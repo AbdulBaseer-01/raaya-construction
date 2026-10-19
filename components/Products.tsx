@@ -1,52 +1,43 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-const productCategories = [
+const featuredProducts = [
 	{
-		label: 'Wooden Series',
+		name: 'Wooden Series',
 		slug: 'wooden-series',
-		image: '/products/woodenseries/wooden/wooden-house-main.webp',
-		items: ['A-Frame Cabin', 'Arc Pod', 'Wooden House', 'Smart House'],
+		image: '/products/woodenseries/aframe/a-frame-hero.webp',
+		features: ['A-Frame Cabin', 'Arc Pod', 'Wooden House'],
 	},
 	{
-		label: 'Portable Solutions',
+		name: 'Portable Solutions',
 		slug: 'portable-solutions',
 		image: '/products/portable/porta-cabin/main.webp',
-		items: ['Porta Cabin', 'Farmhouse', 'Portable Office', 'Bunk House Cabin', 'Containers House', 'Modular Toilet', 'Mobile Toilet', 'Portable Toilet Cabin'],
+		features: ['Porta Cabin', 'Farmhouse', 'Portable Office'],
 	},
 	{
-		label: 'Prefab Solutions',
+		name: 'Prefab Solutions',
 		slug: 'prefab-solutions',
 		image: '/products/prefab/structures/main.webp',
-		items: ['Prefab Site Offices', 'Prefab Structures', 'Prefabricated Accommodation', 'Prefab House', 'Prefab Cottages', 'IOT Pods', 'Prefab Schools'],
+		features: ['Site Offices', 'Prefab Houses', 'Prefab Cottages'],
 	},
 	{
-		label: 'Specialized Structures',
+		name: 'Specialized Structures',
 		slug: 'specialized-structures',
 		image: '/products/special/clinic/main.webp',
-		items: ['Clinic Cabin', 'Restaurant Cabin', 'Smoking Room', 'Electrical Room'],
+		features: ['Clinic Cabin', 'Restaurant Cabin', 'Electrical Room'],
 	},
 	{
-		label: 'Security Solutions',
+		name: 'Security Solutions',
 		slug: 'security-solutions',
 		image: '/products/security/security-cabin/security-cabin-ai.png',
-		items: ['Security Cabins', 'Toll Booth', 'ATM Cabin'],
+		features: ['Security Cabins', 'Toll Booths', 'ATM Cabins'],
 	},
 	{
-		label: 'PUF Insulated Cabin',
+		name: 'PUF Insulated Cabins',
 		slug: 'puf-insulated-cabin',
 		image: '/products/puf/control/main.webp',
-		items: ['Control Room', 'Solar Control Room', 'Clean Room'],
+		features: ['Control Rooms', 'Solar Control Rooms', 'Clean Rooms'],
 	},
-]
-
-const cardLayout = [
-	'md:col-span-7 md:aspect-[1.45/1]',
-	'md:col-span-5 md:aspect-[1/1.1]',
-	'md:col-span-5 md:aspect-[1/1.05]',
-	'md:col-span-7 md:aspect-[1.55/1]',
-	'md:col-span-6 md:aspect-[1.2/1]',
-	'md:col-span-6 md:aspect-[1.2/1]',
 ]
 
 export default function Products() {
@@ -74,46 +65,49 @@ export default function Products() {
 					</div>
 				</div>
 
-				<div className="grid grid-cols-1 gap-4 md:grid-cols-12 md:gap-5">
-					{productCategories.map((category, index) => (
+				<div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+					{featuredProducts.map((product, index) => (
 						<Link
-							key={category.slug}
-							href={`/products/${category.slug}`}
-							className={`group relative block min-h-[26rem] overflow-hidden bg-black md:min-h-0 ${cardLayout[index]}`}
+							key={product.name}
+							href={`/products/${product.slug}`}
+							className="group overflow-hidden rounded-[1.5rem] border border-[#a17c4e] bg-white shadow-[0_12px_35px_rgba(61,43,24,0.08)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(61,43,24,0.16)]"
 						>
-							<Image
-								src={category.image}
-								alt={`${category.label} collection`}
-								fill
-								sizes="(min-width: 768px) 50vw, 100vw"
-								className="object-cover opacity-85 transition duration-700 ease-out group-hover:scale-105 group-hover:opacity-100"
-							/>
-							<div className="absolute inset-0 bg-black/25 transition-colors duration-500 group-hover:bg-black/10" />
-
-							<div className="absolute inset-x-0 bottom-0 p-6 text-white md:p-8">
-								<div className="mb-5 flex items-center justify-between text-[0.58rem] uppercase tracking-[0.25em] text-white/70">
-									<span>{String(index + 1).padStart(2, '0')}</span>
-									<span>{category.items.length} products</span>
-								</div>
-
-								<div className="flex items-end justify-between gap-5">
-									<div>
-										<h3 className="max-w-[22rem] text-[clamp(1.5rem,3vw,3.5rem)] uppercase leading-[0.9] tracking-[-0.045em] transition-transform duration-500 group-hover:translate-x-2">
-											{category.label}
-										</h3>
-										<p className="mt-4 max-w-[24rem] text-[0.62rem] uppercase tracking-[0.12em] text-white/60">
-											{category.items.slice(0, 3).join(' / ')}
-											{category.items.length > 3 ? ` / +${category.items.length - 3}` : ''}
-										</p>
-									</div>
-
-									<span className="shrink-0 border-b border-white/50 pb-1 text-[0.58rem] uppercase tracking-[0.2em] transition-colors duration-300 group-hover:border-[#886c46] group-hover:text-[#d8bd93]">
-										Explore <span className="ml-1 inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
+							<div className="relative aspect-[1.25/0.95] overflow-hidden bg-[#e8e2d8]">
+								<Image
+									src={product.image}
+									alt={product.name}
+									fill
+									sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+									className="object-cover transition duration-700 ease-out group-hover:scale-105"
+								/>
+								{index === 0 && (
+									<span className="absolute right-4 top-4 rounded-full bg-[#8b6b43] px-4 py-2 text-[0.68rem] font-medium tracking-[0.04em] text-white shadow-lg">
+										Most Popular
 									</span>
-								</div>
+								)}
+								<span className="absolute bottom-4 left-4 rounded-full bg-white/85 px-3 py-1.5 text-[0.55rem] uppercase tracking-[0.16em] text-[#765a39] backdrop-blur-sm">
+									Featured category
+								</span>
 							</div>
 
-							<span className="absolute left-6 top-6 h-px w-0 bg-[#886c46] transition-all duration-500 group-hover:w-16 md:left-8 md:top-8" />
+							<div className="p-7 md:p-8">
+								<h3 className="font-serif text-[clamp(1.7rem,2.5vw,2.35rem)] leading-none tracking-[-0.035em] text-[#171716]">
+									{product.name}
+								</h3>
+								<ul className="mt-6 space-y-3.5 text-[0.98rem] text-black/65">
+									{product.features.map((feature) => (
+										<li key={feature} className="flex items-center gap-4">
+											<span className="text-lg leading-none text-[#9a7748]" aria-hidden="true">✓</span>
+											<span>{feature}</span>
+										</li>
+									))}
+								</ul>
+								<div className="my-7 h-px w-3/4 bg-[#b99a70]" />
+								<span className="block rounded-xl bg-[#8b6b43] px-4 py-3 text-center font-serif text-[1.1rem] text-white transition-colors duration-300 group-hover:bg-[#6f5232]">
+									View Details
+									<span className="ml-2 text-base transition-transform duration-300 group-hover:translate-x-1">→</span>
+								</span>
+							</div>
 						</Link>
 					))}
 				</div>

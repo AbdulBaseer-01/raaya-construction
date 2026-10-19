@@ -5,22 +5,22 @@ import Products from "@/components/Products";
 import Projects from "@/components/Projects";
 import TrustedBy from "@/components/TrustedBy";
 import Testimonials from "@/components/Testimonials";
-import FromTheField from "@/components/FromTheField";
-import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import Vlogs from "@/components/Vlogs";
+import OurProcess from "@/components/OurProcess";
 
 export default function Home() {
   return (
     <div>
       <Nav />
       <Hero />
-      <Why />
+      <Vlogs />
       <Products />
+      <Why />
+      <OurProcess />
       <Projects />
       <TrustedBy />
       <Testimonials />
-      <FromTheField />
-      <Contact />
       <Footer />
     </div>
   );

@@ -21,30 +21,36 @@ const partners: Partner[] = [
 	{ name: "Client 06", logo: "/clients/int-6.png" },
 	{ name: "Client 07", logo: "/clients/int-7.png" },
 	{ name: "Client 08", logo: "/clients/int-8.png" },
+	{ name: "Client 09", logo: "/clients/int-9.png" },
+	{ name: "Client 10", logo: "/clients/int-10.png" },
+	{ name: "Client 11", logo: "/clients/int-11.avif" },
+	{ name: "Client 12", logo: "/clients/int-12.webp" },
+	{ name: "Client 13", logo: "/clients/int-13.jpeg" },
+	{ name: "Client 15", logo: "/clients/int-15.png" },
+	{ name: "Client 16", logo: "/clients/int-16.webp" },
+	{ name: "Client 17", logo: "/clients/int-17.webp" },
+	{ name: "Client 18", logo: "/clients/int-18.png" },
+	{ name: "Client 19", logo: "/clients/int-19.png" },
+	{ name: "Client 20", logo: "/clients/int-20.jpg" },
+	{ name: "Client 21", logo: "/clients/int-21.webp" },
+	{ name: "Client 22", logo: "/clients/int-22.png" },
 ];
 
-const partnerGroups = [
-	{ partners: [partners[0], partners[1]], layout: "grid-cols-2 md:grid-cols-12" },
-	{ partners: [partners[2]], layout: "grid-cols-1 md:grid-cols-12" },
-	{ partners: [partners[3], partners[4]], layout: "grid-cols-2 md:grid-cols-12" },
-	{ partners: [partners[5], partners[6], partners[7]], layout: "grid-cols-2 md:grid-cols-12" },
-];
+const partnerGroups = [partners.slice(0, 7), partners.slice(7, 14), partners.slice(14)];
 
 function PartnerMark({ partner, index }: { partner: Partner; index: number }) {
 	return (
 		<a
 			href="#contact"
 			aria-label={`${partner.name}, start a conversation`}
-			className={`partner-mark group relative flex min-h-24 items-center justify-center overflow-hidden py-6 md:min-h-32 md:py-8 ${
-				index === 0 ? "md:col-span-4 md:col-start-2" : ""
-			} ${index === 1 ? "md:col-span-4 md:col-start-8" : ""} ${index === 2 ? "md:col-span-4 md:col-start-5" : ""} ${index === 3 ? "md:col-span-4 md:col-start-2" : ""} ${index === 4 ? "md:col-span-4 md:col-start-8" : ""} ${index === 5 ? "md:col-span-3 md:col-start-2" : ""} ${index === 6 ? "md:col-span-3 md:col-start-6" : ""} ${index === 7 ? "md:col-span-3 md:col-start-10" : ""}`}
+			className="partner-mark group relative flex h-28 w-44 shrink-0 items-center justify-center overflow-hidden md:h-36 md:w-56"
 		>
 			<Image
 				src={partner.logo}
 				alt={partner.name}
 				width={240}
 				height={64}
-				className="h-auto w-[clamp(8rem,16vw,15rem)] transition duration-500 ease-out group-hover:scale-[1.02] group-hover:opacity-100"
+				className="max-h-20 h-auto w-auto max-w-[90%] object-contain opacity-100 transition duration-500 ease-out group-hover:scale-[1.04] group-hover:opacity-100 md:max-h-24"
 			/>
 			<span className="absolute bottom-2 left-1/2 h-px w-0 -translate-x-1/2 bg-[#886c46] transition-all duration-500 group-hover:w-12" />
 			<span className="absolute right-0 top-2 text-[0.5rem] uppercase tracking-[0.2em] text-[#886c46] opacity-0 transition-opacity duration-500 group-hover:opacity-100">
@@ -120,14 +126,16 @@ export default function TrustedBy() {
 					</p>
 				</div>
 
-				<div className="mt-20 md:mt-28">
+				<div className="mt-20 space-y-5 md:mt-28 md:space-y-8">
 					{partnerGroups.map((group, groupIndex) => (
-						<div key={groupIndex} className="partner-group">
+						<div key={groupIndex} className="partner-group overflow-hidden">
 							<div className="partner-rule h-px w-full bg-black/15" />
-							<div className={`grid ${group.layout} md:gap-x-6`}>
-								{group.partners.map((partner, index) => (
-									<PartnerMark key={partner.name} partner={partner} index={groupIndex === 3 ? index + 5 : groupIndex === 2 ? index + 3 : groupIndex === 1 ? 2 : index} />
-								))}
+							<div className="partner-marquee">
+								<div className={`partner-marquee-track ${groupIndex % 2 === 1 ? "partner-marquee-track-reverse" : ""}`}>
+									{[...group, ...group].map((partner, index) => (
+										<PartnerMark key={`${groupIndex}-${partner.name}-${index}`} partner={partner} index={index % group.length} />
+									))}
+								</div>
 							</div>
 						</div>
 					))}

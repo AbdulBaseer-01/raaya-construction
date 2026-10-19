@@ -87,7 +87,7 @@ export default function Nav() {
       </header>
 
       <motion.div
-        className={`fixed inset-0 z-[1000] overflow-y-auto bg-[#f5f2ec] text-black ${
+        className={`fixed inset-0 z-[1000] overflow-y-auto min-h-screen bg-[#f5f2ec] text-black ${
           menuOpen ? 'pointer-events-auto' : 'pointer-events-none'
         }`}
         initial={false}
@@ -98,7 +98,7 @@ export default function Nav() {
             <div ref={panelRef} className="min-h-screen lg:h-screen lg:overflow-hidden">
               <div className="flex items-center justify-between border-b border-black/15 px-[4vw] py-5 lg:py-3">
                 <Link href="/" onClick={() => setMenuOpen(false)} aria-label="Prefab Construction home">
-                  <Image src="/logo-2.png" width={56} height={56} alt="Prefab Construction Company Logo" className="h-11 w-auto" />
+                  <Image src="/black-logo.png" width={176} height={40} sizes="176px" quality={100} alt="Prefab Construction Company Logo" className="h-11 w-auto" />
                 </Link>
 
                 <button type="button" aria-label="Close full-screen navigation" onClick={() => setMenuOpen(false)} className="group flex items-center gap-3 text-[0.68rem] uppercase tracking-[0.2em]">
@@ -148,7 +148,7 @@ export default function Nav() {
                 </div>
 
                 <div className="relative hidden min-h-[500px] overflow-hidden bg-[#171716] lg:block">
-                  <Image src="/products/prefab/cottage/images/image2.png" alt="Prefab architecture" fill sizes="360px" className="object-cover opacity-70 transition-transform duration-700 hover:scale-105" />
+                  <Image src="/products/woodenseries/aframe/a-frame-hero.webp" alt="Prefab architecture" fill sizes="360px" className="object-cover opacity-70 transition-transform duration-700 hover:scale-105" />
                   <div className="absolute right-5 top-5 h-28 w-24 overflow-hidden border border-white/30">
                     <Image src="/products/prefab/iot-pod/ext-2.png" alt="Prefab construction detail" fill sizes="96px" className="object-cover opacity-75" />
                   </div>

@@ -18,3 +18,47 @@ body {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
+
+.projects-rail {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.projects-rail::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes partner-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.partner-marquee {
+  overflow: hidden;
+  width: 100%;
+}
+
+.partner-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: partner-marquee 32s linear infinite;
+  will-change: transform;
+}
+
+.partner-marquee-track-reverse {
+  animation-direction: reverse;
+}
+
+.partner-marquee:hover .partner-marquee-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .partner-marquee-track {
+    animation-play-state: paused;
+  }
+}
