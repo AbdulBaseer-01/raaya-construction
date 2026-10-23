@@ -122,7 +122,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FormEvent, useState } from "react";
-import { ArrowRight, LoaderCircle, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowRight, ArrowUpRight, LoaderCircle, Mail, MapPin, Phone } from "lucide-react";
 
 const ACCENT = "#886c46";
 
@@ -259,108 +259,163 @@ export default function Footer() {
 				</div>
 			</section>
 
-			{/* Footer links */}
-			<section className="relative">
-	<div className="relative z-10 mx-auto grid w-full max-w-[1400px] grid-cols-1 items-center justify-items-center gap-10 px-6 py-14 sm:px-10 md:grid-cols-[1fr_auto_1fr] md:gap-0 md:px-[5vw] md:py-16">
-		<nav
-	aria-label="Primary"
-	className="flex w-full justify-center md:self-stretch md:border-r md:border-white/10 md:py-4"
->
-	<div className="flex w-full max-w-[300px] flex-col gap-4 md:pr-10">
-		{contacts.map((contact) => (
-			<div
-				key={contact.phone.href}
-				className="flex flex-col gap-1 rounded-xl border border-white/15 bg-white/[0.03] p-4"
-			>
-				<a
-					href={contact.phone.href}
-					className="group flex items-center gap-3 rounded-lg p-2 text-sm text-white/80 transition-colors hover:text-white"
-				>
-					<span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#886c46]/50 bg-[#886c46]/15 text-[#886c46] transition-all group-hover:bg-[#886c46] group-hover:text-white">
-						<Phone className="h-4 w-4" />
-					</span>
-					<span>{contact.phone.label}</span>
-				</a>
 
-				<div className="mx-2 border-t border-white/10" />
-
-				<a
-					href={contact.email.href}
-					className="group flex items-center gap-3 rounded-lg p-2 text-sm text-white/80 transition-colors hover:text-white"
-				>
-					<span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#886c46]/50 bg-[#886c46]/15 text-[#886c46] transition-all group-hover:bg-[#886c46] group-hover:text-white">
-						<Mail className="h-4 w-4" />
-					</span>
-					<span className="break-all">{contact.email.label}</span>
-				</a>
+<section className="relative overflow-clip">
+	<div className="relative z-10 mx-auto max-w-[1600px] px-6 sm:px-10 md:px-[5vw]">
+		{/* Header */}
+		<div className="grid grid-cols-1 items-end gap-10 pb-16 pt-24 md:grid-cols-[1.2fr_0.8fr] md:pb-24 md:pt-32">
+			<div>
+				<p className="mb-10 flex items-center gap-3 text-[0.58rem] uppercase tracking-[0.28em] text-white/50">
+					<span className="h-px w-10 bg-[#886c46]" />
+					Get in touch
+				</p>
+				<h2 className="text-[clamp(3.4rem,6.7vw,8rem)] uppercase leading-[0.78] tracking-[-0.075em]">
+					<span className="block">Let&apos;s plan</span>
+					<span className="ml-[10vw] block text-[#886c46]">your space.</span>
+				</h2>
 			</div>
-		))}
-	</div>
-</nav>
-
-		<div className="w-full max-w-[320px] rounded-xl border border-white/15 bg-white/[0.03] px-8 py-8 text-center md:mx-10 md:w-[320px]">
-			<h2 className="text-lg font-bold uppercase leading-snug tracking-wide">
-				Follow us
-				<br />
-				on social media
-			</h2>
-			<div className="mt-6 flex items-center justify-center gap-5">
-				{socials.map(({ label, href, Icon }) => (
-					<a
-						key={label}
-						href={href}
-						aria-label={label}
-						className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-black ring-4 ring-white/15 transition-all hover:bg-[#886c46] hover:text-white hover:ring-[#886c46]/30"
-					>
-						<Icon />
-					</a>
-				))}
+			<div className="md:justify-self-end">
+				<p className="max-w-[21rem] text-[0.82rem] leading-[1.8] text-white/55">
+					Tell us what you need to build. We will help you shape it, from the first call to the final handover.
+				</p>
+				<div className="mt-10 hidden max-w-[19rem] items-center justify-between border-t border-white/15 pt-5 md:flex">
+					<span className="text-[0.58rem] uppercase tracking-[0.2em] text-white/45">Reach out</span>
+					<span className="h-8 w-px bg-[#886c46]" />
+					<span className="text-[0.58rem] uppercase tracking-[0.2em] text-white/45">03 ways</span>
+				</div>
 			</div>
 		</div>
 
-		<nav
-	aria-label="Legal"
-	className="flex w-full justify-center md:self-stretch md:border-l md:border-white/10 md:py-4"
->
-	<div className="flex w-full max-w-[300px] flex-col items-center gap-8 md:items-start md:pl-10">
-		<ul className="flex min-w-[140px] flex-col items-center gap-4 text-[15px] text-white/85 md:items-start">
-			{legalLinks.map((link) => (
-				<li key={link.label}>
-					<Link href={link.href} className="transition-colors hover:text-[#886c46]">
-						{link.label}
-					</Link>
-				</li>
-			))}
-		</ul>
+		{/* Columns */}
+		<div className="grid grid-cols-1 gap-14 border-t border-white/15 pt-10 md:grid-cols-3 md:gap-10">
+			{/* Contact */}
+			<nav aria-label="Primary">
+				<div className="mb-8 flex items-center justify-between">
+					<span className="text-[0.58rem] uppercase tracking-[0.22em] text-white/50">Contact / 01</span>
+					
+				</div>
+				<div className="flex flex-col gap-10">
+					{contacts.map((contact, index) => (
+						<div key={contact.phone.href}>
+							<div className="grid grid-cols-[minmax(3rem,0.5fr)_minmax(0,1.6fr)] border-t border-white/70 pt-5">
+								<span className="text-[0.85rem]">{String(index + 1).padStart(2, '0')}</span>
+								<div className="flex flex-col gap-5 border-l border-white/70 pl-5">
+									<a
+										href={contact.phone.href}
+										className="group flex items-center gap-3 text-[0.85rem] text-white/80 transition-colors hover:text-[#886c46]"
+									>
+										<span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#886c46]/50 bg-[#886c46]/15 text-[#886c46] transition-all group-hover:bg-[#886c46] group-hover:text-white">
+											<Phone className="h-4 w-4" />
+										</span>
+										<span>{contact.phone.label}</span>
+									</a>
+									<a
+										href={contact.email.href}
+										className="group flex items-center gap-3 text-[0.85rem] text-white/80 transition-colors hover:text-[#886c46]"
+									>
+										<span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#886c46]/50 bg-[#886c46]/15 text-[#886c46] transition-all group-hover:bg-[#886c46] group-hover:text-white">
+											<Mail className="h-4 w-4" />
+										</span>
+										<span className="break-all">{contact.email.label}</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					))}
+				</div>
+			</nav>
 
-		<a
-			href="https://maps.google.com/?q=Hyderabad,Telangana,India"
-			target="_blank"
-			rel="noopener noreferrer"
-			className="group flex w-full items-start gap-3 rounded-xl border border-white/15 bg-white/[0.03] p-4 text-sm leading-6 text-white/80 transition-colors hover:text-white"
-		>
-			<span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#886c46]/50 bg-[#886c46]/15 text-[#886c46] transition-all group-hover:bg-[#886c46] group-hover:text-white">
-				<MapPin className="h-4 w-4" />
-			</span>
-			<span className="text-left">
-				Hyderabad, Telangana
-				<br />
-				India
-			</span>
-		</a>
-	</div>
-</nav>
+			{/* Social */}
+			<div>
+				<div className="mb-8 flex items-center justify-between">
+					<span className="text-[0.58rem] uppercase tracking-[0.22em] text-white/50">Follow / 02</span>
+					
+				</div>
+				{/* <h3 className="mb-10 text-[clamp(2.3rem,3.2vw,3.6rem)] uppercase leading-[0.85] tracking-[-0.07em]">
+					Follow us
+					<span className="block text-[#886c46]">on social.</span>
+				</h3> */}
+				<ul className="border-t border-white/70">
+					{socials.map(({ label, href, Icon }) => (
+						<li key={label} className="border-b border-white/15">
+							<a
+								href={href}
+								aria-label={label}
+								className="group flex items-center justify-between gap-4 py-4 text-[0.62rem] uppercase tracking-[0.2em] text-white/70 transition-colors hover:text-[#886c46]"
+							>
+								<span className="flex items-center gap-4">
+									<span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-black ring-4 ring-white/15 transition-all group-hover:bg-[#886c46] group-hover:text-white group-hover:ring-[#886c46]/30 [&>svg]:h-4 [&>svg]:w-4">
+										<Icon />
+									</span>
+									{label}
+								</span>
+								<ArrowUpRight className="h-4 w-4 text-[#886c46] transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
+							</a>
+						</li>
+					))}
+				</ul>
+			</div>
+
+			{/* Legal + location */}
+			<nav aria-label="Legal">
+				<div className="mb-8 flex items-center justify-between">
+					<span className="text-[0.58rem] uppercase tracking-[0.22em] text-white/50">Info / 03</span>
+					
+				</div>
+				<ul className="border-t border-white/70">
+					{legalLinks.map((link, index) => (
+						<li key={link.label} className="border-b border-white/15">
+							<Link
+								href={link.href}
+								className="group flex items-center justify-between gap-4 py-4 text-[0.85rem] text-white/80 transition-colors hover:text-[#886c46]"
+							>
+								<span className="flex items-center gap-5">
+									<span className="text-[0.58rem] tracking-[0.2em] text-white/45">
+										{String(index + 1).padStart(2, '0')}
+									</span>
+									{link.label}
+								</span>
+								<ArrowUpRight className="h-4 w-4 text-[#886c46] transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
+							</Link>
+						</li>
+					))}
+				</ul>
+
+				<a
+					href="https://maps.app.goo.gl/qNSyNS4xH7eMCv2z9"
+					target="_blank"
+					rel="noopener noreferrer"
+					className="group mt-10 flex items-start gap-3 text-[0.85rem] leading-6 text-white/80 transition-colors hover:text-[#886c46]"
+				>
+					<span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#886c46]/50 bg-[#886c46]/15 text-[#886c46] transition-all group-hover:bg-[#886c46] group-hover:text-white">
+						<MapPin className="h-4 w-4" />
+					</span>
+					<span>
+						Plot no 1, Venkateshwara Colony, IDA Jeedimetla, Apurupa Colony, Jeedimetla, Hyderabad, Telangana 500055
+						<br />
+						India
+					</span>
+				</a>
+			</nav>
+		</div>
 	</div>
 
 	{/* Watermark */}
-	<div className="pointer-events-none relative flex w-full select-none justify-center overflow-hidden px-4 pb-10 pt-4">
-		<span className="block whitespace-nowrap text-center text-[clamp(2rem,9vw,9rem)] font-extrabold uppercase leading-none tracking-[-0.02em] text-white/[0.06]">
+	<div className="pointer-events-none relative flex w-full select-none justify-center overflow-hidden px-4 pb-10 pt-20">
+		<span className="block whitespace-nowrap text-center text-[clamp(2rem,9vw,9rem)] font-extrabold uppercase leading-none tracking-[-0.02em] text-white/16">
 			Texo Prefab World
 		</span>
 	</div>
 
-	<div className="relative z-10 border-t border-white/10 px-6 py-5 text-center text-xs text-white/45">
-		© {new Date().getFullYear()} TEXO PREFAB WORLD. All rights reserved.
+	{/* Bottom bar */}
+	<div className="relative z-10 mx-auto max-w-[1600px] px-6 sm:px-10 md:px-[5vw]">
+		<div className="flex flex-col items-center justify-between gap-3 border-t border-white/15 py-5 text-[0.58rem] uppercase tracking-[0.2em] text-white/45 md:flex-row">
+			<span>© {new Date().getFullYear()} TEXO PREFAB WORLD. All rights reserved.</span>
+			<span className="flex items-center gap-3">
+				{/* <span className="h-px w-8 bg-[#886c46]" /> */}
+				Built around your needs
+			</span>
+		</div>
 	</div>
 </section>
 		</footer>

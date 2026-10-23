@@ -131,12 +131,12 @@ export default function Projects() {
 						<ProjectCard key={project.number} project={project} index={index} />
 					))}
 					</div>
-					<div className="pointer-events-none absolute inset-x-2 top-1/2 z-20 flex -translate-y-1/2 justify-between sm:inset-x-4 md:inset-x-6">
+					<div className="pointer-events-none absolute -inset-x-6 top-1/2 z-20 flex -translate-y-1/3 justify-between ">
 						<button
 							type="button"
 							onClick={() => scrollProjects("left")}
 							aria-label="Scroll projects left"
-							className="pointer-events-auto flex h-32 w-14 items-center justify-center rounded-full border border-[#886c46]/70 bg-[#886c46]/65 text-white shadow-lg backdrop-blur-xl transition-colors hover:bg-[#886c46]/85"
+							className="pointer-events-auto flex border border-white h-32 w-14 items-center justify-center rounded-full  bg-[#886c46]/65 text-white shadow-lg backdrop-blur-xl transition-colors hover:bg-[#886c46]/85"
 						>
 							<ArrowLeft className="h-5 w-5" />
 						</button>
@@ -144,7 +144,7 @@ export default function Projects() {
 							type="button"
 							onClick={() => scrollProjects("right")}
 							aria-label="Scroll projects right"
-							className="pointer-events-auto flex h-32 w-14 items-center justify-center rounded-full border border-[#886c46]/70 bg-[#886c46]/65 text-white shadow-lg backdrop-blur-xl transition-colors hover:bg-[#886c46]/85"
+							className="pointer-events-auto flex h-32 w-14 items-center justify-center rounded-full border border-white bg-[#886c46]/65 text-white shadow-lg backdrop-blur-xl transition-colors hover:bg-[#886c46]/85"
 						>
 							<ArrowRight className="h-5 w-5" />
 						</button>
