@@ -164,23 +164,29 @@ export default function OurProcess() {
                 className="group relative mb-20 pl-10 last:mb-0 sm:pl-16 md:mb-32 md:pl-20"
               >
                 <div
-                  className={`absolute left-0 top-1 flex h-3 w-3 items-center justify-center rounded-full border-2 bg-white transition-all duration-500 ${
+                  className={`absolute -left-3.5 top-0 flex h-10 w-10 items-center justify-center rounded-full border text-[0.65rem] font-medium tracking-[0.08em] transition-all duration-500 ${
                     activeStep >= index
-                      ? "scale-125 border-[#886c46]"
-                      : "border-black/25"
+                      ? "border-[#886c46] bg-[#886c46] text-white"
+                      : "border-black/25 bg-white text-black/50"
                   }`}
                 >
-                  <span
-                    className={`h-1.5 w-1.5 rounded-full bg-[#886c46] transition-transform duration-500 ${
-                      activeStep >= index ? "scale-100" : "scale-0"
-                    }`}
-                  />
+                  {number}
                 </div>
 
                 <div className="grid grid-cols-1 items-stretch gap-8 md:grid-cols-[1fr_1.1fr] md:gap-14">
                   {/* Text — left */}
-                  <div className="flex flex-col justify-between py-1 md:py-2">
-                    <div>
+                  <div className="relative flex flex-col justify-between py-1 md:py-2">
+                    <span
+                      aria-hidden="true"
+                      className="pointer-events-none absolute -right-2 top-1/2 -translate-y-1/2 select-none text-[clamp(8rem,16vw,15rem)] font-medium leading-none tracking-[-0.12em] text-[#886c46] transition-opacity duration-700"
+                      style={{
+                        opacity: (activeStep >= index ? 0.14 : 0.035) + index * 0.012,
+                        WebkitTextStroke: "1px #886c46",
+                      }}
+                    >
+                      {number}
+                    </span>
+                    <div className="relative z-10">
                       <div className="flex items-center justify-between gap-6">
                         <span className="text-[0.58rem] uppercase tracking-[0.22em] text-black/50">
                           Process / {number}
@@ -195,7 +201,7 @@ export default function OurProcess() {
                       </h3>
                     </div>
 
-                    <div className="mt-10 grid grid-cols-[minmax(3rem,0.5fr)_minmax(0,1.4fr)] border-t border-black/70 pt-5">
+                    <div className="relative z-10 mt-10 grid grid-cols-[minmax(3rem,0.5fr)_minmax(0,1.4fr)] border-t border-black/70 pt-5">
                       <span className="text-[0.85rem]">{number}</span>
                       <p className="border-l border-black/70 pl-5 text-[0.85rem] leading-[1.35] text-black/80">
                         {description}
