@@ -321,13 +321,13 @@ export default function Hero() {
   return (
     <section
       ref={root}
-      className="relative h-screen w-screen overflow-hidden bg-white text-black"
+      className="relative h-[100svh] w-screen overflow-hidden bg-white text-black md:h-screen"
     >
       {/* =========================================================
           85% EDITORIAL WHITE PANEL
       ========================================================= */}
 
-      <div className="absolute inset-y-0 left-0 z-0 w-[85%] overflow-hidden bg-white">
+      <div className="absolute inset-y-0 left-0 z-0 w-full overflow-hidden bg-white md:w-[85%]">
 
         
 
@@ -336,25 +336,25 @@ export default function Hero() {
           alt="Prefab Construction Company"
           width={88}
           height={88}
-          className="absolute left-[3vw] top-5 z-10 h-20 w-auto object-contain"
+          className="absolute left-5 top-4 z-10 h-14 w-auto object-contain md:left-[3vw] md:top-5 md:h-20"
         />
 
         {/* Top right metadata */}
-        <span className="absolute right-[2.5rem] top-7 text-[0.55rem] uppercase tracking-[0.2em] text-black">
+        <span className="absolute right-5 top-6 text-[0.48rem] uppercase tracking-[0.16em] text-black md:right-[2.5rem] md:top-7 md:text-[0.55rem] md:tracking-[0.2em]">
           2026 / On site
         </span>
 
-        <span className="absolute right-0 top-1/2 -translate-y-1/2 -rotate-90 text-[0.52rem] uppercase tracking-[0.28em] text-black">
+        <span className="absolute right-0 top-1/2 hidden -translate-y-1/2 -rotate-90 text-[0.52rem] uppercase tracking-[0.28em] text-black md:block">
           Form / Function / Future
         </span>
 
         {/* Vertical editorial label */}
-        <span className="absolute left-[1.15rem] top-1/2 -translate-y-1/2 -rotate-90 text-[0.52rem] uppercase tracking-[0.28em] text-[#886c46]">
+        <span className="absolute left-[1.15rem] top-1/2 hidden -translate-y-1/2 -rotate-90 text-[0.52rem] uppercase tracking-[0.28em] text-[#886c46] md:block">
           Built with intent
         </span>
 
         {/* Small vertical number */}
-        <span className="absolute left-[1.1rem] top-[43%] text-[0.5rem] tracking-[0.15em] text-black">
+        <span className="absolute left-5 top-[43%] hidden text-[0.5rem] tracking-[0.15em] text-black md:left-[1.1rem] md:block">
           01
         </span>
 
@@ -362,25 +362,26 @@ export default function Hero() {
             MAIN EDITORIAL TYPE
         ===================================================== */}
 
-        <div className="absolute left-[10%] top-[30%]">
+        <div className="absolute left-[8%] top-[25%] md:left-[10%] md:top-[30%]">
           <h1
             className="
               hero-text-1
-              text-[clamp(3rem,5.2vw,7rem)]
+              text-[clamp(2.7rem,11vw,4.8rem)]
               uppercase
               leading-[0.84]
               tracking-[-0.065em]
+              md:text-[clamp(3rem,5.2vw,7rem)]
             "
           >
             <span className="block">
               Luxury That
             </span>
 
-            <span className="ml-[13%] block">
+            <span className="ml-[7%] block md:ml-[13%]">
               Leaves a
             </span>
 
-            <span className="ml-[28%] block">
+            <span className="ml-[14%] block md:ml-[28%]">
               <em
                 className={`
                   tracking-[-0.045em]
@@ -393,12 +394,12 @@ export default function Hero() {
           </h1>
         </div>
 
-        <p className="absolute left-[58%] top-[37%] w-[min(17rem,20vw)] text-[0.68rem] leading-[1.7] tracking-[0.01em] text-black">
+        <p className="absolute left-[8%] top-[53%] w-[68%] text-[0.62rem] leading-[1.65] tracking-[0.01em] text-black md:left-[58%] md:top-[37%] md:w-[min(17rem,20vw)] md:text-[0.68rem] md:leading-[1.7]">
           Designed around the realities of modern living, each space balances
           speed, clarity and the freedom to evolve over time.
         </p>
 
-        <p className="absolute bottom-[14%] left-[10%] w-[min(20rem,28vw)] text-justify text-[0.66rem] leading-[1.7] tracking-[0.01em] text-black">
+        <p className="absolute bottom-[22%] left-[8%] w-[78%] text-justify text-[0.6rem] leading-[1.6] tracking-[0.01em] text-black md:bottom-[14%] md:left-[10%] md:w-[min(20rem,28vw)] md:text-[0.66rem] md:leading-[1.7]">
           A considered approach to modern construction, where material,
           proportion and permanence meet in spaces made to belong.
         </p>
@@ -407,17 +408,17 @@ export default function Hero() {
             EDITORIAL DESCRIPTION
         ===================================================== */}
 
-        <div className="absolute bottom-[15%] right-[8%] w-[18rem]">
+        <div className="absolute bottom-[10%] left-[8%] w-[78%] md:bottom-[15%] md:left-auto md:right-[8%] md:w-[18rem]">
 
-          <div className="mb-4 flex items-center gap-3">
+          <div className="mb-3 flex items-center gap-3 md:mb-4">
             <span className="h-px w-10 bg-[#886c46]" />
 
-            <span className="text-[0.5rem] uppercase tracking-[0.24em] text-[#886c46]">
+            <span className="text-[0.45rem] uppercase tracking-[0.2em] text-[#886c46] md:text-[0.5rem] md:tracking-[0.24em]">
               Prefabricated living
             </span>
           </div>
 
-          <p className="text-[0.7rem] leading-[1.65] tracking-[-0.01em] text-black">
+          <p className="text-[0.62rem] leading-[1.55] tracking-[-0.01em] text-black md:text-[0.7rem] md:leading-[1.65]">
             Spaces engineered with precision,
             designed for permanence and built
             with a lighter footprint.
@@ -425,7 +426,7 @@ export default function Hero() {
         </div>
 
         {/* Bottom left metadata */}
-        <span className="absolute bottom-7 left-[3vw] text-[0.52rem] uppercase tracking-[0.24em] text-black">
+        <span className="absolute bottom-5 left-5 text-[0.45rem] uppercase tracking-[0.18em] text-black md:bottom-7 md:left-[3vw] md:text-[0.52rem] md:tracking-[0.24em]">
           Structure / craft / time
         </span>
 
@@ -468,12 +469,14 @@ export default function Hero() {
             className="
               hero-detail
               absolute
-              left-[25%]
+              left-1/2
               top-1/2
               z-20
-              w-[clamp(220px,24vw,360px)]
+              w-[min(72vw,280px)]
               -translate-x-1/2
               -translate-y-1/2
+              md:left-[25%]
+              md:w-[clamp(220px,24vw,360px)]
             "
           >
 
@@ -510,19 +513,19 @@ export default function Hero() {
             </div>
 
             {/* Caption */}
-            <div className="mt-3 flex items-start justify-between gap-5 text-white">
+            <div className="mt-2 flex items-start justify-between gap-3 text-white md:mt-3 md:gap-5">
 
               <div>
-                <p className="text-[0.48rem] uppercase tracking-[0.2em] opacity-70">
+                <p className="text-[0.42rem] uppercase tracking-[0.16em] opacity-70 md:text-[0.48rem] md:tracking-[0.2em]">
                   Detail / 01
                 </p>
 
-                <p className="mt-1 text-[0.95rem] italic">
+                <p className="mt-1 text-[0.78rem] italic md:text-[0.95rem]">
                   Designed to last.
                 </p>
               </div>
 
-              <span className="text-[0.48rem] uppercase tracking-[0.18em] opacity-60">
+              <span className="text-[0.42rem] uppercase tracking-[0.15em] opacity-60 md:text-[0.48rem] md:tracking-[0.18em]">
                 +01
               </span>
 
@@ -532,9 +535,9 @@ export default function Hero() {
 
 
           {/* Tiny image-stage metadata */}
-          <div className="absolute right-[3vw] top-7 z-20 text-white">
+          <div className="absolute right-5 top-6 z-20 text-white md:right-[3vw] md:top-7">
 
-            <span className="text-[0.52rem] uppercase tracking-[0.24em] opacity-65">
+            <span className="text-[0.45rem] uppercase tracking-[0.18em] opacity-65 md:text-[0.52rem] md:tracking-[0.24em]">
               Project / 01
             </span>
 
@@ -565,14 +568,14 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black/40" />
 
         {/* Image 2 metadata */}
-        <div className="absolute left-[4vw] top-8 z-10">
-          <span className="text-[0.55rem] uppercase tracking-[0.25em] text-white/60">
+        <div className="absolute left-5 top-6 z-10 md:left-[4vw] md:top-8">
+          <span className="text-[0.45rem] uppercase tracking-[0.18em] text-white/60 md:text-[0.55rem] md:tracking-[0.25em]">
             Field notes / 02
           </span>
         </div>
 
-        <div className="absolute right-[4vw] top-8 z-10">
-          <span className="text-[0.55rem] uppercase tracking-[0.25em] text-white/60">
+        <div className="absolute right-5 top-6 z-10 md:right-[4vw] md:top-8">
+          <span className="text-[0.45rem] uppercase tracking-[0.18em] text-white/60 md:text-[0.55rem] md:tracking-[0.25em]">
             Manufacture / Install
           </span>
         </div>
@@ -588,11 +591,12 @@ export default function Hero() {
             items-center
             justify-center
             text-center
-            text-[clamp(2rem,6vw,7rem)]
+            text-[clamp(2.4rem,12vw,5rem)]
             uppercase
             leading-[0.86]
             tracking-[-0.065em]
             text-white
+            md:text-[clamp(2rem,6vw,7rem)]
           "
         >
           <span className="block overflow-hidden">
@@ -605,14 +609,14 @@ export default function Hero() {
         </h2>
 
         {/* Bottom metadata */}
-        <div className="absolute bottom-8 left-[4vw] z-10">
-          <span className="text-[0.52rem] uppercase tracking-[0.24em] text-white/60">
+        <div className="absolute bottom-6 left-5 z-10 md:bottom-8 md:left-[4vw]">
+          <span className="text-[0.45rem] uppercase tracking-[0.18em] text-white/60 md:text-[0.52rem] md:tracking-[0.24em]">
             Precision / speed / permanence
           </span>
         </div>
 
-        <div className="absolute bottom-8 right-[4vw] z-10">
-          <span className="text-[0.52rem] uppercase tracking-[0.24em] text-white/60">
+        <div className="absolute bottom-6 right-5 z-10 md:bottom-8 md:right-[4vw]">
+          <span className="text-[0.45rem] uppercase tracking-[0.18em] text-white/60 md:text-[0.52rem] md:tracking-[0.24em]">
             02 — 06
           </span>
         </div>

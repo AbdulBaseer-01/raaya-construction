@@ -184,52 +184,52 @@ export default function Footer() {
 	return (
 		<footer id="contact" className="relative w-full overflow-hidden bg-black text-white">
 			{/* Hero / CTA */}
-			<section className="relative h-[92vh] min-h-[620px] w-full overflow-hidden">
+			<section className="relative h-[100svh] min-h-[560px] w-full overflow-hidden md:h-[92vh] md:min-h-[620px]">
 				<Image
 					src="/products/prefab/iot-pod/ext-1.png"
 					alt="Modern prefab pod at sunset"
 					fill
 					priority={false}
-					className="object-cover object-[65%_center]"
+					className="object-cover object-[62%_center] md:object-[65%_center]"
 					sizes="100vw"
 				/>
 				<div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/45 to-transparent" />
 				<div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black to-transparent" />
 
-				<div className="relative mx-auto grid h-full max-w-[1600px] grid-cols-1 gap-12 px-6 pb-24 pt-10 sm:px-10 md:grid-cols-[1fr_minmax(320px,430px)] md:items-end md:gap-16 md:px-[5vw]">
+				<div className="relative mx-auto grid h-full max-w-[1600px] grid-cols-1 gap-8 px-5 pb-12 pt-6 sm:px-10 sm:pb-16 md:grid-cols-[1fr_minmax(320px,430px)] md:items-end md:gap-16 md:px-[5vw] md:pb-24 md:pt-10">
 					<Link href="/" aria-label="TEXO Prefab World home" className="w-fit transition-opacity hover:opacity-80 md:col-span-2">
 						<Image
 							src="/horiz-logo.png"
 							alt="TEXO Prefab World"
 							width={360}
 							height={82}
-							className="h-auto w-[180px] object-contain object-left sm:w-[220px]"
+							className="h-auto w-[150px] object-contain object-left sm:w-[220px]"
 						/>
 					</Link>
 
-					<div className=" max-w-2xl md:col-start-1">
-						<h1 className="text-[clamp(2rem,6vw,5rem)]  uppercase leading-[0.98] tracking-[-0.03em]">
+					<div className="max-w-2xl md:col-start-1">
+						<h1 className="text-[clamp(2.4rem,11vw,4.8rem)] uppercase leading-[0.92] tracking-[-0.04em] md:text-[clamp(2rem,6vw,5rem)] md:leading-[0.98] md:tracking-[-0.03em]">
 							Ready to
 							<br />
 							make a <span style={{ color: ACCENT }}>move?</span>
 						</h1>
-						<p className="mt-8 max-w-sm text-md leading-8 text-white/85">
+						<p className="mt-5 max-w-[18rem] text-sm leading-6 text-white/85 md:mt-8 md:max-w-sm md:text-md md:leading-8">
 							Tell us what you&apos;re looking for &ndash; we&apos;ll take care of the rest.
 						</p>
 
 						<a
 							href="mailto:info@texoprefabworld.com"
-							className="group mt-10 inline-flex items-center gap-8 rounded-full pl-4 text-sm font-bold uppercase tracking-[0.04em] text-white shadow-[0_0_0_2px_rgba(255,255,255,0.18)] transition-all hover:brightness-110"
+							className="group mt-7 inline-flex items-center gap-5 rounded-full pl-4 text-xs font-bold uppercase tracking-[0.04em] text-white shadow-[0_0_0_2px_rgba(255,255,255,0.18)] transition-all hover:brightness-110 md:mt-10 md:gap-8 md:text-sm"
 							style={{ background: `linear-gradient(135deg, #a88c64 0%, ${ACCENT} 60%, #6d5535 100%)` }}
 						>
 							Let&apos;s talk
-							<span className="flex h-12 w-12 items-center justify-center rounded-full bg-black text-white transition-transform duration-300 group-hover:translate-x-1">
+							<span className="flex h-10 w-10 items-center justify-center rounded-full bg-black text-white transition-transform duration-300 group-hover:translate-x-1 md:h-12 md:w-12">
 								<ArrowRight className="h-5 w-5" />
 							</span>
 						</a>
 					</div>
 
-					<div className="rounded-2xl border border-white/20 bg-black/45 p-6 shadow-2xl backdrop-blur-md md:col-start-2 md:row-start-2 md:mb-1 md:p-8">
+					<div className="rounded-2xl border border-white/20 bg-black/45 p-5 shadow-2xl backdrop-blur-md md:col-start-2 md:row-start-2 md:mb-1 md:p-8">
 						{isSubmitted ? (
 							<div className="py-8" role="status" aria-live="polite">
 								<p className="text-2xl font-semibold uppercase">Thank you.</p>
@@ -261,15 +261,15 @@ export default function Footer() {
 
 
 <section className="relative overflow-clip">
-	<div className="relative z-10 mx-auto max-w-[1600px] px-6 sm:px-10 md:px-[5vw]">
+	<div className="relative z-10 mx-auto max-w-[1600px] px-5 sm:px-10 md:px-[5vw]">
 		{/* Header */}
-		<div className="grid grid-cols-1 items-end gap-10 pb-16 pt-24 md:grid-cols-[1.2fr_0.8fr] md:pb-24 md:pt-32">
+		<div className="grid grid-cols-1 items-end gap-8 pb-14 pt-20 md:grid-cols-[1.2fr_0.8fr] md:gap-10 md:pb-24 md:pt-32">
 			<div>
 				<p className="mb-10 flex items-center gap-3 text-[0.58rem] uppercase tracking-[0.28em] text-white/50">
 					<span className="h-px w-10 bg-[#886c46]" />
 					Get in touch
 				</p>
-				<h2 className="text-[clamp(3.4rem,6.7vw,8rem)] uppercase leading-[0.78] tracking-[-0.075em]">
+				<h2 className="text-[clamp(3rem,14vw,5.5rem)] uppercase leading-[0.8] tracking-[-0.075em] md:text-[clamp(3.4rem,6.7vw,8rem)] md:leading-[0.78]">
 					<span className="block">Let&apos;s plan</span>
 					<span className="ml-[10vw] block text-[#886c46]">your space.</span>
 				</h2>
@@ -287,10 +287,10 @@ export default function Footer() {
 		</div>
 
 		{/* Columns */}
-		<div className="grid grid-cols-1 gap-14 border-t border-white/15 pt-10 md:grid-cols-3 md:gap-10">
+		<div className="grid grid-cols-1 gap-12 border-t border-white/15 pt-8 md:grid-cols-3 md:gap-10 md:pt-10">
 			{/* Contact */}
 			<nav aria-label="Primary">
-				<div className="mb-8 flex items-center justify-between">
+				<div className="mb-6 flex items-center justify-between md:mb-8">
 					<span className="text-[0.58rem] uppercase tracking-[0.22em] text-white/50">Contact / 01</span>
 					
 				</div>
@@ -302,7 +302,7 @@ export default function Footer() {
 								<div className="flex flex-col gap-5 border-l border-white/70 pl-5">
 									<a
 										href={contact.phone.href}
-										className="group flex items-center gap-3 text-[0.85rem] text-white/80 transition-colors hover:text-[#886c46]"
+										className="group flex items-center gap-3 text-[0.78rem] text-white/80 transition-colors hover:text-[#886c46] md:text-[0.85rem]"
 									>
 										<span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#886c46]/50 bg-[#886c46]/15 text-[#886c46] transition-all group-hover:bg-[#886c46] group-hover:text-white">
 											<Phone className="h-4 w-4" />
@@ -311,7 +311,7 @@ export default function Footer() {
 									</a>
 									<a
 										href={contact.email.href}
-										className="group flex items-center gap-3 text-[0.85rem] text-white/80 transition-colors hover:text-[#886c46]"
+										className="group flex items-center gap-3 text-[0.78rem] text-white/80 transition-colors hover:text-[#886c46] md:text-[0.85rem]"
 									>
 										<span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#886c46]/50 bg-[#886c46]/15 text-[#886c46] transition-all group-hover:bg-[#886c46] group-hover:text-white">
 											<Mail className="h-4 w-4" />
@@ -327,7 +327,7 @@ export default function Footer() {
 
 			{/* Social */}
 			<div>
-				<div className="mb-8 flex items-center justify-between">
+				<div className="mb-6 flex items-center justify-between md:mb-8">
 					<span className="text-[0.58rem] uppercase tracking-[0.22em] text-white/50">Follow / 02</span>
 					
 				</div>
@@ -358,7 +358,7 @@ export default function Footer() {
 
 			{/* Legal + location */}
 			<nav aria-label="Legal">
-				<div className="mb-8 flex items-center justify-between">
+				<div className="mb-6 flex items-center justify-between md:mb-8">
 					<span className="text-[0.58rem] uppercase tracking-[0.22em] text-white/50">Info / 03</span>
 					
 				</div>
@@ -385,7 +385,7 @@ export default function Footer() {
 					href="https://maps.app.goo.gl/qNSyNS4xH7eMCv2z9"
 					target="_blank"
 					rel="noopener noreferrer"
-					className="group mt-10 flex items-start gap-3 text-[0.85rem] leading-6 text-white/80 transition-colors hover:text-[#886c46]"
+					className="group mt-8 flex items-start gap-3 text-[0.78rem] leading-6 text-white/80 transition-colors hover:text-[#886c46] md:mt-10 md:text-[0.85rem]"
 				>
 					<span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#886c46]/50 bg-[#886c46]/15 text-[#886c46] transition-all group-hover:bg-[#886c46] group-hover:text-white">
 						<MapPin className="h-4 w-4" />
@@ -401,11 +401,11 @@ export default function Footer() {
 	</div>
 
 	{/* Watermark */}
-	<div className="pointer-events-none relative flex w-full select-none justify-center overflow-hidden px-4 pb-10 pt-20">
+	{/* <div className="pointer-events-none relative flex w-full select-none justify-center overflow-hidden px-4 pb-10 pt-20">
 		<span className="block whitespace-nowrap text-center text-[clamp(2rem,9vw,9rem)] font-extrabold uppercase leading-none tracking-[-0.02em] text-white/16">
 			Texo Prefab World
 		</span>
-	</div>
+	</div> */}
 
 	{/* Bottom bar */}
 	<div className="relative z-10 mx-auto max-w-[1600px] px-6 sm:px-10 md:px-[5vw]">

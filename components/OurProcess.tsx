@@ -147,7 +147,7 @@ export default function OurProcess() {
         </div>
 
         {/* Timeline */}
-        <div className="px-6 pb-24 sm:px-10 md:px-[5vw] md:pb-40">
+        <div className="px-5 pb-24 sm:px-10 md:px-[5vw] md:pb-40">
           <div ref={timelineRef} className="relative">
             <div className="absolute bottom-0 left-[5.5px] top-0 w-px bg-black/15">
               <div
@@ -164,7 +164,7 @@ export default function OurProcess() {
                 className="group relative mb-20 pl-10 last:mb-0 sm:pl-16 md:mb-32 md:pl-20"
               >
                 <div
-                  className={`absolute -left-3.5 top-0 flex h-10 w-10 items-center justify-center rounded-full border text-[0.65rem] font-medium tracking-[0.08em] transition-all duration-500 ${
+                  className={`absolute -left-3.5 top-0 flex h-9 w-9 items-center justify-center rounded-full border text-[0.58rem] font-medium tracking-[0.06em] transition-all duration-500 md:h-10 md:w-10 md:text-[0.65rem] md:tracking-[0.08em] ${
                     activeStep >= index
                       ? "border-[#886c46] bg-[#886c46] text-white"
                       : "border-black/25 bg-white text-black/50"
@@ -173,12 +173,12 @@ export default function OurProcess() {
                   {number}
                 </div>
 
-                <div className="grid grid-cols-1 items-stretch gap-8 md:grid-cols-[1fr_1.1fr] md:gap-14">
+                <div className="grid grid-cols-1 items-stretch gap-10 md:grid-cols-[1fr_1.1fr] md:gap-14">
                   {/* Text — left */}
                   <div className="relative flex flex-col justify-between py-1 md:py-2">
                     <span
                       aria-hidden="true"
-                      className="pointer-events-none absolute -right-2 top-1/2 -translate-y-1/2 select-none text-[clamp(8rem,16vw,15rem)] font-medium leading-none tracking-[-0.12em] text-[#886c46] transition-opacity duration-700"
+                      className="pointer-events-none absolute hidden sm:block -right-1 top-0 select-none text-[clamp(6.5rem,28vw,9rem)] font-medium leading-none tracking-[-0.12em] text-[#886c46] transition-opacity duration-700 md:-right-2 md:top-1/2 md:-translate-y-1/2 md:text-[clamp(8rem,16vw,15rem)]"
                       style={{
                         opacity: (activeStep >= index ? 0.14 : 0.035) + index * 0.012,
                         WebkitTextStroke: "1px #886c46",
@@ -186,7 +186,7 @@ export default function OurProcess() {
                     >
                       {number}
                     </span>
-                    <div className="relative z-10">
+                    <div className="relative z-10 max-w-[90%] md:max-w-none">
                       <div className="flex items-center justify-between gap-6">
                         <span className="text-[0.58rem] uppercase tracking-[0.22em] text-black/50">
                           Process / {number}
@@ -196,21 +196,21 @@ export default function OurProcess() {
                           strokeWidth={1.4}
                         />
                       </div>
-                      <h3 className="mt-8 text-[clamp(2.3rem,4.2vw,5rem)] leading-[0.9] tracking-[-0.07em] transition-colors duration-300 hover:text-[#886c46]">
+                      <h3 className="mt-6 text-[clamp(2.15rem,10vw,3.8rem)] leading-[0.9] tracking-[-0.07em] transition-colors duration-300 hover:text-[#886c46] md:mt-8 md:text-[clamp(2.3rem,4.2vw,5rem)]">
                         {title}
                       </h3>
                     </div>
 
-                    <div className="relative z-10 mt-10 grid grid-cols-[minmax(3rem,0.5fr)_minmax(0,1.4fr)] border-t border-black/70 pt-5">
-                      <span className="text-[0.85rem]">{number}</span>
-                      <p className="border-l border-black/70 pl-5 text-[0.85rem] leading-[1.35] text-black/80">
+                    <div className="relative z-10 mt-8 grid grid-cols-[minmax(2.5rem,0.35fr)_minmax(0,1.65fr)] border-t border-black/70 pt-4 md:mt-10 md:grid-cols-[minmax(3rem,0.5fr)_minmax(0,1.4fr)] md:pt-5">
+                      <span className="text-[0.75rem] md:text-[0.85rem]">{number}</span>
+                      <p className="border-l border-black/70 pl-4 text-[0.75rem] leading-[1.45] text-black/80 md:pl-5 md:text-[0.85rem] md:leading-[1.35]">
                         {description}
                       </p>
                     </div>
                   </div>
 
                   {/* Image — right */}
-                  <div className="relative aspect-[1.2] overflow-hidden bg-[#f3ede3] md:aspect-auto md:min-h-[26rem]">
+                  <div className="relative aspect-[1.15] overflow-hidden bg-[#f3ede3] md:aspect-auto md:min-h-[26rem]">
                     <Image
                       src={image}
                       alt={title}
