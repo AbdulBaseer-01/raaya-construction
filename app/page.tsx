@@ -7,17 +7,18 @@ import TrustedBy from "@/components/TrustedBy";
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
 import Vlogs from "@/components/Vlogs";
-import OurProcess from "@/components/OurProcess";
+import Process from "@/components/Process";
 
 export default function Home() {
   return (
+    // home page
     <div>
       <Nav />
       <Hero />
       <Vlogs />
       <Products />
       <Why />
-      <OurProcess />
+      <Process />
       <Projects />
       <TrustedBy />
       <Testimonials />

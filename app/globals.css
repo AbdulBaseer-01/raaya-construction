@@ -62,3 +62,91 @@ body {
     animation-play-state: paused;
   }
 }
+
+/* Shared editorial system for public pages. Home remains component-owned. */
+.public-page {
+  --page-accent: #886c46;
+  --page-ink: #000;
+  --page-paper: #fff;
+  background: var(--page-paper);
+  color: var(--page-ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.public-page :is(h1, h2, h3, h4) {
+  font-family: inherit !important;
+  font-weight: 500;
+  letter-spacing: -0.07em;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.public-page h1 {
+  font-size: clamp(3.4rem, 7vw, 8rem) !important;
+}
+
+.public-page h2 {
+  font-size: clamp(3rem, 6.7vw, 8rem) !important;
+}
+
+.public-page h3 {
+  font-size: clamp(2rem, 4.2vw, 5rem) !important;
+}
+
+.public-page :is(p, li, input, textarea, button, a, span) {
+  font-family: inherit;
+}
+
+.public-page p {
+  line-height: 1.8;
+}
+
+.public-page button,
+.public-page a[class*="uppercase"] {
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.public-page [class*="font-"] {
+  font-family: inherit !important;
+}
+
+.public-page [class*="text-[#886c46]"],
+.public-page [class*="text-[#a8926d]"],
+.public-page [class*="text-[#b3976d]"],
+.public-page [class*="text-[#6f5838]"] {
+  color: var(--page-accent) !important;
+}
+
+.public-page [class*="bg-[#886c46]"],
+.public-page [class*="bg-[#6f5838]"] {
+  background-color: var(--page-accent) !important;
+}
+
+.public-page [class*="border-[#886c46]"] {
+  border-color: var(--page-accent) !important;
+}
+
+.public-page [class*="rounded-2xl"],
+.public-page [class*="rounded-3xl"],
+.public-page [class*="rounded-xl"] {
+  border-radius: 0 !important;
+}
+
+.public-page [class*="shadow-"] {
+  box-shadow: none !important;
+}
+
+.public-page [class*="backdrop-blur"] {
+  backdrop-filter: none !important;
+}
+
+.public-page input,
+.public-page textarea,
+.public-page select {
+  border-radius: 0 !important;
+}
+
+.public-page :is(section, article) {
+  border-color: rgb(0 0 0 / 15%);
+}

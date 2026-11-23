@@ -19,18 +19,23 @@ const productCategories = [
 const primaryLinks = [
   { label: 'Home', href: '/' },
   { label: 'Products', href: '/products' },
-  { label: 'Projects', href: '/projects' },
   { label: 'Features', href: '/features' },
   { label: 'Inspiration Gallery', href: '/inspiration-gallery' },
   { label: 'About Us', href: '/about-us' },
-  { label: 'Journal', href: '/blogs' },
+  { label: 'Blogs', href: '/blogs' },
   { label: 'Career', href: '/career' },
+  { label: 'Contact', href: '/contact-us' },
 ]
 
 const menuEase = [0.22, 1, 0.36, 1] as const
 
-export default function Nav() {
+/**
+ * `alwaysVisible` shows the header from the top of the page. Home leaves it off
+ * so the header only appears once the pinned hero has scrolled away.
+ */
+export default function Nav({ alwaysVisible = false }: { alwaysVisible?: boolean }) {
   const [heroComplete, setHeroComplete] = useState(false)
+  const showHeader = alwaysVisible || heroComplete
   const [menuOpen, setMenuOpen] = useState(false)
   const panelRef = useRef<HTMLDivElement>(null)
 
@@ -66,7 +71,7 @@ export default function Nav() {
     <>
       <header
         className={`fixed left-0 right-0 top-0 z-40 transition-all duration-500 ${
-          heroComplete
+          showHeader
             ? 'translate-y-0 opacity-100'
             : 'pointer-events-none -translate-y-full opacity-0'
         }`}

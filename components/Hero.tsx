@@ -327,7 +327,22 @@ export default function Hero() {
           85% EDITORIAL WHITE PANEL
       ========================================================= */}
 
-      <div className="absolute inset-y-0 left-0 z-0 w-full overflow-hidden bg-white md:w-[85%]">
+      {/*
+        Below lg the panel is a flow layout (headline + copy stacked, or two
+        columns on short landscape screens) sized to the visible 85% beside the
+        image strip. From lg up every element keeps its original absolute
+        desktop position, so the desktop view is unchanged.
+      */}
+      <div
+        className="
+          absolute inset-y-0 left-0 z-0 flex w-[85%] flex-col overflow-hidden bg-white
+          px-[8%] pb-[clamp(3rem,9svh,5.5rem)] pt-[clamp(5rem,20svh,11rem)]
+          max-lg:landscape:grid max-lg:landscape:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]
+          max-lg:landscape:content-center max-lg:landscape:gap-x-[7%] max-lg:landscape:gap-y-[clamp(0.6rem,3svh,1.25rem)]
+          max-lg:landscape:pb-[2.75rem] max-lg:landscape:pt-[6.75rem]
+          lg:block lg:p-0
+        "
+      >
 
         
 
@@ -344,17 +359,17 @@ export default function Hero() {
           2026 / On site
         </span>
 
-        <span className="absolute right-0 top-1/2 hidden -translate-y-1/2 -rotate-90 text-[0.52rem] uppercase tracking-[0.28em] text-black md:block">
+        <span className="absolute right-0 top-1/2 hidden -translate-y-1/2 -rotate-90 text-[0.52rem] uppercase tracking-[0.28em] text-black lg:block">
           Form / Function / Future
         </span>
 
         {/* Vertical editorial label */}
-        <span className="absolute left-[1.15rem] top-1/2 hidden -translate-y-1/2 -rotate-90 text-[0.52rem] uppercase tracking-[0.28em] text-[#886c46] md:block">
+        <span className="absolute left-[1.15rem] top-1/2 hidden -translate-y-1/2 -rotate-90 text-[0.52rem] uppercase tracking-[0.28em] text-[#886c46] lg:block">
           Built with intent
         </span>
 
         {/* Small vertical number */}
-        <span className="absolute left-5 top-[43%] hidden text-[0.5rem] tracking-[0.15em] text-black md:left-[1.1rem] md:block">
+        <span className="absolute left-5 top-[43%] hidden text-[0.5rem] tracking-[0.15em] text-black md:left-[1.1rem] lg:block">
           01
         </span>
 
@@ -362,26 +377,27 @@ export default function Hero() {
             MAIN EDITORIAL TYPE
         ===================================================== */}
 
-        <div className="absolute left-[8%] top-[25%] md:left-[10%] md:top-[30%]">
+        <div className="relative max-lg:landscape:col-start-1 max-lg:landscape:row-span-3 max-lg:landscape:row-start-1 max-lg:landscape:self-center lg:absolute lg:left-[10%] lg:top-[30%]">
           <h1
             className="
               hero-text-1
-              text-[clamp(2.7rem,11vw,4.8rem)]
+              text-[clamp(2.1rem,min(11vw,8.5svh),4.8rem)]
               uppercase
               leading-[0.84]
               tracking-[-0.065em]
-              md:text-[clamp(3rem,5.2vw,7rem)]
+              max-lg:landscape:text-[clamp(1.8rem,min(6.2vw,12svh),4.2rem)]
+              lg:text-[clamp(3rem,5.2vw,7rem)]
             "
           >
             <span className="block">
               Luxury That
             </span>
 
-            <span className="ml-[7%] block md:ml-[13%]">
+            <span className="ml-[7%] block lg:ml-[13%]">
               Leaves a
             </span>
 
-            <span className="ml-[14%] block md:ml-[28%]">
+            <span className="ml-[14%] block lg:ml-[28%]">
               <em
                 className={`
                   tracking-[-0.045em]
@@ -394,12 +410,12 @@ export default function Hero() {
           </h1>
         </div>
 
-        <p className="absolute left-[8%] top-[53%] w-[68%] text-[0.62rem] leading-[1.65] tracking-[0.01em] text-black md:left-[58%] md:top-[37%] md:w-[min(17rem,20vw)] md:text-[0.68rem] md:leading-[1.7]">
+        <p className="relative mt-[clamp(1.25rem,4.5svh,2.75rem)] w-[85%] max-w-[24rem] text-[0.62rem] leading-[1.65] tracking-[0.01em] text-black sm:text-[0.74rem] max-lg:landscape:col-start-2 max-lg:landscape:mt-0 max-lg:landscape:w-full max-lg:landscape:text-[0.66rem] lg:absolute lg:left-[58%] lg:top-[37%] lg:mt-0 lg:w-[min(17rem,20vw)] lg:text-[0.68rem] lg:leading-[1.7]">
           Designed around the realities of modern living, each space balances
           speed, clarity and the freedom to evolve over time.
         </p>
 
-        <p className="absolute bottom-[22%] left-[8%] w-[78%] text-justify text-[0.6rem] leading-[1.6] tracking-[0.01em] text-black md:bottom-[14%] md:left-[10%] md:w-[min(20rem,28vw)] md:text-[0.66rem] md:leading-[1.7]">
+        <p className="relative mt-auto w-full max-w-[26rem] text-justify text-[0.6rem] leading-[1.6] tracking-[0.01em] text-black sm:text-[0.72rem] max-lg:landscape:col-start-2 max-lg:landscape:mt-0 max-lg:landscape:text-[0.64rem] lg:absolute lg:bottom-[14%] lg:left-[10%] lg:mt-0 lg:w-[min(20rem,28vw)] lg:text-[0.66rem] lg:leading-[1.7]">
           A considered approach to modern construction, where material,
           proportion and permanence meet in spaces made to belong.
         </p>
@@ -408,7 +424,7 @@ export default function Hero() {
             EDITORIAL DESCRIPTION
         ===================================================== */}
 
-        <div className="absolute bottom-[10%] left-[8%] w-[78%] md:bottom-[15%] md:left-auto md:right-[8%] md:w-[18rem]">
+        <div className="relative mt-[clamp(1rem,3.5svh,2rem)] w-full max-w-[26rem] max-lg:landscape:col-start-2 max-lg:landscape:mt-0 lg:absolute lg:bottom-[15%] lg:left-auto lg:right-[8%] lg:mt-0 lg:w-[18rem]">
 
           <div className="mb-3 flex items-center gap-3 md:mb-4">
             <span className="h-px w-10 bg-[#886c46]" />
