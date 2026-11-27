@@ -1,7 +1,6 @@
 import FeaturesHero from '@/components/features/FeaturesHero'
 import Vision from '@/components/features/Vision'
 import KeyFeatures from '@/components/features/KeyFeatures'
-import PlugnPlay from '@/components/features/PlugnPlay'
 import Advantages from '@/components/features/Advantage'
 import TrustStrip from '@/components/features/TrustStrip'
 import HowItWorks from '@/components/features/HowItWorks'
@@ -20,7 +19,7 @@ export default function Features() {
       <FeaturesHero />
       <Vision />
       <KeyFeatures />
-      <PlugnPlay />
+      {/* The "4-step Plug & Play process" section was removed (brief, section 18): it repeated How it works in the wrong order. */}
       <Advantages />
       <TrustStrip />
       <HowItWorks />

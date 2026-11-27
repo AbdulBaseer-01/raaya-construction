@@ -14,7 +14,7 @@ const pillars = [
     icon: Crosshair,
     label: 'Precision',
     headline: 'Delivered with Precision',
-    body: 'From factory floor to final bolt, tolerances are measured in millimetres. Our ISO 9001:2025-certified process ensures every module arrives flawless and on schedule.',
+    body: 'From factory floor to final fitting, every module is checked before it leaves our Hyderabad factory.',
     number: '02',
   },
   {

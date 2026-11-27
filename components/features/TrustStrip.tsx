@@ -1,7 +1,11 @@
 import { Check } from 'lucide-react'
 import { shell } from '@/components/site/primitives'
 
-const certs = ['BIS Certified', 'ISO 9001', 'MSME Registered', 'Green Build Compliant']
+/*
+ * TODO(Texo): badges are hidden until confirmed (brief, section 18). Add only the
+ * certifications / registrations Texo can show, e.g. 'BIS Certified', 'ISO 9001', 'MSME Registered'.
+ */
+const certs: string[] = []
 
 export default function TrustStrip() {
   return (
@@ -10,6 +14,7 @@ export default function TrustStrip() {
         <p className="max-w-[30rem] text-[clamp(1.5rem,2.4vw,2.6rem)] uppercase leading-[0.95] tracking-[-0.05em]">
           Trusted by <span className="text-[#886c46]">infrastructure giants, MSMEs</span> and everything in between.
         </p>
+        {certs.length > 0 && (
         <ul className="grid grid-cols-2 gap-px bg-white/15 sm:grid-cols-4">
           {certs.map((cert) => (
             <li key={cert} className="flex flex-col gap-5 bg-[#080808] p-5">
@@ -20,6 +25,7 @@ export default function TrustStrip() {
             </li>
           ))}
         </ul>
+        )}
       </div>
     </section>
   )

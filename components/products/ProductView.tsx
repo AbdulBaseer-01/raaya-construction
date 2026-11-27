@@ -35,7 +35,7 @@ export default function ProductView({ product }: { product: ProductData }) {
       <Applications product={detail} />
       <Gallery product={detail} />
       {product.techSpecs && <TechSpecs name={product.name} techSpecs={product.techSpecs} />}
-      <TrustBand product={detail} />
+      <TrustBand />
       <Faq product={detail} />
       <Variants product={detail} />
       <RelatedProducts

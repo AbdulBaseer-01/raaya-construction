@@ -15,7 +15,7 @@ export default function CustomCta({
       <div className={`${shell} grid gap-12 py-24 md:grid-cols-[1fr_0.7fr] md:items-end md:gap-16 md:py-36`}>
         <div>
           <Eyebrow className="mb-10">{eyebrow}</Eyebrow>
-          <h2 className="text-[clamp(3rem,7vw,8rem)] uppercase leading-[0.78] tracking-[-0.075em]">
+          <h2 className="text-[clamp(2.6rem,5vw,6.2rem)] uppercase leading-[0.82] tracking-[-0.035em]">
             <span className="block">{lines[0]}</span>
             <span className="ml-[10vw] block text-[#886c46]">{lines[1]}</span>
             <span className="ml-[4vw] block">{lines[2]}</span>

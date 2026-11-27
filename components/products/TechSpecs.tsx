@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { ArrowLeft, ArrowRight, ArrowUpRight } from 'lucide-react'
 import FallbackImage from '@/components/site/FallbackImage'
 import { EASE, Eyebrow, pad, shell } from '@/components/site/primitives'
+import { visibleSpecs } from '@/lib/claims'
 
 /* ─────────────────────────────────────────────
    TYPES (imported by lib/productsData.ts)
@@ -45,11 +46,15 @@ const squareButton =
   'flex h-10 w-10 shrink-0 items-center justify-center border border-black/20 transition-colors hover:border-[#886c46] hover:text-[#886c46]'
 
 export default function TechSpecs({ name, techSpecs }: { name: string; techSpecs: TechSpecsData }) {
-  const [activeTab, setActiveTab] = useState<keyof TechSpecsData>('architecture')
+  // Tabs with neither images nor specs (e.g. a 2D layout that has not been supplied) are left out.
+  const tabs = TABS.filter((t) => techSpecs[t.key].images.length > 0 || visibleSpecs(techSpecs[t.key].specs).length > 0)
+  const [activeTab, setActiveTab] = useState<keyof TechSpecsData>(tabs[0]?.key ?? 'architecture')
   const [imgIndex, setImgIndex] = useState(0)
 
   const tabIndex = TABS.findIndex((t) => t.key === activeTab)
-  const { images, specs } = techSpecs[activeTab]
+  const { images } = techSpecs[activeTab]
+  // Unverified wind / seismic / CNC claims are hidden (brief, section 16).
+  const specs = visibleSpecs(techSpecs[activeTab].specs)
   const label = TABS[tabIndex].label
 
   const switchTab = (key: keyof TechSpecsData) => {
@@ -63,8 +68,8 @@ export default function TechSpecs({ name, techSpecs }: { name: string; techSpecs
       <div className={`${shell} py-24 md:py-36`}>
         <div className="mb-16 grid gap-10 md:grid-cols-[1fr_0.7fr] md:items-end md:gap-16">
           <div>
-            <Eyebrow className="mb-8">Specifications / {pad(TABS.length)}</Eyebrow>
-            <h2 className="text-[clamp(2.8rem,6.4vw,7.5rem)] uppercase leading-[0.78] tracking-[-0.075em]">
+            <Eyebrow className="mb-8">Specifications / {pad(tabs.length)}</Eyebrow>
+            <h2 className="text-[clamp(2.6rem,5vw,6.2rem)] uppercase leading-[0.82] tracking-[-0.035em]">
               <span className="block">Technical</span>
               <span className="ml-[10vw] block text-[#886c46]">specifications.</span>
             </h2>
@@ -77,7 +82,7 @@ export default function TechSpecs({ name, techSpecs }: { name: string; techSpecs
         <div className="grid gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,2.2fr)] lg:gap-14">
           {/* ── Tabs ── */}
           <div role="tablist" aria-label={`${name} specification categories`} className="projects-rail -mx-6 flex overflow-x-auto px-6 sm:-mx-10 sm:px-10 md:-mx-[5vw] md:px-[5vw] lg:mx-0 lg:block lg:overflow-visible lg:border-t lg:border-black/15 lg:px-0">
-            {TABS.map((tab, i) => {
+            {tabs.map((tab, i) => {
               const active = tab.key === activeTab
               return (
                 <button

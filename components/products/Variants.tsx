@@ -6,7 +6,7 @@ import { ArrowLeft, ArrowRight, ArrowUpRight, X } from 'lucide-react'
 import FallbackImage from '@/components/site/FallbackImage'
 import Reveal from '@/components/site/Reveal'
 import { EASE, Eyebrow, OutlineLink, Rule, pad, shell, squareButton } from '@/components/site/primitives'
-import type { ProductDetail } from './types'
+import { hasRealVariants, type ProductDetail } from './types'
 
 type Variant = ProductDetail['variants'][number]
 type ViewTab = '2d' | 'gallery' | 'interior'
@@ -30,6 +30,8 @@ function VariantPanel({
 }) {
   const [tab, setTab] = useState<ViewTab>('2d')
   const [imageIndex, setImageIndex] = useState(0)
+  // Variants with their own description (e.g. Toilet Cabins, Security Cabins) use an exterior photo, not a 2D layout.
+  const tabs = variant.description ? TABS.map((t) => (t.key === '2d' ? { ...t, label: 'Exterior' } : t)) : TABS
 
   const images =
     tab === '2d' ? [variant.variantImage] : tab === 'interior' ? [variant.variantInterior] : [variant.variantImage, ...gallery]
@@ -86,7 +88,7 @@ function VariantPanel({
         </div>
 
         <div role="tablist" className="projects-rail flex gap-7 overflow-x-auto border-b border-black/15 px-5 sm:px-8">
-          {TABS.map((t) => (
+          {tabs.map((t) => (
             <button
               key={t.key}
               type="button"
@@ -120,10 +122,10 @@ function VariantPanel({
                 >
                   <FallbackImage
                     src={images[imageIndex]}
-                    alt={`${variant.variantName}, ${TABS.find((t) => t.key === tab)?.label} ${imageIndex + 1}`}
+                    alt={`${variant.variantName}, ${tabs.find((t) => t.key === tab)?.label} ${imageIndex + 1}`}
                     fill
                     sizes="(min-width: 1152px) 1100px, 95vw"
-                    className={tab === '2d' ? 'object-contain' : 'object-cover'}
+                    className={tab === '2d' && !variant.description ? 'object-contain' : 'object-cover'}
                   />
                 </motion.div>
               </AnimatePresence>
@@ -157,6 +159,22 @@ function VariantPanel({
               </button>
             </div>
           )}
+
+          {(variant.description || variant.specs?.length) && (
+            <div className="mt-8 grid gap-8 border-t border-black/15 pt-6 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] md:gap-12">
+              {variant.description && <p className="text-[0.95rem] leading-[1.7] text-black/75">{variant.description}</p>}
+              {variant.specs?.length ? (
+                <dl className="border-b border-black/15">
+                  {variant.specs.map((spec) => (
+                    <div key={spec.label} className="grid grid-cols-[minmax(6rem,0.6fr)_minmax(0,1.4fr)] border-t border-black/15 py-3">
+                      <dt className="text-[0.58rem] uppercase leading-[1.9] tracking-[0.2em] text-black/50">{spec.label}</dt>
+                      <dd className="text-[0.85rem] leading-[1.55]">{spec.value}</dd>
+                    </div>
+                  ))}
+                </dl>
+              ) : null}
+            </div>
+          )}
         </div>
 
         <div className="flex flex-col items-start justify-between gap-4 border-t border-black/15 px-5 py-5 sm:flex-row sm:items-center sm:px-8">
@@ -170,7 +188,8 @@ function VariantPanel({
 
 export default function Variants({ product }: { product: ProductDetail }) {
   const [active, setActive] = useState<number | null>(null)
-  const variants = product.variants
+  // Only real variants are listed; the shared placeholder set (Studio / 1-BHK …) is hidden.
+  const variants = hasRealVariants(product) ? product.variants : []
 
   return (
     <section className="border-t border-black/15 bg-white">
@@ -180,7 +199,7 @@ export default function Variants({ product }: { product: ProductDetail }) {
             <div className="mb-16 grid gap-10 md:grid-cols-[1fr_0.7fr] md:items-end md:gap-16">
               <div>
                 <Eyebrow className="mb-8">Variants / {pad(variants.length)}</Eyebrow>
-                <h2 className="text-[clamp(2.8rem,6.4vw,7.5rem)] uppercase leading-[0.78] tracking-[-0.075em]">
+                <h2 className="text-[clamp(2.6rem,5vw,6.2rem)] uppercase leading-[0.82] tracking-[-0.035em]">
                   <span className="block">Available</span>
                   <span className="ml-[10vw] block text-[#886c46]">variants.</span>
                 </h2>
@@ -217,6 +236,9 @@ export default function Variants({ product }: { product: ProductDetail }) {
                       <span className="text-[clamp(1.8rem,2.8vw,3rem)] uppercase leading-[0.85] tracking-[-0.065em]">
                         {variant.variantName}
                       </span>
+                      {variant.description && (
+                        <span className="mt-4 text-[0.82rem] leading-[1.6] text-black/65">{variant.description}</span>
+                      )}
                       <span className="mt-6 flex items-center justify-between border-t border-black/15 pt-4 text-[0.58rem] uppercase tracking-[0.2em] text-black/45 transition-colors group-hover:text-[#886c46]">
                         View details
                         <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />

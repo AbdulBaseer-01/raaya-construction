@@ -15,7 +15,7 @@ export default function History() {
           />
           <dl className="mt-3 grid grid-cols-[minmax(4rem,0.5fr)_minmax(0,1.5fr)] border-t border-black/70 pt-5">
             <dt className="sr-only">Established</dt>
-            <dd className="text-[clamp(2.4rem,3.6vw,4rem)] uppercase leading-[0.85] tracking-[-0.075em]">2006</dd>
+            <dd className="text-[clamp(2.4rem,3.6vw,4rem)] uppercase leading-[0.85] tracking-[-0.035em]">2018</dd>
             <dd className="self-end border-l border-black/70 pl-5 text-[0.58rem] uppercase tracking-[0.22em] text-black/50">
               Est. Hyderabad
             </dd>
@@ -24,14 +24,13 @@ export default function History() {
 
         <div className="min-w-0 lg:pt-6">
           <Eyebrow className="mb-10">Our story / 01</Eyebrow>
-          <DisplayHeading lines={['Eighteen years', 'of building', 'India.']} accent={1} />
+          <DisplayHeading lines={['Built in Hyderabad.', 'Delivered across', '56+ cities.']} accent={1} />
 
           <div className="mt-12 grid gap-8 md:ml-[10%]">
             <p className="max-w-[34rem] text-[clamp(1.05rem,1.4vw,1.35rem)] leading-[1.45] tracking-[-0.015em]">
-              At Texo Prefab World, we don’t just construct spaces—we craft smart, scalable environments that adapt to
-              how you live, work, and grow. With 7+ years of expertise, our ISO 9001:2025-certified studio based in
-              Hyderabad delivers precision-engineered prefab structures for both luxury living and large-scale
-              industrial use.
+              Texo Prefab World was founded in 2018 by a team that had been building prefab since 2016. From
+              Jeedimetla, Hyderabad, we design, manufacture and install premium modular buildings for homes, businesses
+              and large-scale projects: 1,359+ projects across 56+ cities so far.
             </p>
             <p className="max-w-[30rem] border-t border-black/15 pt-8 text-[0.85rem] leading-[1.8] text-black/65">
               From signature A-Frame homes and sleek cottages to high-performance control rooms, warehouses, and

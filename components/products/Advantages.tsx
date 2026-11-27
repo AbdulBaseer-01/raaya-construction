@@ -79,8 +79,8 @@ export default function Advantages({ product }: { product: ProductDetail }) {
         <div className="self-start md:sticky md:top-[68px] md:min-h-[calc(100vh-68px)]">
           <div className="flex h-full flex-col justify-center px-6 pb-12 pt-24 sm:px-10 md:min-h-[calc(100vh-68px)] md:px-[5vw] md:py-16">
             <Eyebrow className="mb-10">Advantages / {pad(product.advantages.length)}</Eyebrow>
-            <h2 lang="en" className={`break-words uppercase leading-[0.8] tracking-[-0.075em] ${
-                hasLongWord(product.name) ? 'text-[clamp(2.1rem,4.4vw,5.4rem)]' : 'text-[clamp(2.8rem,5.4vw,6.5rem)]'
+            <h2 lang="en" className={`break-words uppercase leading-[0.8] tracking-[-0.035em] ${
+                hasLongWord(product.name) ? 'text-[clamp(2.1rem,4.4vw,5.4rem)]' : 'text-[clamp(2.6rem,5vw,6.2rem)]'
               }`}>
               <span className="block">Advantages</span>
               <span className="ml-[6vw] block text-[#886c46]">of the</span>

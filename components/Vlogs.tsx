@@ -3,45 +3,33 @@
 import { useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 
+/*
+ * Client films (brief, section 4). Each film's company, quote, name, role and
+ * summary must come from that video. They are blank until Texo supplies them,
+ * and blank fields are not shown.
+ *
+ * TODO(Texo): for each film fill in
+ *   company  – client company of the person in the video
+ *   quote    – a line they actually say, under 15 words
+ *   name     – the person in the video
+ *   role     – their role
+ *   summary  – "[Structure type], [size] sq.ft at [location]. Designed, factory-built and installed in [X] days. [One-line outcome]."
+ */
 type Vlog = {
   youtubeId: string;
-  quote: string;
-  name: string;
-  role: string;
-  company: string;
-  description: string;
+  quote?: string;
+  name?: string;
+  role?: string;
+  company?: string;
+  description?: string;
 };
 
 const ACCENT = "#886c46";
 
 const VLOGS: Vlog[] = [
-  {
-    youtubeId: "cul1LcpEFIs",
-    quote: "We needed a solution that was fast, reliable and functional.",
-    name: "Anirudh S.",
-    role: "Founder",
-    company: "Ayana Hilltop Resort",
-    description:
-      "Replace this with a short summary of the project: what was delivered, where, and the outcome the client cares about most.",
-  },
-  {
-    youtubeId: "GPNkwPsOYCs",
-    quote: "The team handled everything from design to delivery without a hitch.",
-    name: "Client Name",
-    role: "Director",
-    company: "Company Name",
-    description:
-      "Replace this with a short summary of the project: what was delivered, where, and the outcome the client cares about most.",
-  },
-  {
-    youtubeId: "ocE7J7QmotU",
-    quote: "Clear communication, steady progress and a result we trust.",
-    name: "Client Name",
-    role: "Owner",
-    company: "Company Name",
-    description:
-      "Replace this with another short project summary. Keep it to two or three sentences for the cleanest layout.",
-  },
+  { youtubeId: "cul1LcpEFIs" },
+  { youtubeId: "GPNkwPsOYCs" },
+  { youtubeId: "ocE7J7QmotU" },
 ];
 
 const pad = (n: number) => String(n).padStart(2, "0");
@@ -59,14 +47,14 @@ export default function Vlogs() {
         <div className="px-6 pb-16 pt-24 sm:px-10 md:px-[5vw] md:pb-20 md:pt-32">
           <p className="mb-10 flex items-center gap-3 text-[0.58rem] uppercase tracking-[0.28em] text-black/50">
             <span className="h-px w-10 bg-[#886c46]" />
-            Client stories / {pad(VLOGS.length)} films
+            Client films / {pad(VLOGS.length)}
           </p>
-          <h2 className="text-[clamp(3.4rem,6.7vw,8rem)] uppercase leading-[0.78] tracking-[-0.075em]">
-            <span className="block">Watch the future</span>
-            <span className="ml-[10vw] block text-[#886c46]">of prefab unfold.</span>
+          <h2 className="text-[clamp(2.6rem,5vw,6.2rem)] font-normal uppercase leading-[0.82] tracking-[-0.035em]">
+            <span className="block">Real clients.</span>
+            <span className="ml-[10vw] block text-[#886c46]">Real builds.</span>
           </h2>
           <p className="mt-10 max-w-[21rem] text-[0.82rem] leading-[1.8] text-black/55 md:ml-[10%]">
-            Hear directly from the people we have built for, in their own words.
+            Short films from clients on how their space was planned, built and handed over.
           </p>
         </div>
 
@@ -78,7 +66,7 @@ export default function Vlogs() {
               <iframe
                 key={vlog.youtubeId}
                 src={`https://www.youtube-nocookie.com/embed/${vlog.youtubeId}?rel=0&modestbranding=1`}
-                title={`${vlog.name}, ${vlog.company}`}
+                title={vlog.company ? `${vlog.name ?? "Client film"}, ${vlog.company}` : `Client film ${pad(index + 1)}`}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
                 loading="lazy"
@@ -90,9 +78,11 @@ export default function Vlogs() {
               <span className="text-[0.58rem] uppercase tracking-[0.22em] text-black/50">
                 Film / {pad(index + 1)}
               </span>
-              <span className="text-[0.58rem] uppercase tracking-[0.22em] text-black/50">
-                {vlog.company}
-              </span>
+              {vlog.company && (
+                <span className="text-[0.58rem] uppercase tracking-[0.22em] text-black/50">
+                  {vlog.company}
+                </span>
+              )}
             </div>
           </div>
 
@@ -100,29 +90,37 @@ export default function Vlogs() {
           <div className="flex flex-col justify-between gap-12">
             <div>
               <div className="mb-8 h-px w-12 bg-[#886c46]" />
-              <blockquote
-                key={index}
-                className="text-[clamp(2.3rem,3.6vw,4.2rem)] uppercase leading-[0.9] tracking-[-0.07em]"
-              >
-                <span className="text-[#886c46]">&ldquo;</span>
-                {vlog.quote}
-                <span className="text-[#886c46]">&rdquo;</span>
-              </blockquote>
+              {vlog.quote && (
+                <blockquote
+                  key={index}
+                  className="text-[clamp(2.3rem,3.6vw,4.2rem)] uppercase leading-[0.9] tracking-[-0.035em]"
+                >
+                  <span className="text-[#886c46]">&ldquo;</span>
+                  {vlog.quote}
+                  <span className="text-[#886c46]">&rdquo;</span>
+                </blockquote>
+              )}
             </div>
 
             <div>
-              <div className="grid grid-cols-[minmax(4rem,0.7fr)_minmax(0,1.4fr)] border-t border-black/70 pt-5">
-                <span className="text-[0.85rem]">{pad(index + 1)}</span>
-                <div className="border-l border-black/70 pl-5">
-                  <p className="text-[0.85rem]">{vlog.name}</p>
-                  <p className="mt-1 text-[0.58rem] uppercase tracking-[0.2em] text-black/45">
-                    {vlog.role} / {vlog.company}
-                  </p>
-                  <p className="mt-5 text-[0.85rem] leading-[1.5] text-black/65">
-                    {vlog.description}
-                  </p>
+              {(vlog.name || vlog.description) && (
+                <div className="grid grid-cols-[minmax(4rem,0.7fr)_minmax(0,1.4fr)] border-t border-black/70 pt-5">
+                  <span className="text-[0.85rem]">{pad(index + 1)}</span>
+                  <div className="border-l border-black/70 pl-5">
+                    {vlog.name && <p className="text-[0.85rem]">{vlog.name}</p>}
+                    {vlog.role && vlog.company && (
+                      <p className="mt-1 text-[0.58rem] uppercase tracking-[0.2em] text-black/45">
+                        {vlog.role} / {vlog.company}
+                      </p>
+                    )}
+                    {vlog.description && (
+                      <p className="mt-5 text-[0.85rem] leading-[1.5] text-black/65">
+                        {vlog.description}
+                      </p>
+                    )}
+                  </div>
                 </div>
-              </div>
+              )}
 
               <div className="mt-8 flex items-center justify-between border-t border-black/15 pt-5">
                 <div className="flex items-center gap-1.5" aria-hidden="true">

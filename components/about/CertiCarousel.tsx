@@ -76,12 +76,11 @@ export default function CertiCarousel() {
       <div className={`${shell} py-24 md:py-36`}>
         <div className="mb-16 grid gap-10 md:grid-cols-[1fr_0.7fr] md:items-end md:gap-16">
           <div>
-            <Eyebrow className="mb-8">Certifications / {pad(certificates.length)}</Eyebrow>
-            <DisplayHeading lines={['Certified for', 'excellence.']} className="text-[clamp(2.4rem,6.4vw,7.5rem)]" />
+            <Eyebrow className="mb-8">Certifications / 04</Eyebrow>
+            <DisplayHeading lines={['Certified for', 'excellence.']} className="text-[clamp(2.6rem,5vw,6.2rem)]" />
           </div>
           <p className="max-w-[23rem] text-[0.82rem] leading-[1.8] text-black/70 md:pb-2">
-            Every certificate we hold is a promise kept — to our clients, our craft, and the industry. Texo&apos;s
-            accreditations reflect eighteen years of building to the highest international standards.
+            Every certificate we hold is a promise kept — to our clients, our craft, and the industry.
           </p>
         </div>
 

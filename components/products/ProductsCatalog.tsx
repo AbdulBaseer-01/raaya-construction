@@ -7,7 +7,7 @@ import ProductCard from './ProductCard'
 import FallbackImage from '@/components/site/FallbackImage'
 import Reveal from '@/components/site/Reveal'
 import CustomCta from './CustomCta'
-import { ArrowLink, Eyebrow, pad, shell } from '@/components/site/primitives'
+import { ArrowLink, Eyebrow, hasLongWord, pad, shell } from '@/components/site/primitives'
 
 const ALL = 'All Products'
 
@@ -39,7 +39,7 @@ export default function ProductsCatalog() {
         <div className={`${shell} grid gap-14 pb-16 pt-14 md:pb-24 md:pt-20 lg:grid-cols-[1.2fr_0.8fr] lg:items-end lg:gap-20`}>
           <div>
             <Eyebrow className="mb-10">The collection / {pad(productCategories.length)} categories</Eyebrow>
-            <h1 className="text-[clamp(3.2rem,8.2vw,9rem)] uppercase leading-[0.78] tracking-[-0.075em]">
+            <h1 className="text-[clamp(3.2rem,8.2vw,9rem)] uppercase leading-[0.82] tracking-[-0.035em]">
               <span className="block">Premium</span>
               <span className="ml-[10vw] block text-[#886c46]">Prefab</span>
               <span className="ml-[4vw] block">Solutions.</span>
@@ -85,7 +85,7 @@ export default function ProductsCatalog() {
               <div className="relative h-full w-full overflow-hidden bg-[#f3ede3]">
                 <FallbackImage
                   src="/products/woodenseries/arcpod/arc-pod-main.webp"
-                  alt="Arc Pod from the Wooden Series"
+                  alt="Arc Pods from the Resorts &amp; Getaways range"
                   fill
                   priority
                   sizes="(min-width: 1024px) 34vw, 90vw"
@@ -95,7 +95,7 @@ export default function ProductsCatalog() {
               </div>
             </div>
             <div className="mt-3 flex items-start justify-between gap-5 text-[0.58rem] uppercase tracking-[0.22em] text-black/50">
-              <span>Wooden Series / Arc Pod</span>
+              <span>Resorts &amp; Getaways / Arc Pods</span>
               <span>
                 {totalProductCount} products / {pad(productCategories.length)} categories
               </span>
@@ -162,7 +162,11 @@ export default function ProductsCatalog() {
                   <Eyebrow className="mb-8">Collection / {pad(index + 1)}</Eyebrow>
                   <h2
                     id={`${category.slug}-title`}
-                    className="text-[clamp(2.6rem,5.6vw,6.5rem)] uppercase leading-[0.8] tracking-[-0.075em]"
+                    lang="en"
+                    // Long words ("Accommodation", "Pre-Engineered") get a smaller size so they fit a phone screen.
+                    className={`break-words uppercase leading-[0.8] tracking-[-0.035em] ${
+                      hasLongWord(category.name) ? 'text-[clamp(1.9rem,4.8vw,5.6rem)]' : 'text-[clamp(2.6rem,5.6vw,6.5rem)]'
+                    }`}
                   >
                     {category.name}
                   </h2>
@@ -180,7 +184,7 @@ export default function ProductsCatalog() {
 
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {products.map((product, i) => (
-                  <Reveal key={product.name} delay={Math.min(i, 5) * 0.05} className="h-full">
+                  <Reveal key={product.name} delay={Math.min(i, 5) * 0.05} className="h-full min-w-0">
                     <ProductCard name={product.name} image={product.image} category={category.name} index={i} />
                   </Reveal>
                 ))}

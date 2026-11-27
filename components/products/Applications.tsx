@@ -2,6 +2,7 @@ import FallbackImage from '@/components/site/FallbackImage'
 import Reveal from '@/components/site/Reveal'
 import { Eyebrow, Rule, pad, shell } from '@/components/site/primitives'
 import type { ProductDetail } from './types'
+import { stripListNumber } from '@/lib/claims'
 
 export default function Applications({ product }: { product: ProductDetail }) {
   const applications = product.applications ?? []
@@ -16,7 +17,7 @@ export default function Applications({ product }: { product: ProductDetail }) {
         <div className="mb-16 grid gap-10 md:grid-cols-[1fr_0.7fr] md:items-end md:gap-16">
           <div>
             <Eyebrow className="mb-8">Applications / {pad(applications.length)}</Eyebrow>
-            <h2 className="text-[clamp(2.8rem,6.4vw,7.5rem)] uppercase leading-[0.78] tracking-[-0.075em]">
+            <h2 className="text-[clamp(2.6rem,5vw,6.2rem)] uppercase leading-[0.82] tracking-[-0.035em]">
               <span className="block">Operational</span>
               <span className="ml-[10vw] block text-[#886c46]">applications.</span>
             </h2>
@@ -33,7 +34,7 @@ export default function Applications({ product }: { product: ProductDetail }) {
                 <div className="relative aspect-[1.5] overflow-hidden">
                   <FallbackImage
                     src={app.image}
-                    alt={app.heading}
+                    alt={stripListNumber(app.heading)}
                     fill
                     sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw"
                     className="object-cover transition duration-700 ease-out group-hover:scale-105"
@@ -45,7 +46,7 @@ export default function Applications({ product }: { product: ProductDetail }) {
                 </div>
                 <div className="flex flex-1 flex-col p-6 sm:p-7">
                   <Rule className="mb-5" />
-                  <h3 className="text-[clamp(1.5rem,2vw,2.2rem)] uppercase leading-[0.88] tracking-[-0.06em]">{app.heading}</h3>
+                  <h3 className="text-[clamp(1.5rem,2vw,2.2rem)] uppercase leading-[0.88] tracking-[-0.06em]">{stripListNumber(app.heading)}</h3>
                   <p className="mt-5 text-[0.82rem] leading-[1.7] text-black/65">{app.description}</p>
                 </div>
               </article>

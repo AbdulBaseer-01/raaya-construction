@@ -5,8 +5,9 @@ import Map from "@/components/contact/Map"
 export default function ContactUsPage() {
   return (
     <>
-      <Hero />
+      {/* Enquiry block first, then "Our footprint" (brief, section 20). */}
       <Contact />
+      <Hero />
       <Map />
     </>
   )

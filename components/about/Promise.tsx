@@ -15,7 +15,7 @@ export default function Promise() {
             <span className="h-px w-10 shrink-0 bg-[#886c46]" />
             Our commitment / 02
           </p>
-          <h2 className="text-[clamp(3.4rem,9vw,10rem)] uppercase leading-[0.78] tracking-[-0.075em]">
+          <h2 className="text-[clamp(2.6rem,5vw,6.2rem)] uppercase leading-[0.82] tracking-[-0.035em]">
             <span className="block">Our</span>
             <span className="ml-[10vw] block text-[#886c46]">promise.</span>
           </h2>
@@ -25,7 +25,7 @@ export default function Promise() {
           <span className="text-[0.85rem] text-white/70">02</span>
           <p className="max-w-[46rem] text-[clamp(1rem,1.3vw,1.25rem)] leading-[1.6] tracking-[-0.01em] text-white/85 md:border-l md:border-white/25 md:pl-8">
             At TEXO PREFAB WORLD, our promise is simple — to deliver structures that stand strong, age beautifully, and
-            exceed expectations. Every modular farmhouse, A-frame cabin, and custom-built space we create is engineered
+            exceed expectations. Every site office, modular home, cabin and custom-built space we create is engineered
             with precision, built using high-quality materials, and designed for long-term durability. We commit to
             transparent processes, timely delivery, and uncompromising craftsmanship, ensuring that what we build for you
             is not just a structure, but a space you can truly rely on for years to come.

@@ -1,13 +1,14 @@
-import CountUp from './CountUp'
 import { Eyebrow, pad, shell } from '@/components/site/primitives'
-import type { ProductDetail } from './types'
+import { FACTS } from '@/lib/siteFacts'
 
-export default function TrustBand({ product }: { product: ProductDetail }) {
-  const stats = [
-    { value: product.trustBand.citiesCovered, label: 'Cities covered' },
-    { value: product.trustBand.completedProjects, label: 'Projects completed' },
-    { value: product.trustBand.customerSatisfaction, label: 'Customer satisfaction', suffix: '%' },
-  ]
+/* Approved facts only (brief, sections 16 and 21); the per-product trustBand numbers in the data are not used. */
+const stats = [
+  { value: FACTS.cities, label: 'Cities' },
+  { value: FACTS.projects, label: 'Projects completed' },
+  { value: FACTS.googleRating, label: `Google rating (${FACTS.googleReviews} reviews)` },
+]
+
+export default function TrustBand() {
 
   return (
     <section className="border-t border-black/15 bg-white">
@@ -15,9 +16,9 @@ export default function TrustBand({ product }: { product: ProductDetail }) {
         <div className="mb-16 grid gap-10 md:grid-cols-[1fr_0.7fr] md:items-end md:gap-16">
           <div>
             <Eyebrow className="mb-8">Our track record</Eyebrow>
-            <h2 className="text-[clamp(2.8rem,6.4vw,7.5rem)] uppercase leading-[0.78] tracking-[-0.075em]">
-              <span className="block">Trusted by</span>
-              <span className="ml-[10vw] block text-[#886c46]">thousands.</span>
+            <h2 className="text-[clamp(2.6rem,5vw,6.2rem)] uppercase leading-[0.82] tracking-[-0.035em]">
+              <span className="block">Trusted across</span>
+              <span className="ml-[10vw] block text-[#886c46]">{FACTS.cities} cities.</span>
             </h2>
           </div>
           <p className="max-w-[23rem] text-[0.82rem] leading-[1.8] text-black/70 md:pb-2">
@@ -31,9 +32,8 @@ export default function TrustBand({ product }: { product: ProductDetail }) {
               <span className="text-[0.85rem]">{pad(i + 1)}</span>
               <div className="flex flex-col-reverse border-l border-black/70 pl-5">
                 <dt className="mt-4 text-[0.58rem] uppercase tracking-[0.22em] text-black/50">{stat.label}</dt>
-                <dd className="text-[clamp(3.2rem,5.4vw,6.5rem)] uppercase leading-[0.85] tracking-[-0.075em]">
-                  <CountUp end={stat.value} />
-                  {stat.suffix && <span className="text-[#886c46]">{stat.suffix}</span>}
+                <dd className="text-[clamp(3.2rem,5.4vw,6.5rem)] uppercase leading-[0.85] tracking-[-0.035em]">
+                  {stat.value}
                 </dd>
               </div>
             </div>

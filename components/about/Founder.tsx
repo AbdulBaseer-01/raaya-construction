@@ -10,17 +10,18 @@ const founders = [
     image: '/products-hero.png',
     side: 'left',
     message:
-      'With 30+ years leading top-tier operations across India, GCC, and Europe, Faiz Ahmed is the visionary propelling Texo Prefab World forward. A seasoned executive in the portable and prefab space, he builds powerhouse teams and delivers standout projects fast. His mission? Set new standards in prefab by combining unmatched speed, premium quality, and personalized service. At Texo, he doesn’t just meet expectations he redefines them.',
+      'With 30+ years leading top-tier operations across India, GCC, and Europe, Faiz Ahmed is the visionary propelling Texo Prefab World forward. A seasoned executive in the portable and prefab space, he builds powerhouse teams and delivers standout projects fast. His mission? Set new standards in prefab by combining unmatched speed, premium quality, and personalized service. At Texo, he doesn’t just meet expectations — he redefines them.',
     signature: 'Faiz Ahmed',
   },
   {
     role: 'Managing Partner',
     roleShort: 'MP',
+    // TODO(Texo): confirm one spelling with him and use it here, in `signature` and in the bio (brief, section 17).
     name: 'Mohammad ZaheerUddin',
     image: '/products-hero.png',
     side: 'right',
     message:
-      'With 15+ years of hands-on prefab expertise, Mohammad Zaheer Uddin is the operational engine of Texo Prefab World. Known for sharp execution, he leads a 25+ member team, delivering projects that consistently exceed client expectations. Rooted in precision, innovation, and service-first thinking, Mohammad ensures Texo delivers quality that speaks for itself on time, every time.',
+      'With 15+ years of hands-on prefab expertise, Mohammad Zaheer Uddin is the operational engine of Texo Prefab World. Known for sharp execution, he leads a 25+ member team, delivering projects that consistently exceed client expectations. Rooted in precision, innovation, and service-first thinking, Mohammad ensures Texo delivers quality that speaks for itself — on time, every time.',
     signature: 'Mohammad ZaheerUddin',
   },
 ]
@@ -32,7 +33,7 @@ export default function Founders() {
         <div className="mb-16 grid gap-10 md:mb-24 md:grid-cols-[1fr_0.7fr] md:items-end md:gap-16">
           <div>
             <Eyebrow className="mb-8">The people behind Texo / 03</Eyebrow>
-            <DisplayHeading lines={['Visionaries who', 'built it', 'from zero.']} className="text-[clamp(2.4rem,6.4vw,7.5rem)]" />
+            <DisplayHeading lines={['Visionaries who', 'built it', 'from zero.']} className="text-[clamp(2.6rem,5vw,6.2rem)]" />
           </div>
           <p className="max-w-[23rem] text-[0.82rem] leading-[1.8] text-black/70 md:pb-2">
             Texo was not built by capital alone — it was built by conviction. Meet the two founders whose decisions,

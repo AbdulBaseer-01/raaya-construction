@@ -6,7 +6,7 @@ import { ArrowLeft, ArrowRight, Maximize2 } from 'lucide-react'
 import Lightbox from './Lightbox'
 import FallbackImage from '@/components/site/FallbackImage'
 import { ArrowLink, EASE, Eyebrow, OutlineLink, hasLongWord, pad, paragraphs, shell, squareButton } from '@/components/site/primitives'
-import type { ProductDetail } from './types'
+import { hasRealVariants, type ProductDetail } from './types'
 
 export default function ProductHero({ product, categoryIndex }: { product: ProductDetail; categoryIndex: number }) {
   const gallery = product.gallery
@@ -135,7 +135,7 @@ export default function ProductHero({ product, categoryIndex }: { product: Produ
             {product.category}
             {categoryIndex >= 0 && ` / ${pad(categoryIndex + 1)}`}
           </Eyebrow>
-          <h1 lang="en" className={`break-words uppercase leading-[0.82] tracking-[-0.07em] ${
+          <h1 lang="en" className={`break-words uppercase leading-[0.82] tracking-[-0.035em] ${
               hasLongWord(product.name) ? 'text-[clamp(2.1rem,4.2vw,5.2rem)]' : 'text-[clamp(2.6rem,4.8vw,6rem)]'
             }`}>
             <span className="block">{first}</span>
@@ -155,7 +155,8 @@ export default function ProductHero({ product, categoryIndex }: { product: Produ
           <dl className="mt-10 max-w-[34rem] border-b border-black/15">
             {[
               ['Collection', product.category],
-              ['Variants', product.variants.length ? product.variants.map((v) => v.variantName).join(' / ') : 'Custom'],
+              // The Variants row only shows real variants; the shared Studio / 1-BHK / 2-BHK / 3-BHK template is hidden (brief, section 21).
+              ...(hasRealVariants(product) ? [['Variants', product.variants.map((v) => v.variantName).join(' / ')]] : []),
               ['Gallery', `${pad(count)} images`],
             ].map(([label, value]) => (
               <div key={label} className="grid grid-cols-[minmax(5.5rem,0.5fr)_minmax(0,1.5fr)] border-t border-black/15 py-3">

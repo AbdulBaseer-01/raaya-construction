@@ -32,7 +32,7 @@ export default function BlogsIndex() {
         <div className={`${shell} grid gap-12 py-24 md:grid-cols-[1fr_0.7fr] md:items-end md:gap-16 md:py-36`}>
           <div>
             <Eyebrow className="mb-10">Newsletter</Eyebrow>
-            <DisplayHeading lines={['Stay', 'updated.']} className="text-[clamp(3rem,7vw,8rem)]" />
+            <DisplayHeading lines={['Stay', 'updated.']} className="text-[clamp(2.6rem,5vw,6.2rem)]" />
           </div>
           <div className="md:pb-2">
             <p className="mb-8 max-w-[24rem] text-[0.85rem] leading-[1.8] text-black/70">

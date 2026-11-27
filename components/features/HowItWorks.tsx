@@ -15,7 +15,7 @@ const process = [
   {
     step: '03',
     title: 'Manufacturing',
-    desc: 'Factory-controlled production with real-time updates. Quality checks at every milestone.',
+    desc: 'Factory-controlled production, typically about 10 days depending on our schedule, with progress updates and quality checks at every milestone.',
   },
   {
     step: '04',
@@ -30,7 +30,7 @@ export default function HowItWorks() {
       <div className={`${shell} py-24 md:py-36`}>
         <div className="mb-16 grid gap-10 md:mb-24 md:grid-cols-[1fr_0.7fr] md:items-end md:gap-16">
           <div>
-            <Eyebrow className="mb-8">How it works / 05</Eyebrow>
+            <Eyebrow className="mb-8">How it works / 04</Eyebrow>
             <DisplayHeading lines={['From enquiry', 'to handover.']} />
           </div>
           <p className="max-w-[23rem] text-[0.82rem] leading-[1.8] text-black/70 md:pb-2">

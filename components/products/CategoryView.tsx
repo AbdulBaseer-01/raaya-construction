@@ -4,7 +4,7 @@ import FallbackImage from '@/components/site/FallbackImage'
 import Reveal from '@/components/site/Reveal'
 import CustomCta from './CustomCta'
 import Breadcrumb from '@/components/site/Breadcrumb'
-import { ArrowLink, Eyebrow, pad, shell } from '@/components/site/primitives'
+import { ArrowLink, Eyebrow, hasLongWord, pad, shell } from '@/components/site/primitives'
 
 export default function CategoryView({ category }: { category: ProductCategory }) {
   const index = productCategories.findIndex((c) => c.slug === category.slug)
@@ -28,7 +28,12 @@ export default function CategoryView({ category }: { category: ProductCategory }
             <Eyebrow className="mb-10">
               Collection / {pad(index + 1)} of {pad(productCategories.length)}
             </Eyebrow>
-            <h1 className="text-[clamp(3.2rem,8vw,9rem)] uppercase leading-[0.78] tracking-[-0.075em]">
+            <h1
+              lang="en"
+              className={`break-words uppercase leading-[0.82] tracking-[-0.035em] ${
+                hasLongWord(category.name) ? 'text-[clamp(2.1rem,6.4vw,7.2rem)]' : 'text-[clamp(3.2rem,8vw,9rem)]'
+              }`}
+            >
               <span className="block">{first}</span>
               {rest.length > 0 && <span className="ml-[10vw] block text-[#886c46]">{rest.join(' ')}</span>}
             </h1>
@@ -58,7 +63,7 @@ export default function CategoryView({ category }: { category: ProductCategory }
         <div className={`${shell} grid gap-12 py-24 md:grid-cols-[0.8fr_1.2fr] md:gap-16 md:py-32`}>
           <div>
             <Eyebrow className="mb-8">{category.name}</Eyebrow>
-            <h2 className="text-[clamp(2.6rem,5vw,6rem)] uppercase leading-[0.8] tracking-[-0.075em]">
+            <h2 className="text-[clamp(2.6rem,5vw,6.2rem)] uppercase leading-[0.8] tracking-[-0.035em]">
               <span className="block">About</span>
               <span className="ml-[6vw] block text-[#886c46]">this series.</span>
             </h2>
@@ -87,7 +92,7 @@ export default function CategoryView({ category }: { category: ProductCategory }
           <div className="mb-12 flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end md:mb-16">
             <div>
               <Eyebrow className="mb-8">{pad(category.products.length)} products in this series</Eyebrow>
-              <h2 className="text-[clamp(2.6rem,5vw,6rem)] uppercase leading-[0.8] tracking-[-0.075em]">
+              <h2 className="text-[clamp(2.6rem,5vw,6.2rem)] uppercase leading-[0.8] tracking-[-0.035em]">
                 <span className="block">Explore</span>
                 <span className="ml-[6vw] block text-[#886c46]">the series.</span>
               </h2>
@@ -96,7 +101,7 @@ export default function CategoryView({ category }: { category: ProductCategory }
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {category.products.map((product, i) => (
-              <Reveal key={product.name} delay={Math.min(i, 5) * 0.05} className="h-full">
+              <Reveal key={product.name} delay={Math.min(i, 5) * 0.05} className="h-full min-w-0">
                 <ProductCard name={product.name} image={product.image} category={category.name} index={i} />
               </Reveal>
             ))}

@@ -1,6 +1,7 @@
 /**
- * Product collections shown on /products and on the category routes
- * (/products/wooden-series, ...). Product detail data lives in productsData.ts.
+ * The eight product categories, shared by the menu, the footer, /products and the
+ * category routes (/products/homes, ...). Product detail data lives in productsData.ts;
+ * product names here must match the `name` there.
  */
 
 export interface CategoryProduct {
@@ -23,91 +24,102 @@ export const toSlug = (value: string) =>
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)/g, "");
 
-export const productHref = (name: string) => `/products/${encodeURIComponent(name)}`;
+/** Product pages live at lowercase, hyphenated slugs (old /products/<Name> URLs redirect). */
+export const productHref = (name: string) => `/products/${toSlug(name)}`;
 
 const categories: Omit<ProductCategory, "slug">[] = [
   {
-    name: "Wooden Series",
-    cover: "/products/woodenseries/aframe/a-frame-hero.webp",
-    description: "Luxury modular wooden structures blending elegance with sustainability",
+    name: "Homes",
+    cover: "/products/portable/farmhouse/farmhouse-night-1.jpg",
+    description: "Container homes and prefab farmhouses, designed for comfortable everyday living",
     longDescription:
-      "Our Wooden Series represents the finest in sustainable modular architecture. Each structure is crafted from responsibly sourced timber, precision-engineered for structural integrity while preserving the warmth and character of natural wood. Whether nestled in a forest retreat or set against an urban backdrop, these cabins deliver a living experience that is both timeless and contemporary — marrying the craftsmanship of traditional joinery with the efficiency of modern prefabrication.",
+      "Our homes bring the precision of factory construction to the places you live. Container homes turn robust steel modules into bright, insulated living spaces, while prefab farmhouses give rural plots a finished, low-maintenance home that is built off-site and installed with minimal disruption. Every layout, finish and interior is shaped around your family and your land.",
     products: [
-      { name: "A-Frame Cabin", image: "/products/woodenseries/aframe/a-frame-hero-img.png" },
-      { name: "Arc Pod", image: "/products/woodenseries/arcpod/arc-pod-main.webp" },
-      { name: "Wooden House", image: "/products/woodenseries/wooden/wooden-house-main.webp" },
-      { name: "Smart House", image: "/products/woodenseries/smart/main.png" },
+      { name: "Container Homes", image: "/products/portable/container/main.webp" },
+      { name: "Prefab Farmhouses", image: "/products/portable/farmhouse/farmhouse-night-1.jpg" },
     ],
   },
   {
-    name: "Portable Solutions",
-    cover: "/products/portable/porta-cabin/main.webp",
-    description: "Quick deployment solutions for construction sites and temporary facilities",
+    name: "Offices",
+    cover: "/products/prefab/site-office/images/image20.jpg",
+    description: "Container, site and marketing offices that are ready to work in from day one",
     longDescription:
-      "Designed for speed without sacrifice, our Portable Solutions are engineered to be operational within hours of delivery. Each unit is built to withstand demanding site conditions, offering weatherproof shells, thermal insulation, and modular interior configurations. From single-room site offices to multi-unit bunkhouse complexes, this series gives project managers a dependable, cost-effective answer to temporary accommodation and operational space.",
+      "From a single container office to a G+1 marketing office, our office range gives teams a professional workspace without the wait of conventional construction. Each office arrives with insulation, electrical fittings and interiors in place, and can be expanded, reconfigured or relocated as your project moves on.",
     products: [
-      { name: "Porta Cabin", image: "/products/portable/porta-cabin/main.webp" },
-      { name: "Farmhouse", image: "/products/portable/farmhouse/farmhouse-night-1.jpg" },
-      { name: "Portable Office", image: "/products/portable/office/main.webp" },
-      { name: "Bunk House Cabin", image: "/products/portable/bunkhouse/main.webp" },
-      { name: "Containers House", image: "/products/portable/container/main.webp" },
-      { name: "Modular Toilet", image: "/products/portable/modular-toilet/modular-toilet.png" },
-      { name: "Mobile Toilet", image: "/products/portable/mobile-toilet/mobile-main.webp" },
-      { name: "Portable Toilet Cabin", image: "/products/portable/portable-toilet/pt-2.jpg" },
-    ],
-  },
-  {
-    name: "Prefab Solutions",
-    cover: "/products/prefab/structures/main.webp",
-    description: "Complete prefabricated structures for residential and commercial use",
-    longDescription:
-      "Our Prefab Solutions combine factory precision with on-site flexibility. Every component is manufactured under controlled conditions, ensuring consistent quality and dramatically reduced construction timelines. The result is a permanent-grade structure — complete with plumbing, electrical, and finishing options — delivered at a fraction of the time and cost of conventional builds. Ideal for schools, housing colonies, offices, and beyond.",
-    products: [
+      { name: "Container Offices", image: "/products/portable/office/main.webp" },
       { name: "Prefab Site Offices", image: "/products/prefab/site-office/main.webp" },
-      { name: "Prefab Structures", image: "/products/prefab/structures/main.webp" },
-      { name: "Prefabricated Accommodation", image: "/products/prefab/accomodation/main.webp" },
-      { name: "Prefab House", image: "/products/prefab/house/main.webp" },
-      { name: "Prefab Cottages", image: "/products/prefab/cottage/images/image1.png" },
-      { name: "IOT Pods", image: "/products/prefab/iot-pod/ext-1.png" },
-      { name: "Prefab Schools", image: "/products/prefab/school/main.webp" },
+      { name: "Marketing Offices", image: "/products/prefab/site-office/images/image20.jpg" },
     ],
   },
   {
-    name: "Specialized Structures",
-    cover: "/products/special/clinic/main.webp",
-    description: "Custom-designed facilities for specific commercial applications",
+    name: "Resorts & Getaways",
+    cover: "/products/woodenseries/aframe/a-frame-hero.webp",
+    description: "A-frame homes, pods and wooden retreats for resorts, farm stays and weekend escapes",
     longDescription:
-      "Not every need fits a standard template. Our Specialized Structures are purpose-engineered for specific commercial environments — from hygienic clinical cabins and hospitality-ready restaurant units to controlled smoking enclosures and dedicated electrical rooms. Each structure meets the technical and regulatory requirements of its use-case, delivered with the same build quality and speed that defines all of our product lines.",
+      "Designed for places people travel to, our resort and getaway range pairs striking architecture with the speed of prefabrication. A-frame homes, arc pods, prefab wooden homes and smart homes are built in our factory and installed on site, giving hospitality projects and private retreats a finished, characterful stay with minimal on-site work.",
     products: [
-      { name: "Clinic Cabin", image: "/products/special/clinic/main.webp" },
-      { name: "Restaurant Cabin", image: "/products/special/restaurant/main.webp" },
-      { name: "Smoking Room", image: "/products/special/smoking/main.webp" },
-      { name: "Electrical Room", image: "/products/special/electric/main-1.webp" },
+      { name: "A-Frame Homes", image: "/products/woodenseries/aframe/a-frame-hero-img.png" },
+      { name: "Arc Pods", image: "/products/woodenseries/arcpod/arc-pod-main.webp" },
+      { name: "Prefab Wooden Homes", image: "/products/woodenseries/wooden/wooden-house-main.webp" },
+      { name: "Smart Homes", image: "/products/woodenseries/smart/main.png" },
     ],
   },
   {
-    name: "Security Solutions",
-    cover: "/products/security/security-cabin/security-cabin-ai.png",
-    description: "Purpose-built security and monitoring structures",
+    name: "Worker Accommodation & Site Welfare",
+    cover: "/products/prefab/accomodation/main.webp",
+    description: "Labour accommodation, bunk houses and toilet cabins for safe, hygienic project sites",
     longDescription:
-      "Security infrastructure demands reliability above all else. Our Security Solutions series delivers robust, tamper-resistant structures designed for round-the-clock operation in exposed environments. From manned guard posts at facility perimeters to revenue-collecting toll booths and weather-protected ATM enclosures, every unit is built with reinforced panels, secure access points, and climate control options to keep personnel and equipment safe.",
+      "Good site welfare keeps projects moving. Our labour accommodation and bunk houses give crews clean, ventilated living space, and our toilet cabins, in portable, mobile and modular versions, provide hygienic sanitation close to the work. Units are built to handle daily heavy use and can be moved to your next site when the project is complete.",
+    products: [
+      { name: "Labour Accommodation", image: "/products/prefab/accomodation/main.webp" },
+      { name: "Bunk Houses", image: "/products/portable/bunkhouse/main.webp" },
+      { name: "Toilet Cabins", image: "/products/portable/modular-toilet/modular-toilet.png" },
+    ],
+  },
+  {
+    name: "Security & Gate Cabins",
+    cover: "/products/security/security-cabin/security-cabin-ai.png",
+    description: "Security cabins in MS, ACP and PUF, plus toll booths and ATM cabins",
+    longDescription:
+      "Our security and gate cabins are built for the people who work in them all day. Security cabins come in mild-steel, ACP and PUF-insulated versions to suit the site and climate, while toll booths and ATM cabins are designed for continuous public use. Each unit is weather-resistant, well ventilated and ready for electrical and communication fittings.",
     products: [
       { name: "Security Cabins", image: "/products/security/security-cabin/security-cabin-ai.png" },
-      { name: "Toll Booth", image: "/products/security/toll-booth/toll.png" },
-      { name: "ATM Cabin", image: "/products/security/atm/atm.png" },
+      { name: "Toll Booths", image: "/products/security/toll-booth/toll.png" },
+      { name: "ATM Cabins", image: "/products/security/atm/atm.png" },
     ],
   },
   {
-    name: "PUF Insulated Cabin",
-    cover: "/products/puf/control/main.webp",
-    description: "Thermally efficient insulated cabins for extreme conditions",
+    name: "Clinics, Schools & Public Cabins",
+    cover: "/products/special/clinic/main.webp",
+    description: "Clinics, prefab schools, restaurant cabins and smoking rooms for public-facing spaces",
     longDescription:
-      "Where temperature control is non-negotiable, our PUF Insulated Cabin series excels. Polyurethane foam core panels provide industry-leading thermal resistance, keeping interiors stable regardless of external climate extremes. These structures are the first choice for control rooms, solar monitoring stations, and clean-room environments where temperature variance, dust ingress, and humidity must be precisely managed throughout the operational lifecycle.",
+      "Spaces that serve the public need to be clean, comfortable and dependable. Our clinics and health centres, prefab schools, restaurant cabins and smoking rooms are planned around how people use them, with the right ventilation, finishes and fittings for each purpose, and are built off-site so they can open sooner.",
     products: [
-      { name: "Control Room", image: "/products/puf/control/main.webp" },
-      { name: "Solar Control Room", image: "/products/puf/solar-room/main.webp" },
-      { name: "Clean Room", image: "/products/puf/clean/clean.webp" },
+      { name: "Clinics & Health Centres", image: "/products/special/clinic/main.webp" },
+      { name: "Prefab Schools", image: "/products/prefab/school/main.webp" },
+      { name: "Restaurant Cabins", image: "/products/special/restaurant/main.webp" },
+      { name: "Smoking Rooms", image: "/products/special/smoking/main.webp" },
     ],
+  },
+  {
+    name: "Electrical, Control & Industrial Rooms",
+    cover: "/products/puf/control/main.webp",
+    description: "Electrical rooms, control rooms and solar control rooms for critical equipment",
+    longDescription:
+      "Critical equipment needs a controlled, protected environment. Our electrical rooms, control rooms and solar control rooms use insulated panel construction to keep interiors stable, with provision for cabling, cooling and equipment layouts planned to your specification. They are built in our factory and installed ready for commissioning.",
+    products: [
+      { name: "Electrical Rooms", image: "/products/special/electric/main-1.webp" },
+      { name: "Control Rooms", image: "/products/puf/control/main.webp" },
+      { name: "Solar Control Rooms", image: "/products/puf/solar-room/main.webp" },
+    ],
+  },
+  {
+    name: "Pre-Engineered Buildings",
+    cover: "/products/prefab/structures/images/image2.png",
+    description: "Steel pre-engineered buildings for warehouses, factories and large-span spaces",
+    longDescription:
+      "Pre-engineered buildings deliver large, column-free spaces quickly. Steel frames are designed for your span, height and loads, fabricated off-site and erected on prepared foundations, giving warehouses, factories and industrial sheds a durable structure with far less time on site than conventional construction.",
+    products: [{ name: "Pre-Engineered Buildings", image: "/products/prefab/structures/main.webp" }],
   },
 ];
 
@@ -115,6 +127,19 @@ export const productCategories: ProductCategory[] = categories.map((category) =>
   ...category,
   slug: toSlug(category.name),
 }));
+
+/**
+ * The six collections the site used before the restructure. Their URLs (still
+ * linked from the Home page's "The Collection" cards) redirect to the closest new category.
+ */
+export const LEGACY_CATEGORY_SLUGS: Record<string, string> = {
+  "wooden-series": "resorts-getaways",
+  "portable-solutions": "worker-accommodation-site-welfare",
+  "prefab-solutions": "offices",
+  "specialized-structures": "clinics-schools-public-cabins",
+  "security-solutions": "security-gate-cabins",
+  "puf-insulated-cabin": "electrical-control-industrial-rooms",
+};
 
 export const getCategoryBySlug = (slug: string) =>
   productCategories.find((category) => category.slug === slug);

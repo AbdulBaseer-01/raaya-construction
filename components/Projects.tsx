@@ -60,7 +60,7 @@ const projects: Project[] = [
 function ProjectCard({ project, index }: { project: Project; index: number }) {
 	return (
 		<Link
-			href="/projects"
+			href="/inspiration-gallery"
 			className="project-card group relative flex h-[57vh] min-h-[25rem] w-[72vw] max-w-[22rem] shrink-0 flex-col justify-between overflow-hidden rounded-[1.5rem] border border-white/15 bg-[#242421] p-5 text-white shadow-2xl transition-transform duration-500 hover:-translate-y-3 sm:w-[48vw] md:h-[62vh] md:w-[28vw] md:max-w-[25rem]"
 			style={{ transform: `translateY(${index % 2 === 0 ? "0" : "2.5rem"})` }}
 		>
@@ -113,11 +113,11 @@ export default function Projects() {
 					<div>
 						<p className="mb-8 flex items-center gap-3 text-[0.58rem] uppercase tracking-[0.28em] text-[#b3976d]">
 							<span className="h-px w-10 bg-[#b3976d]" />
-							Our Portfolio
+							Our portfolio / 07
 						</p>
-						<h2 className="max-w-4xl text-[clamp(3.5rem,9vw,10rem)] uppercase leading-[0.76] tracking-[-0.09em]">
+						<h2 className="max-w-4xl text-[clamp(2.6rem,5vw,6.2rem)] font-normal uppercase leading-[0.82] tracking-[-0.035em]">
 							<span className="block">Made</span>
-							<span className="ml-[12vw] block text-[#b3976d]">to stay.</span>
+							<span className="ml-[12vw] block text-[#886c46]">to stay.</span>
 						</h2>
 					</div>
 					<p className="mt-2 hidden max-w-[13rem] text-right text-[0.72rem] leading-[1.7] text-black/80 md:block">
@@ -153,7 +153,7 @@ export default function Projects() {
 
 				<div className="flex items-center justify-between border-t border-white/15 pt-5 text-[0.58rem] uppercase tracking-[0.2em] text-black">
 					<span>Scroll to explore</span>
-					<Link href="/projects" className="transition-colors hover:text-[#b3976d]">View all projects <span className="ml-2">↗</span></Link>
+					<Link href="/inspiration-gallery" className="transition-colors hover:text-[#b3976d]">View all projects <span className="ml-2">↗</span></Link>
 				</div>
 			</div>
 		</section>

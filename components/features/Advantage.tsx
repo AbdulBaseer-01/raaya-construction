@@ -6,7 +6,7 @@ const advantages = [
   {
     icon: Plug,
     title: 'Plug & Play Construction',
-    body: 'Modular units arrive fully finished, just connect and start living.',
+    body: 'Modular units arrive fully finished. Just connect and start using them.',
   },
   {
     icon: ClipboardCheck,
@@ -21,7 +21,7 @@ const advantages = [
   {
     icon: Timer,
     title: 'Speed Meets Your Style',
-    body: 'Delivered 50% faster than conventional builds with aesthetics intact.',
+    body: 'Drawings in 48 hours and about 10 days in the factory, so you move in weeks sooner than with a site-built structure.',
   },
   {
     icon: Move,
@@ -31,7 +31,8 @@ const advantages = [
   {
     icon: Handshake,
     title: 'Global-Grade Partners, Local Execution',
-    body: 'We build with Kohler, VEKA, Kajaria, and more — quality that’s always standard.',
+    // TODO(Texo): name the brands Texo actually uses once confirmed (brief, section 18).
+    body: 'We use materials from trusted Indian and global brands, specified in every quote.',
   },
   {
     icon: Hammer,
@@ -51,12 +52,11 @@ export default function Advantages() {
       <div className={`${shell} py-24 md:py-36`}>
         <div className="mb-16 grid gap-10 md:grid-cols-[1fr_0.7fr] md:items-end md:gap-16">
           <div>
-            <Eyebrow className="mb-8">Why choose Texo / 04</Eyebrow>
+            <Eyebrow className="mb-8">Why choose Texo / 03</Eyebrow>
             <DisplayHeading lines={['The Texo', 'prefab', 'advantage.']} />
           </div>
           <p className="max-w-[23rem] text-[0.82rem] leading-[1.8] text-black/70 md:pb-2">
-            Eighteen years of refinement, distilled into eight reasons why Indias most demanding builders choose Texo —
-            and never look back.
+            Eight reasons India&apos;s leading developers and businesses choose Texo.
           </p>
         </div>
 

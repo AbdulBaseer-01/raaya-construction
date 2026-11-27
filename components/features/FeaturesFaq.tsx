@@ -1,5 +1,5 @@
 import Accordion from '@/components/site/Accordion'
-import { DisplayHeading, Eyebrow, OutlineLink, pad, shell } from '@/components/site/primitives'
+import { DisplayHeading, Eyebrow, OutlineLink, shell } from '@/components/site/primitives'
 
 const faqs = [
   {
@@ -10,7 +10,8 @@ const faqs = [
   {
     question: 'How long does it take to deliver and install a Texo prefab structure?',
     answer:
-      'Our Plug & Play prefab units are delivered up to 50% faster than conventional construction. Depending on the size and complexity, delivery and on-site assembly can happen within 7–30 days.',
+      // TODO(Texo): add the typical installation range at the end (brief, section 18).
+      'You get drawings and a quote within 48 hours. Once you approve, factory production typically takes about 10 days, depending on our schedule. Installation depends on size and site.',
   },
   {
     question: 'Can I customize the design of my prefab unit?',
@@ -28,8 +29,9 @@ const faqs = [
       'With proper maintenance, our prefab buildings can last 30+ years. The use of high-strength steel frames and premium finishes ensures long-term durability.',
   },
   {
-    question: 'Is Texo prefab damage environment?',
-    answer: 'No. Our process generates less onsite waste, uses recyclable materials, and promotes sustainable building practices.',
+    question: 'Are Texo prefab structures environmentally friendly?',
+    // The question was reworded (brief, section 18), so the answer now opens with "Yes" to keep its meaning.
+    answer: 'Yes. Our process generates less onsite waste, uses recyclable materials, and promotes sustainable building practices.',
   },
   {
     question: 'Can I relocate or expand my prefab structure later?',
@@ -56,11 +58,11 @@ export default function FeaturesFaq() {
     <section className="border-t border-black/15 bg-[#f5f2ec]">
       <div className={`${shell} grid gap-14 py-24 md:grid-cols-[0.8fr_1.2fr] md:gap-16 md:py-36`}>
         <div className="md:sticky md:top-[calc(68px+4rem)] md:self-start">
-          <Eyebrow className="mb-8">FAQ / {pad(faqs.length)}</Eyebrow>
-          <DisplayHeading lines={['Questions', 'we hear', 'most.']} className="text-[clamp(2.8rem,5.4vw,6.5rem)]" />
+          <Eyebrow className="mb-8">FAQ / 05</Eyebrow>
+          <DisplayHeading lines={['Questions', 'we hear', 'most.']} className="text-[clamp(2.6rem,5vw,6.2rem)]" />
           <p className="mb-8 mt-10 max-w-[21rem] text-[0.82rem] leading-[1.8] text-black/60">
-            Can&apos;t find your answer below? Our team responds to all enquiries within one business day — with a real
-            answer, not a template.
+            {/* TODO(Texo): add "within [response time]" once confirmed (brief, section 18). */}
+            Can&apos;t find your answer below? Our team responds to all enquiries with a real answer, not a template.
           </p>
           <OutlineLink href="/contact-us">Contact our experts</OutlineLink>
         </div>

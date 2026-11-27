@@ -11,7 +11,7 @@ export default function CareersCta() {
             <span className="h-px w-10 shrink-0 bg-[#886c46]" />
             Don&apos;t see a fit?
           </p>
-          <h2 className="text-[clamp(2.4rem,6vw,7rem)] uppercase leading-[0.8] tracking-[-0.075em]">
+          <h2 className="text-[clamp(2.6rem,5vw,6.2rem)] uppercase leading-[0.8] tracking-[-0.035em]">
             <span className="block">Send us your</span>
             <span className="ml-[10vw] block text-[#886c46]">resume anyway.</span>
           </h2>

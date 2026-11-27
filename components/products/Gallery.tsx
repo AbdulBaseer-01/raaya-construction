@@ -19,7 +19,7 @@ export default function Gallery({ product }: { product: ProductDetail }) {
         <div className="mb-16 flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
           <div>
             <Eyebrow className="mb-8">Gallery / {pad(images.length)} images</Eyebrow>
-            <h2 className="text-[clamp(2.8rem,6.4vw,7.5rem)] uppercase leading-[0.78] tracking-[-0.075em]">
+            <h2 className="text-[clamp(2.6rem,5vw,6.2rem)] uppercase leading-[0.82] tracking-[-0.035em]">
               <span className="block">Explore</span>
               <span className="ml-[10vw] block text-[#886c46]">in detail.</span>
             </h2>

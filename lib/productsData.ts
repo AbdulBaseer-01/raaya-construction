@@ -21,6 +21,9 @@ export interface ProductData {
     variantName: string;
     variantImage: string;
     variantInterior: string;
+    /** Optional: shown on the variant card and in the variant panel. */
+    description?: string;
+    specs?: { label: string; value: string }[];
   }[];
   advantages: {
     title: string;
@@ -46,9 +49,9 @@ export interface ProductData {
 }
 
 export const productsData: Record<string, ProductData> = {
-  "A-Frame Cabin": {
-    name: "A-Frame Cabin",
-    category: "Wooden Series",
+  "A-Frame Homes": {
+    name: "A-Frame Homes",
+    category: "Resorts & Getaways",
     icon: Home,
     description:
       "Introducing the A-Frame Houses – a masterpiece of modern modular living",
@@ -286,7 +289,7 @@ export const productsData: Record<string, ProductData> = {
 
       /* 6 ─ Transit, Payment & Warranty */
       transitPaymentWarranty: {
-        images: ["/siteoffice-2.webp", "/products-hero.png"],
+        images: [],
         specs: [
           { label: "Lead time", value: "30–45 days from booking confirmation" },
           { label: "Delivery mode", value: "Flat-pack on 40 ft trailers" },
@@ -310,12 +313,7 @@ export const productsData: Record<string, ProductData> = {
 
       /* 7 ─ 2D Layout */
       layout2D: {
-        images: [
-          "/siteoffice-2.webp",
-          "/products-hero.png",
-          "/siteoffice-2.webp",
-          "/products-hero.png",
-        ],
+        images: [],
         specs: [
           { label: "Configuration", value: "2 BHK — 3 BHK modular options" },
           { label: "Carpet area", value: "65 m² (2BHK) · 95 m² (3BHK)" },
@@ -352,9 +350,9 @@ export const productsData: Record<string, ProductData> = {
       },
     ],
   },
-  "Arc Pod": {
-    name: "Arc Pod",
-    category: "Wooden Series",
+  "Arc Pods": {
+    name: "Arc Pods",
+    category: "Resorts & Getaways",
     icon: Home,
     description:
       "Introducing the Arc Pod Houses – where bold architecture meets the art of refined living.",
@@ -413,23 +411,23 @@ export const productsData: Record<string, ProductData> = {
     variants: [
       {
         variantName: "Studio",
-        variantImage: "/products/woodenseries/arcpod/arc-pod-main.jpg",
-        variantInterior: "/products/woodenseries/arcpod/arc-pod-main.jpg",
+        variantImage: "/products/woodenseries/arcpod/arc-pod-main.webp",
+        variantInterior: "/products/woodenseries/arcpod/arc-pod-main.webp",
       },
       {
         variantName: "1-BHK",
         variantImage: "/products/woodenseries/arcpod/arc-2.jpg",
-        variantInterior: "/products/woodenseries/arcpod/arc-pod-main.jpg",
+        variantInterior: "/products/woodenseries/arcpod/arc-pod-main.webp",
       },
       {
         variantName: "2-BHK",
         variantImage: "/products/woodenseries/arcpod/arc-int.jpg",
-        variantInterior: "/products/woodenseries/arcpod/arc-pod-main.jpg",
+        variantInterior: "/products/woodenseries/arcpod/arc-pod-main.webp",
       },
       {
         variantName: "3-BHK",
-        variantImage: "/products/woodenseries/arcpod/arc-pod-main.jpg",
-        variantInterior: "/products/woodenseries/arcpod/arc-pod-main.jpg",
+        variantImage: "/products/woodenseries/arcpod/arc-pod-main.webp",
+        variantInterior: "/products/woodenseries/arcpod/arc-pod-main.webp",
       },
     ],
     faq: [
@@ -474,7 +472,7 @@ export const productsData: Record<string, ProductData> = {
         heading: "1. Vacation Getaways",
         description:
           "Turn the Arc Pod into your perfect getaway, offering unmatched privacy and tranquility. Whether nestled in the heart of nature or perched on a scenic coastline, it creates an exclusive retreat that combines luxury with serenity, allowing you to unwind in style.",
-        image: "/products/woodenseries//arcpod/arc-2.jpg",
+        image: "/products/woodenseries/arcpod/arc-2.jpg",
       },
       {
         heading: "2. Creative Studio",
@@ -486,7 +484,7 @@ export const productsData: Record<string, ProductData> = {
         heading: "3. Exhibition Hubs",
         description:
           "Transform the Arc Pod into an inspiring space for learning or creative exhibitions. Its adaptable design creates an ideal environment for workshops, art galleries, or pop-up education hubs, blending functionality with a modern aesthetic to foster innovation and engagement.",
-        image: "/products/woodenseries/arcpod/main",
+        image: "/products/woodenseries/arcpod/arc-pod-main.webp",
       },
     ],
 
@@ -622,13 +620,7 @@ export const productsData: Record<string, ProductData> = {
       },
 
       interiorExteriorFloor: {
-        images: [
-          "/products/woodenseries/arcpod/techspecs/ief-1.png",
-          "/products/woodenseries/arcpod/techspecs/ief-2.png",
-          "/products/woodenseries/arcpod/techspecs/ief-3.png",
-          "/products/woodenseries/arcpod/techspecs/ief-4.png",
-          "/products/woodenseries/arcpod/techspecs/ief-5.png",
-        ],
+        images: [],
         specs: [
           {
             label: "Pine Wood",
@@ -668,14 +660,7 @@ export const productsData: Record<string, ProductData> = {
       },
 
       doorsSanitaryElectrical: {
-        images: [
-          "/products/woodenseries/arcpod/techspecs/dse-1.png",
-          "/products/woodenseries/arcpod/techspecs/dse-2.png",
-          "/products/woodenseries/arcpod/techspecs/dse-3.png",
-          "/products/woodenseries/arcpod/techspecs/dse-4.png",
-          "/products/woodenseries/arcpod/techspecs/dse-5.png",
-          "/products/woodenseries/arcpod/techspecs/dse-6.png",
-        ],
+        images: [],
         specs: [
           {
             label: "Windows",
@@ -714,10 +699,7 @@ export const productsData: Record<string, ProductData> = {
       },
 
       transitPaymentWarranty: {
-        images: [
-          "/products/woodenseries/arcpod/techspecs/tpw-1.png",
-          "/products/woodenseries/arcpod/techspecs/tpw-2.png",
-        ],
+        images: [],
         specs: [
           {
             label: "Construction Method",
@@ -756,12 +738,7 @@ export const productsData: Record<string, ProductData> = {
       },
 
       layout2D: {
-        images: [
-          "/products/woodenseries/arcpod/layout-1.png",
-          "/products/woodenseries/arcpod/layout-2.png",
-          "/products/woodenseries/arcpod/layout-3.png",
-          "/products/woodenseries/arcpod/layout-4.png",
-        ],
+        images: [],
         specs: [
           { label: "Configuration", value: "1 BHK modular layout." },
           { label: "Design Style", value: "Signature arched architecture." },
@@ -785,9 +762,9 @@ export const productsData: Record<string, ProductData> = {
       },
     },
   },
-  "Wooden House": {
-    name: "Wooden House",
-    category: "Wooden Series",
+  "Prefab Wooden Homes": {
+    name: "Prefab Wooden Homes",
+    category: "Resorts & Getaways",
     icon: Home,
     description:
       "Traditional wooden houses with modern amenities and sustainable construction",
@@ -1053,13 +1030,7 @@ export const productsData: Record<string, ProductData> = {
       },
 
       interiorExteriorFloor: {
-        images: [
-          "/products/woodenseries/woodenhouse/techspecs/ief-1.png",
-          "/products/woodenseries/woodenhouse/techspecs/ief-2.png",
-          "/products/woodenseries/woodenhouse/techspecs/ief-3.png",
-          "/products/woodenseries/woodenhouse/techspecs/ief-4.png",
-          "/products/woodenseries/woodenhouse/techspecs/ief-5.png",
-        ],
+        images: [],
         specs: [
           {
             label: "Pine Wood",
@@ -1099,14 +1070,7 @@ export const productsData: Record<string, ProductData> = {
       },
 
       doorsSanitaryElectrical: {
-        images: [
-          "/products/woodenseries/woodenhouse/techspecs/dse-1.png",
-          "/products/woodenseries/woodenhouse/techspecs/dse-2.png",
-          "/products/woodenseries/woodenhouse/techspecs/dse-3.png",
-          "/products/woodenseries/woodenhouse/techspecs/dse-4.png",
-          "/products/woodenseries/woodenhouse/techspecs/dse-5.png",
-          "/products/woodenseries/woodenhouse/techspecs/dse-6.png",
-        ],
+        images: [],
         specs: [
           {
             label: "Windows",
@@ -1145,10 +1109,7 @@ export const productsData: Record<string, ProductData> = {
       },
 
       transitPaymentWarranty: {
-        images: [
-          "/products/woodenseries/woodenhouse/techspecs/tpw-1.png",
-          "/products/woodenseries/woodenhouse/techspecs/tpw-2.png",
-        ],
+        images: [],
         specs: [
           {
             label: "Construction Method",
@@ -1191,12 +1152,7 @@ export const productsData: Record<string, ProductData> = {
       },
 
       layout2D: {
-        images: [
-          "/products/woodenseries/woodenhouse/layout-1.png",
-          "/products/woodenseries/woodenhouse/layout-2.png",
-          "/products/woodenseries/woodenhouse/layout-3.png",
-          "/products/woodenseries/woodenhouse/layout-4.png",
-        ],
+        images: [],
         specs: [
           {
             label: "Configuration",
@@ -1237,9 +1193,9 @@ export const productsData: Record<string, ProductData> = {
       },
     },
   },
-  "Smart House": {
-    name: "Smart House",
-    category: "Wooden Series",
+  "Smart Homes": {
+    name: "Smart Homes",
+    category: "Resorts & Getaways",
     icon: Home,
     description:"Intelligent wooden homes with integrated smart technology and automation",
     longDescription: `The Smart House represents the future of wooden living, combining traditional timber construction with cutting-edge smart home technology. These intelligent homes feature integrated automation systems that enhance comfort, security, and energy efficiency.
@@ -1411,7 +1367,6 @@ export const productsData: Record<string, ProductData> = {
         images: [
           "/products/woodenseries/smart/techspecs/ts-2.png",
           "/products/woodenseries/smart/techspecs/ts-3.png",
-          "/products/woodenseries/smart/techspecs/ts-4.png",
           "/products/woodenseries/smart/techspecs/ts-5.png",
         ],
         specs: [
@@ -1458,7 +1413,6 @@ export const productsData: Record<string, ProductData> = {
         images: [
           "/products/woodenseries/smart/techspecs/ts-6.png",
           "/products/woodenseries/smart/techspecs/ts-7.png",
-          "/products/woodenseries/smart/techspecs/ts-8.png",
           "/products/woodenseries/smart/techspecs/ts-9.png",
         ],
         specs: [
@@ -1496,13 +1450,7 @@ export const productsData: Record<string, ProductData> = {
       },
 
       interiorExteriorFloor: {
-        images: [
-          "/products/woodenseries/smarthouse/techspecs/ief-1.png",
-          "/products/woodenseries/smarthouse/techspecs/ief-2.png",
-          "/products/woodenseries/smarthouse/techspecs/ief-3.png",
-          "/products/woodenseries/smarthouse/techspecs/ief-4.png",
-          "/products/woodenseries/smarthouse/techspecs/ief-5.png",
-        ],
+        images: [],
         specs: [
           {
             label: "Pine Wood",
@@ -1542,14 +1490,7 @@ export const productsData: Record<string, ProductData> = {
       },
 
       doorsSanitaryElectrical: {
-        images: [
-          "/products/woodenseries/smarthouse/techspecs/dse-1.png",
-          "/products/woodenseries/smarthouse/techspecs/dse-2.png",
-          "/products/woodenseries/smarthouse/techspecs/dse-3.png",
-          "/products/woodenseries/smarthouse/techspecs/dse-4.png",
-          "/products/woodenseries/smarthouse/techspecs/dse-5.png",
-          "/products/woodenseries/smarthouse/techspecs/dse-6.png",
-        ],
+        images: [],
         specs: [
           {
             label: "Windows",
@@ -1591,10 +1532,7 @@ export const productsData: Record<string, ProductData> = {
       },
 
       transitPaymentWarranty: {
-        images: [
-          "/products/woodenseries/smarthouse/techspecs/tpw-1.png",
-          "/products/woodenseries/smarthouse/techspecs/tpw-2.png",
-        ],
+        images: [],
         specs: [
           {
             label: "Construction Method",
@@ -1634,12 +1572,7 @@ export const productsData: Record<string, ProductData> = {
       },
 
       layout2D: {
-        images: [
-          "/products/woodenseries/smarthouse/layout-1.png",
-          "/products/woodenseries/smarthouse/layout-2.png",
-          "/products/woodenseries/smarthouse/layout-3.png",
-          "/products/woodenseries/smarthouse/layout-4.png",
-        ],
+        images: [],
         specs: [
           {
             label: "Configuration",
@@ -1683,12 +1616,10 @@ export const productsData: Record<string, ProductData> = {
     category: "Portable Solutions",
     icon: Building2,
     description:
-      "Versatile portable cabins for temporary and mobile accommodation needs",
-    longDescription: `Porta Cabins are the ultimate solution for flexible accommodation requirements. These prefabricated structures offer quick deployment and can be easily relocated as needs change. Built with durability and comfort in mind, our Porta Cabins serve various applications from construction sites to emergency housing.
+      "Portable cabins for site offices, security, clinics and staff accommodation, factory-built and delivered ready to use.",
+    longDescription: `Texo Porta Cabins are built on a welded mild-steel base frame (100×50×3 mm RHS, Apollo/JSW) with a 1.2 mm self-draining steel roof, and arrive on site ready to connect. When your site changes, they can be moved and reused.
 
-Each Porta Cabin is constructed using high-quality materials and modular design principles, ensuring rapid assembly and disassembly. The interiors are designed for functionality while maintaining comfort standards, making them suitable for both short-term and extended use.
-
-Our Porta Cabins are engineered to withstand transportation and various environmental conditions, providing reliable shelter wherever it's needed.`,
+Typical uses: construction site offices, security and staff cabins, clinics and training rooms. Every unit is made to order. Tell us the size and layout, and we'll send drawings and a quote within 48 hours.`,
     gallery: [
       "/products/portable/porta-cabin/images/image21.jpg",
       "/products/portable/porta-cabin/main.webp",
@@ -1707,7 +1638,7 @@ Our Porta Cabins are engineered to withstand transportation and various environm
         icon: "Rocket",
         title: "Rapid Deployment",
         description:
-          "Pre-engineered for quick setup, our cabins reduce construction time by 70%, enabling businesses to establish functional spaces instantly, without delays or heavy on-site work.",
+          "Drawings and a quote in 48 hours and about 10 days in our factory, so your cabin is working weeks sooner than a site-built room.",
       },
       {
         icon: "ShieldCheck",
@@ -1719,7 +1650,7 @@ Our Porta Cabins are engineered to withstand transportation and various environm
         icon: "SlidersHorizontal",
         title: "Fully Customizable",
         description:
-          "Tailored to specific needs, Texo Porta Cabins offer modern interiors, smart automation, and flexible layouts, ensuring optimal functionality for offices, accommodations, and commercial spaces.",
+          "Tailored to specific needs, Texo Porta Cabins offer modern interiors and flexible layouts, ensuring optimal functionality for offices, accommodations, and commercial spaces.",
       },
       {
         icon: "Truck",
@@ -2067,10 +1998,7 @@ Our Porta Cabins are engineered to withstand transportation and various environm
       },
 
       transitPaymentWarranty: {
-        images: [
-          "/products/portablesolutions/portacabin/techspecs/tpw-1.png",
-          "/products/portablesolutions/portacabin/techspecs/tpw-2.png",
-        ],
+        images: [],
         specs: [
           {
             label: "Construction Method",
@@ -2114,12 +2042,7 @@ Our Porta Cabins are engineered to withstand transportation and various environm
       },
 
       layout2D: {
-        images: [
-          "/products/portablesolutions/portacabin/layout-1.png",
-          "/products/portablesolutions/portacabin/layout-2.png",
-          "/products/portablesolutions/portacabin/layout-3.png",
-          "/products/portablesolutions/portacabin/layout-4.png",
-        ],
+        images: [],
         specs: [
           {
             label: "Configuration",
@@ -2160,9 +2083,9 @@ Our Porta Cabins are engineered to withstand transportation and various environm
       },
     },
   },
-  Farmhouse: {
-    name: "Farmhouse",
-    category: "Portable Solutions",
+  "Prefab Farmhouses": {
+    name: "Prefab Farmhouses",
+    category: "Homes",
     icon: Building2,
     description:
       "Rural-style portable cabins perfect for agricultural and countryside applications",
@@ -2555,10 +2478,7 @@ Each Farmhouse is built to last, with reinforced structures that can withstand t
       },
 
       transitPaymentWarranty: {
-        images: [
-          "/products/premiumfarmhouse/techspecs/tpw-1.png",
-          "/products/premiumfarmhouse/techspecs/tpw-2.png",
-        ],
+        images: [],
         specs: [
           {
             label: "Construction Speed",
@@ -2604,12 +2524,7 @@ Each Farmhouse is built to last, with reinforced structures that can withstand t
       },
 
       layout2D: {
-        images: [
-          "/products/premiumfarmhouse/layout-1.png",
-          "/products/premiumfarmhouse/layout-2.png",
-          "/products/premiumfarmhouse/layout-3.png",
-          "/products/premiumfarmhouse/layout-4.png",
-        ],
+        images: [],
         specs: [
           {
             label: "Configuration",
@@ -2655,9 +2570,9 @@ Each Farmhouse is built to last, with reinforced structures that can withstand t
       },
     },
   },
-  "Portable Office": {
-    name: "Portable Office",
-    category: "Portable Solutions",
+  "Container Offices": {
+    name: "Container Offices",
+    category: "Offices",
     icon: Building2,
     description:
       "Standard portable cabins offering reliable temporary accommodation",
@@ -3048,10 +2963,7 @@ Our Portable Cabins are built to industry standards, providing safe and comforta
       },
 
       transitPaymentWarranty: {
-        images: [
-          "/products/portablesolutions/portableoffice/techspecs/tpw-1.png",
-          "/products/portablesolutions/portableoffice/techspecs/tpw-2.png",
-        ],
+        images: [],
         specs: [
           {
             label: "Installation",
@@ -3094,12 +3006,7 @@ Our Portable Cabins are built to industry standards, providing safe and comforta
       },
 
       layout2D: {
-        images: [
-          "/products/portablesolutions/portableoffice/layout-1.png",
-          "/products/portablesolutions/portableoffice/layout-2.png",
-          "/products/portablesolutions/portableoffice/layout-3.png",
-          "/products/portablesolutions/portableoffice/layout-4.png",
-        ],
+        images: [],
         specs: [
           {
             label: "Configuration",
@@ -3142,9 +3049,9 @@ Our Portable Cabins are built to industry standards, providing safe and comforta
       },
     },
   },
-  "Bunk House Cabin": {
-    name: "Bunk House Cabin",
-    category: "Portable Solutions",
+  "Bunk Houses": {
+    name: "Bunk Houses",
+    category: "Worker Accommodation & Site Welfare",
     icon: Building2,
     description:
       "Multi-occupancy cabins designed for group accommodation and labor camps",
@@ -3488,9 +3395,7 @@ Our Bunk House Cabins are engineered for durability and can be equipped with add
       },
 
       transitPaymentWarranty: {
-        images: [
-          "/products/portablesolutions/bunkhousecabin/techspecs/tpw-1.png",
-        ],
+        images: [],
         specs: [
           {
             label: "Installation",
@@ -3526,14 +3431,14 @@ Our Bunk House Cabins are engineered for durability and can be equipped with add
       },
 
       layout2D: {
-        images: ["/products/portablesolutions/bunkhousecabin/layout-1.png"],
+        images: [],
         specs: [],
       },
     },
   },
-  "Containers House": {
-    name: "Containers House",
-    category: "Portable Solutions",
+  "Container Homes": {
+    name: "Container Homes",
+    category: "Homes",
     icon: Building2,
     description:
       "Shipping container converted homes offering unique and sustainable living",
@@ -3885,9 +3790,7 @@ Our Container Houses combine the strength and durability of shipping containers 
       },
 
       transitPaymentWarranty: {
-        images: [
-          "/products/portablesolutions/containerhomes/techspecs/tpw-1.png",
-        ],
+        images: [],
         specs: [
           {
             label: "Stackable Design",
@@ -3928,27 +3831,28 @@ Our Container Houses combine the strength and durability of shipping containers 
       },
 
       layout2D: {
-        images: ["/products/portablesolutions/containerhomes/layout-1.png"],
+        images: [],
         specs: [],
       },
     },
   },
-  "Modular Toilet": {
-    name: "Modular Toilet",
-    category: "Portable Solutions",
+  "Toilet Cabins": {
+    name: "Toilet Cabins",
+    category: "Worker Accommodation & Site Welfare",
     icon: Building2,
     description:
-      "Clean and hygienic portable toilet facilities for various applications",
-    longDescription: `Modular Toilets provide clean, hygienic sanitation solutions for construction sites, events, and remote locations. These portable facilities combine modern sanitation technology with durable construction to deliver reliable service in any environment.
+      "Portable, mobile and modular toilet cabins for sites, events and public facilities",
+    longDescription: `Texo Toilet Cabins provide clean, hygienic sanitation wherever it is needed: construction sites, labour camps, events and public spaces. Every cabin is factory-built with flushing toilets, washbasins and proper ventilation, and arrives ready to connect.
 
-Each unit is equipped with flushing toilets, sinks, and proper ventilation systems, ensuring comfort and hygiene standards are maintained. The modular design allows for easy transportation and quick setup, making them ideal for temporary or mobile requirements.
-
-Our Modular Toilets are built to withstand heavy use and can be equipped with additional features like solar power and water recycling systems.`,
+Choose the variant that suits your site. Portable cabins are self-contained and built for high-traffic use; Mobile units are mounted on wheels and move with your work front; Modular toilets combine into larger blocks and can be equipped with options such as solar power and water recycling.`,
     gallery: [
       "/products/portable/modular-toilet/modular-toilet.png",
+      "/products/portable/portable-toilet/pt-2.jpg",
+      "/products/portable/mobile-toilet/mobile-main.webp",
       "/products/portable/modular-toilet/modular-toilet-2.jpg",
+      "/products/portable/portable-toilet/pt-1.jpg",
+      "/products/portable/mobile-toilet/mobile-2.png",
       "/products/portable/modular-toilet/modular-int.jpg",
-      "/products/portable/modular-toilet/modular-ai-int.jpg",
     ],
     advantages: [
       {
@@ -3990,24 +3894,40 @@ Our Modular Toilets are built to withstand heavy use and can be equipped with ad
     ],
     variants: [
       {
-        variantName: "Studio",
-        variantImage: "/products-hero.png",
-        variantInterior: "/siteoffice-2.webp",
+        variantName: "Portable",
+        variantImage: "/products/portable/portable-toilet/images/image15.png",
+        variantInterior: "/products/portable/portable-toilet/images/image5.png",
+        description:
+          "Self-contained cabins with toilet compartments, handwashing stations and ventilation, built for durability in high-traffic, remote or temporary locations.",
+        specs: [
+          { label: "Layout", value: "Single or multiple WC / urinal compartments" },
+          { label: "Fit-out", value: "Handwashing stations, ventilation and lighting" },
+          { label: "Best for", value: "Construction sites, labour camps, public facilities" },
+        ],
       },
       {
-        variantName: "1-BHK",
-        variantImage: "/siteoffice-2.webp",
-        variantInterior: "/siteoffice-2.webp",
+        variantName: "Mobile",
+        variantImage: "/products/portable/mobile-toilet/mobile-main.webp",
+        variantInterior: "/products/portable/mobile-toilet/mobile-2.png",
+        description:
+          "Wheel-mounted units that can be towed between locations and quickly connected to utilities at each stop, with stabilisers for safe use.",
+        specs: [
+          { label: "Mounting", value: "Wheeled chassis with stabilising system" },
+          { label: "Connections", value: "Quick connection to water, drainage and power" },
+          { label: "Best for", value: "Events, moving work fronts, emergency response" },
+        ],
       },
       {
-        variantName: "2-BHK",
-        variantImage: "/products-hero.png",
-        variantInterior: "/siteoffice-2.webp",
-      },
-      {
-        variantName: "3-BHK",
-        variantImage: "/products-hero.png",
-        variantInterior: "/siteoffice-2.webp",
+        variantName: "Modular",
+        variantImage: "/products/portable/modular-toilet/modular-toilet.png",
+        variantInterior: "/products/portable/modular-toilet/modular-int.jpg",
+        description:
+          "Factory-built modules with flushing toilets, sinks and ventilation that can be combined into larger toilet blocks for longer-term use.",
+        specs: [
+          { label: "Configuration", value: "Single units or combined toilet blocks" },
+          { label: "Fit-out", value: "Flushing WCs, washbasins and ventilation" },
+          { label: "Options", value: "Solar power, water recycling" },
+        ],
       },
     ],
     faq: [
@@ -4288,491 +4208,9 @@ Our Modular Toilets are built to withstand heavy use and can be equipped with ad
       },
     },
   },
-  "Mobile Toilet": {
-    name: "Mobile Toilet",
-    category: "Portable Solutions",
-    icon: Building2,
-    description:
-      "Fully mobile toilet units for maximum flexibility and convenience",
-    longDescription: `Mobile Toilets offer the ultimate in flexibility, providing fully transportable sanitation facilities that can be moved as needed. These units are ideal for dynamic environments where fixed facilities aren't practical.
-
-  Each Mobile Toilet is mounted on wheels and can be towed to different locations, making them perfect for construction sites, events, and emergency situations. Despite their mobility, they maintain high standards of comfort and hygiene.
-
-  Our Mobile Toilets are equipped with stabilizing systems for safe operation and can be quickly connected to utilities at each location.`,
-    gallery: [
-      "/products/portable/mobile-toilet/mobile-main.webp",
-      "/products/portable/mobile-toilet/mobile-2.png",
-      "/products/portable/mobile-toilet/mobile-3.png",
-    ],
-    advantages: [
-      {
-        icon: "Truck",
-        title: "Fully Portable & Easy to Transport",
-        description:
-          "Designed for mobility and quick deployment, Texo’s mobile toilets can be moved and placed anywhere, making them ideal for temporary and remote locations.",
-      },
-      {
-        icon: "Rocket",
-        title: "Quick Installation",
-        description:
-          "Our mobile toilets come pre-assembled and fully equipped, ensuring instant usability with minimal setup time.",
-      },
-      {
-        icon: "ShieldCheck",
-        title: "Weather-Resistant & Durable",
-        description:
-          "Constructed from high-quality, rust-proof materials, our mobile toilets withstand harsh weather conditions, heavy usage, and frequent relocation.",
-      },
-      {
-        icon: "ShieldPlus",
-        title: "Hygienic & Odor-Free Design",
-        description:
-          "Featuring anti-bacterial surfaces, proper ventilation, and sealed waste compartments, Texo’s mobile toilets offer a fresh and odor-free restroom experience.",
-      },
-      {
-        icon: "SlidersHorizontal",
-        title: "Customizable for Different Uses",
-        description:
-          "Available in various designs, sizes, and configurations, including single units and multi-stall models, to suit different industry and event requirements.",
-      },
-      {
-        icon: "BadgeDollarSign",
-        title: "Cost-Effective",
-        description:
-          "With reusable components, energy-saving features, and long-lasting materials, Texo’s mobile toilets offer a budget-friendly and environmentally responsible sanitation option.",
-      },
-    ],
-    variants: [
-      {
-        variantName: "Studio",
-        variantImage: "/products-hero.png",
-        variantInterior: "/siteoffice-2.webp",
-      },
-      {
-        variantName: "1-BHK",
-        variantImage: "/siteoffice-2.webp",
-        variantInterior: "/siteoffice-2.webp",
-      },
-      {
-        variantName: "2-BHK",
-        variantImage: "/products-hero.png",
-        variantInterior: "/siteoffice-2.webp",
-      },
-      {
-        variantName: "3-BHK",
-        variantImage: "/products-hero.png",
-        variantInterior: "/siteoffice-2.webp",
-      },
-    ],
-    faq: [
-      {
-        question: "Can I customize my Mobile Toilet Cabin?",
-        answer:
-          "Absolutely! Texo Prefab World provides highly flexible Mobile Toilet Cabin solutions. From the number of stalls and interior layout to exterior design, features, and towing requirements, we work closely with you to create a mobile sanitation unit that suits your location, purpose, and user expectations.",
-      },
-      {
-        question: "What amenities can I expect in a Mobile Toilet Cabin?",
-        answer:
-          "At Texo Prefab World, our Mobile Toilet Cabins are fully equipped with essentials such as integrated fresh and waste water tanks, ventilation systems, flush toilets, and lighting. Premium options include hand wash stations, motion-sensor lighting, separate male/female compartments, mirrors, exhaust fans, and anti-skid flooring for a hygienic user experience on the go.",
-      },
-      {
-        question: "How do I maintain a Mobile Toilet Cabin?",
-        answer:
-          "Mobile Toilet Cabins from Texo Prefab World are designed for operational ease and minimal upkeep. Routine maintenance includes waste tank disposal, water refilling, surface cleaning, and plumbing checks. Built with non-corrosive materials and easy-access servicing panels, these cabins ensure reliable performance in transit and static use alike.",
-      },
-      {
-        question:
-          "What is special about Mobile Toilet Cabins, and are they strong?",
-        answer:
-          "Mobile Toilet Cabins stand out for their mobility, convenience, and quick deployment at events, construction sites, festivals, and emergency relief areas.\n\nAt Texo Prefab World, each cabin is built using high-quality, weather-resistant materials with an aerodynamic design for easy towing and setup.\n\nIn terms of strength, these cabins feature a galvanized steel chassis, reinforced insulated panels, and heavy-duty fittings—ensuring stability on rough terrains and safety during transport. Our mobile units combine practicality with engineering excellence for demanding field conditions.",
-      },
-      {
-        question: "Are Mobile Toilet Cabins eco-friendly?",
-        answer:
-          "Sustainability is a core value at Texo Prefab World. Our Mobile Toilet Cabins feature energy-efficient LED lighting, low-water flush systems, and options for bio-toilets or solar power integration. With recyclable materials and waste management features, they’re built to serve without harming the environment.",
-      },
-      {
-        question: "What is the typical cost of a Mobile Toilet Cabin?",
-        answer:
-          "Texo Prefab World offers Mobile Toilet Cabins at competitive rates. Pricing varies based on size, facilities, towing setup, and add-on features. Whether you require single units or fleet-ready mobile sanitation pods, we tailor solutions that align with your logistics and budget.",
-      },
-    ],
-    applications: [
-      {
-        heading: "Outdoor Events & Festivals",
-        description:
-          "Provide clean, accessible, and hygienic restroom facilities for concerts, fairs, exhibitions, sporting events, and other large public gatherings. Mobile Toilets ensure visitor comfort while supporting efficient crowd management.",
-        image: "/products/portable/mobile-toilet/images/image1.jpg",
-      },
-      {
-        heading: "Construction & Infrastructure Projects",
-        description:
-          "Deliver reliable sanitation facilities for workers at construction sites, road projects, industrial developments, and temporary worksites. Their portability allows easy relocation as project requirements change.",
-        image: "/products/portable/mobile-toilet/images/image2.jpg",
-      },
-      {
-        heading: "Highways & Remote Worksites",
-        description:
-          "Ideal for highway rest stops, fuel stations, mining locations, and remote operational sites where permanent restroom infrastructure is unavailable. Mobile Toilets provide a practical and hygienic sanitation solution in off-grid environments.",
-        image: "/products/portable/mobile-toilet/images/image3.jpg",
-      },
-    ],
-    trustBand: {
-      citiesCovered: 350,
-      completedProjects: 1100,
-      customerSatisfaction: 90,
-    },
-  },
-  "Portable Toilet Cabin": {
-    name: "Portable Toilet Cabin",
-    category: "Portable Solutions",
-    icon: Building2,
-    description:
-      "Complete portable toilet cabins with enhanced comfort features",
-    longDescription: `Portable Toilet Cabins combine the convenience of mobile sanitation with enhanced comfort features. These complete units provide self-contained facilities that can be deployed anywhere reliable sanitation is needed.
-
-Each cabin includes multiple toilet compartments, handwashing stations, and proper ventilation, creating comfortable and hygienic environments. The portable design allows for easy transportation and setup in remote or temporary locations.
-
-Our Portable Toilet Cabins are built for durability and can handle high-traffic situations while maintaining cleanliness and functionality.`,
-    gallery: [
-      "/products/portable/portable-toilet/pt-1.jpg",
-      "/products/portable/portable-toilet/pt-2.jpg",
-    ],
-    advantages: [
-      {
-        icon: "ShieldPlus",
-        title: "Hygienic & Odor-Free Design",
-        description:
-          "Equipped with efficient ventilation systems, slip proof flooring and anti-bacterial interiors, our toilet cabins ensure a clean and odor-free environment.",
-      },
-      {
-        icon: "Rocket",
-        title: "Quick Installation",
-        description:
-          "Texo portable toilets are pre-fabricated, easy to transport, and require minimal installation, making them ideal for temporary and remote applications.",
-      },
-      {
-        icon: "Truck",
-        title: "Lightweight & Fully Mobile",
-        description:
-          "Built with light yet robust materials, our portable toilet can be relocated easily, ensuring maximum convenience for temporary or emergency setups.",
-      },
-      {
-        icon: "SlidersHorizontal",
-        title: "Customizable Setup",
-        description:
-          "Available in multiple configurations, including single units, multi-cabin setups, and luxury restroom trailers, to cater to different industries and requirements.",
-      },
-      {
-        icon: "Wrench",
-        title: "Low Maintenance",
-        description:
-          "With easy-to-clean interiors and efficient drainage systems, Texo portable toilets reduce downtime and maintenance costs.",
-      },
-      {
-        icon: "Building2",
-        title: "Ideal for Multiple Industries",
-        description:
-          "From construction sites to public parks and disaster relief zones, Texo portable restrooms provide hygienic sanitation solutions anywhere.",
-      },
-    ],
-    variants: [
-      {
-        variantName: "Studio",
-        variantImage: "/products-hero.png",
-        variantInterior: "/siteoffice-2.webp",
-      },
-      {
-        variantName: "1-BHK",
-        variantImage: "/siteoffice-2.webp",
-        variantInterior: "/siteoffice-2.webp",
-      },
-      {
-        variantName: "2-BHK",
-        variantImage: "/products-hero.png",
-        variantInterior: "/siteoffice-2.webp",
-      },
-      {
-        variantName: "3-BHK",
-        variantImage: "/products-hero.png",
-        variantInterior: "/siteoffice-2.webp",
-      },
-    ],
-    faq: [
-      {
-        question: "Can I customize my Portable Toilet Cabin?",
-        answer:
-          "Absolutely! Texo Prefab World specializes in tailored solutions. From layout and size to internal fittings and exterior finishes, we work with you to create a Portable Toilet Cabin that meets your exact sanitation needs—ideal for construction sites, events, remote areas, or transit hubs.",
-      },
-      {
-        question: "What amenities can I expect in a Portable Toilet Cabin?",
-        answer:
-          "At Texo Prefab World, our Portable Toilet Cabins come equipped with essential features such as fresh water and waste storage tanks, proper ventilation, non-slip flooring, and plumbing provisions. Additional options include flush systems, hand wash stations, exhaust fans, mirrors, lighting, and separate male/female sections for enhanced hygiene and usability.",
-      },
-      {
-        question: "How do I maintain a Portable Toilet Cabin?",
-        answer:
-          "Portable Toilet Cabins from Texo Prefab World are built with durable, low-maintenance materials. Routine upkeep includes waste disposal, water refilling, sanitation checks, and ventilation inspection. Our cabins are designed to be easily serviceable, ensuring hygiene, efficiency, and long-term use with minimal hassle.",
-      },
-      {
-        question:
-          "What is special about Portable Toilet Cabins, and are they strong?",
-        answer:
-          "A Portable Toilet Cabin stands out for its convenience, mobility, and essential role in maintaining sanitation across temporary or mobile environments. It’s an efficient solution for outdoor events, labor camps, and emergency setups where infrastructure is limited.\n\nAt Texo Prefab World, we ensure that every Portable Toilet Cabin is designed using sturdy, weather-resistant materials that can withstand frequent relocation and varied climates.\n\nIn terms of strength, these cabins are engineered with a solid steel frame and heavy-duty wall panels, ensuring resilience against moisture, corrosion, and rough handling. Our designs combine structural integrity with hygiene-focused functionality.",
-      },
-      {
-        question: "Are Portable Toilet Cabins eco-friendly?",
-        answer:
-          "Sustainability is a core value at Texo Prefab World. Our Portable Toilet Cabins are built using eco-friendly materials and water-efficient fixtures. Options like bio-toilets, solar-powered ventilation, and recyclable construction components make them a sustainable and responsible sanitation choice.",
-      },
-      {
-        question: "What is the typical cost of a Portable Toilet Cabin?",
-        answer:
-          "Texo Prefab World offers Portable Toilet Cabins at cost-effective prices. The cost depends on factors such as number of units, plumbing type, mobility, and add-on features. Whether you need a basic unit or a premium hygiene solution, we provide customizable options that suit your budget and operational requirements.",
-      },
-    ],
-    trustBand: {
-      citiesCovered: 300,
-      completedProjects: 950,
-      customerSatisfaction: 89,
-    },
-    applications: [
-      {
-        heading: "Smart City Public Sanitation",
-        description:
-          "Governments and municipalities can deploy portable toilet cabins in urban areas to improve public hygiene and sanitation in markets, slums, and public spaces, ensuring clean and accessible restrooms for all.",
-        image: "/products/portable/portable-toilet/images/image11.png",
-      },
-      {
-        heading: "School & Educational Institutions",
-        description:
-          "For temporary classrooms, outdoor training centers, or schools in developing regions, Texo’s portable toilet cabins offer safe and hygienic restroom facilities for students and staff.",
-        image: "/products/portable/portable-toilet/images/image15.png",
-      },
-      {
-        heading: "Highway Rest Stops & Public Spaces",
-        description:
-          "Installed at highways, bus terminals, and tourist spots, ensuring clean and accessible washrooms for travelers.",
-        image: "/products/portable/portable-toilet/images/image17.jpg",
-      },
-    ],
-
-    techSpecs: {
-      architecture: {
-        images: [
-          "/products/portable/portable-toilet/images/image3.jpg",
-          "/products/portable/portable-toilet/images/image6.png",
-          "/products/portable/portable-toilet/images/image7.jpg",
-          "/products/portable/portable-toilet/images/image18.png",
-        ],
-        specs: [
-          {
-            label: "Base Frame",
-            value:
-              "Pressed mild steel channel sections with 100x50x3mm Rectangular Hollow Section (RHS) cross members from APOLLO/JSW.",
-          },
-          {
-            label: "Roof",
-            value:
-              "Self-draining roof fabricated from 1.2mm thick M.S sheet (JSW) with adequate roof bows.",
-          },
-          {
-            label: "Structure",
-            value:
-              "High-quality CNC-engineered mild steel framing system with welded base frame and reinforced corners.",
-          },
-          {
-            label: "Wind Resistance",
-            value: "Designed to withstand wind speeds up to 180 kmph.",
-          },
-          {
-            label: "Seismic Compliance",
-            value: "Complies with Seismic Zone IV requirements.",
-          },
-          {
-            label: "Side & End Walls",
-            value:
-              "1.2mm MS G.I galvanized corrugated sheets (JSW), corrosion-resistant and fully sealed against moisture ingress.",
-          },
-          {
-            label: "Rockwool Insulation",
-            value:
-              "50mm thick Rockwool insulation with density of 48 kg/m³ for thermal and acoustic performance.",
-          },
-          {
-            label: "Thermocol Insulation",
-            value:
-              "Density ranging from 8–40 kg/m³ with thickness between 25–50 mm.",
-          },
-        ],
-      },
-
-      exteriorWallRoof: {
-        images: [
-          "/products/portable/portable-toilet/images/image10.jpg",
-          "/products/portable/portable-toilet/images/image12.png",
-        ],
-        specs: [
-          {
-            label: "Primer",
-            value:
-              "Red oxide primer applied for corrosion resistance and improved paint adhesion.",
-          },
-          {
-            label: "Top Coat",
-            value:
-              "Two coats of chlorinated rubber PU paint (BERGER) for UV, weather, and chemical resistance.",
-          },
-          {
-            label: "Exterior Finish",
-            value:
-              "Durable weatherproof coating suitable for harsh environmental conditions.",
-          },
-          {
-            label: "Color Options",
-            value:
-              "Exterior paint can be customized according to customer requirements.",
-          },
-        ],
-      },
-
-      interiorWallCeiling: {
-        images: [
-          "/products/portable/portable-toilet/images/image13.jpg",
-          
-        ],
-        specs: [
-          {
-            label: "Hylam Sheet",
-            value:
-              "Phenolic resin-based laminate offering waterproof, hygienic, and impact-resistant wall paneling.",
-          },
-          {
-            label: "Hygienic Surface",
-            value:
-              "Non-porous surface prevents bacterial growth and supports easy cleaning.",
-          },
-          {
-            label: "Chemical Resistance",
-            value: "Resistant to common cleaning agents and disinfectants.",
-          },
-          {
-            label: "Fibre Cement Board",
-            value:
-              "Weather-resistant, fire-resistant, and insect-resistant board suitable for interior applications.",
-          },
-          {
-            label: "Board Thickness",
-            value: "Available in 18mm and 6mm thickness.",
-          },
-          {
-            label: "Board Width",
-            value: "1050 mm overall width and 1010 mm effective width.",
-          },
-        ],
-      },
-
-      interiorExteriorFloor: {
-        images: [
-          "/products/portable/portable-toilet/images/image4.png",
-        ],
-        specs: [
-          {
-            label: "Vinyl Tile",
-            value:
-              "Durable vinyl flooring with plank size of 1286 x 194 x 8 mm.",
-          },
-          {
-            label: "Abrasion Rating",
-            value: "AC4.",
-          },
-          {
-            label: "Groove",
-            value: "4 Side V-Groove.",
-          },
-          {
-            label: "Bathroom Vitrified Tiles",
-            value:
-              "11 mm thick luxury vitrified tiles with superior durability and aesthetics.",
-          },
-          {
-            label: "Tile Features",
-            value:
-              "Stain resistant, chromatic stability, super flatness, and low maintenance.",
-          },
-        ],
-      },
-
-      doorsSanitaryElectrical: {
-        images: [
-          "/products/portable/portable-toilet/images/image2.png",
-          "/products/portable/portable-toilet/images/image16.png",
-          "/products/portable/portable-toilet/images/image9.png",
-        ],
-        specs: [
-          {
-            label: "External Door",
-            value:
-              "Mild steel main door with options in Aluminum, UPVC, WPC, or solid skin finish with duco paint.",
-          },
-          {
-            label: "Optional Door Features",
-            value:
-              "Double-glazed units (DGU), mosquito mesh, and skylight blinds.",
-          },
-          {
-            label: "Sanitary System",
-            value:
-              "CPVC/UPVC pipelines from Ashirvad and Sudhakar with fixtures from Cera, Parryware, or Kajaria.",
-          },
-          {
-            label: "Premium Fixtures",
-            value: "Jaquar and Kohler upgrades available at additional cost.",
-          },
-          {
-            label: "Electrical Wiring",
-            value: "Concealed ISI-mark insulated copper wiring by Anchor.",
-          },
-          {
-            label: "Switches & Sockets",
-            value: "Anchor / Maru.",
-          },
-          {
-            label: "Lighting",
-            value: "Energy-efficient LED lights with bulkhead illumination.",
-          },
-          {
-            label: "Ventilation",
-            value: "Orient cabin fans.",
-          },
-          {
-            label: "Distribution Board",
-            value: "MCB-protected electrical distribution board.",
-          },
-          {
-            label: "AC Provision",
-            value:
-              "Pre-installed air-conditioning pipeline within wall panels as per layout.",
-          },
-        ],
-      },
-
-      transitPaymentWarranty: {
-        images: [],
-        specs: [],
-      },
-
-      layout2D: {
-        images: [
-          "/products/portable/portable-toilet/images/image19.jpg",
-        ],
-        specs: [],
-      },
-    },
-  },
   "Prefab Site Offices": {
     name: "Prefab Site Offices",
-    category: "Prefab Solutions",
+    category: "Offices",
     icon: Factory,
     description:
       "Professional prefabricated offices for construction and project sites",
@@ -5122,26 +4560,125 @@ Our Prefab Site Offices are built to withstand construction site conditions whil
       },
 
       layout2D: {
-        images: [
-          "/products/prefab-site-office/techspecs/layout-1.png",
-          "/products/prefab-site-office/techspecs/layout-2.png",
-          "/products/prefab-site-office/techspecs/layout-3.png",
-        ],
+        images: [],
         specs: [],
       },
     },
   },
-  "Prefab Structures": {
-    name: "Prefab Structures",
-    category: "Prefab Solutions",
+  "Marketing Offices": {
+    name: "Marketing Offices",
+    category: "Offices",
+    icon: Briefcase,
+    description:
+      "Showcase-ready sales and marketing offices for real-estate projects, built off-site and installed on your plot",
+    longDescription: `Marketing Offices are the first impression of a new project. Texo designs and builds them as finished, branded spaces, with glazed elevations, reception and display areas, discussion rooms and back-office space, so your sales team can welcome buyers from the first day.
+
+Each office is designed to your brief and site, built in our factory and installed with interiors, lighting and branding surfaces in place. Single-storey and G+1 layouts are available, and the structure can be relocated or reused once the project is sold out.`,
+    gallery: [
+      "/products/prefab/site-office/images/image20.jpg",
+      "/products/prefab/site-office/main.webp",
+      "/products/portable/office/images/image18.jpg",
+      "/products/prefab/site-office/images/image8.jpg",
+      "/products/prefab/site-office/images/image14.jpg",
+    ],
+    advantages: [
+      {
+        icon: "Building",
+        title: "Built to Impress",
+        description:
+          "Glazed elevations, premium cladding and branded façades that help your project stand out from the street.",
+      },
+      {
+        icon: "LayoutDashboard",
+        title: "Planned for Sales",
+        description:
+          "Reception, model display, discussion rooms and back office planned around how your sales team works.",
+      },
+      {
+        icon: "Factory",
+        title: "Factory-Built",
+        description:
+          "Built under controlled conditions in our factory while your site is prepared, then installed ready to use.",
+      },
+      {
+        icon: "Palette",
+        title: "Your Brand, Inside and Out",
+        description:
+          "Finishes, colours, lighting and signage surfaces chosen to match your project's identity.",
+      },
+      {
+        icon: "Move",
+        title: "Relocatable & Reusable",
+        description:
+          "When the project is sold out, the office can be moved to your next site or repurposed.",
+      },
+      {
+        icon: "Layers",
+        title: "Single-Storey or G+1",
+        description:
+          "Compact pavilions or two-storey offices with staircases, balconies and terraces where the layout needs them.",
+      },
+    ],
+    applications: [
+      {
+        heading: "Real-Estate Sales Offices",
+        description:
+          "A finished, branded sales office on your plot where buyers can meet your team and explore the project.",
+        image: "/products/prefab/site-office/images/image20.jpg",
+      },
+      {
+        heading: "Experience Centres",
+        description:
+          "Display areas for models, material boards and walkthroughs that let buyers see the quality they are paying for.",
+        image: "/products/prefab/site-office/images/image8.jpg",
+      },
+      {
+        heading: "Project Launch Lounges",
+        description:
+          "Comfortable lounges and discussion rooms for launch events, site visits and closing conversations.",
+        image: "/products/prefab/site-office/images/image14.jpg",
+      },
+    ],
+    variants: [],
+    faq: [
+      {
+        question: "Can the marketing office match our project branding?",
+        answer:
+          "Yes. Finishes, colours, lighting and signage surfaces are chosen to your brief, and display walls can be planned for renders and models.",
+      },
+      {
+        question: "Is a two-storey (G+1) marketing office possible?",
+        answer:
+          "Yes. We build single-storey and G+1 marketing offices, including staircases and balconies where the layout needs them.",
+      },
+      {
+        question: "What happens to the office after the project is sold?",
+        answer:
+          "It can be dismantled and relocated to your next site, or repurposed as a site office or amenity space.",
+      },
+      {
+        question: "How do we get a quote?",
+        answer:
+          "Share your plot size, preferred layout and location. We send drawings and a detailed quote within 48 hours.",
+      },
+    ],
+    trustBand: {
+      citiesCovered: 56,
+      completedProjects: 1359,
+      customerSatisfaction: 0,
+    },
+  },
+  "Pre-Engineered Buildings": {
+    name: "Pre-Engineered Buildings",
+    category: "Pre-Engineered Buildings",
     icon: Factory,
     description:
-      "Versatile prefabricated buildings for various commercial and industrial applications",
-    longDescription: `Prefab Structures offer versatile building solutions for a wide range of applications. These prefabricated buildings combine speed of construction with the quality and durability of traditional buildings.
+      "Steel pre-engineered buildings for warehouses, factories and large-span industrial spaces",
+    longDescription: `Pre-Engineered Buildings offer versatile building solutions for a wide range of applications. These prefabricated buildings combine speed of construction with the quality and durability of traditional buildings.
 
 Each structure is engineered for specific use cases, whether it's warehousing, manufacturing, or commercial space. The modular design allows for easy expansion and modification as needs change.
 
-Our Prefab Structures are built with high-quality materials and can be customized to meet specific architectural and functional requirements.`,
+Our Pre-Engineered Buildings are built with high-quality materials and can be customized to meet specific architectural and functional requirements.`,
     gallery: [
       "/products/prefab/structures/main.webp",
       "/products/prefab/structures/images/image1.jpg",
@@ -5214,23 +4751,23 @@ Our Prefab Structures are built with high-quality materials and can be customize
           "Absolutely! At Texo Prefab World, customization is at the core of every project. Whether it’s a residential, commercial, or industrial structure, we tailor everything—from size and spatial layout to panel finishes, roofing styles, and internal utilities—ensuring the final structure fits your purpose, site conditions, and vision precisely.",
       },
       {
-        question: "What types of Prefab Structures are available?",
+        question: "What types of Pre-Engineered Buildings are available?",
         answer:
           "Texo Prefab World offers a wide range of prefab structures including cottages, offices, warehouses, villas, bunk houses, toilet units, classrooms, kiosks, and security cabins. Each unit is engineered for rapid deployment, high durability, and maximum usability. Optional integrations include smart systems, climate control, and renewable energy solutions.",
       },
       {
         question: "How do I maintain a Prefab Structure?",
         answer:
-          "Prefab Structures by Texo are made using premium, low-maintenance materials. Regular upkeep includes checking insulation panels, cleaning cladding surfaces, inspecting electrical and plumbing systems, and servicing HVAC if installed. Our structures are designed for hassle-free upkeep, reducing long-term maintenance costs and downtime.",
+          "Pre-Engineered Buildings by Texo are made using premium, low-maintenance materials. Regular upkeep includes checking insulation panels, cleaning cladding surfaces, inspecting electrical and plumbing systems, and servicing HVAC if installed. Our structures are designed for hassle-free upkeep, reducing long-term maintenance costs and downtime.",
       },
       {
         question:
-          "What is special about Prefab Structures, and are they strong?",
+          "What is special about Pre-Engineered Buildings, and are they strong?",
         answer:
-          "Prefab Structures stand out for their speed of construction, versatility, and reusability across diverse sectors like hospitality, education, construction, and healthcare.\n\nAt Texo Prefab World, we use galvanized steel, PUF panels, and weatherproof materials for every build—crafted with CNC precision to <1 mm tolerances.\n\nIn terms of strength, our prefab units are engineered to withstand wind loads, seismic movement, and environmental extremes, ensuring reliability and safety in both temporary and permanent installations.",
+          "Pre-Engineered Buildings stand out for their speed of construction, versatility, and reusability across diverse sectors like hospitality, education, construction, and healthcare.\n\nAt Texo Prefab World, we use galvanized steel, PUF panels, and weatherproof materials for every build—crafted with CNC precision to <1 mm tolerances.\n\nIn terms of strength, our prefab units are engineered to withstand wind loads, seismic movement, and environmental extremes, ensuring reliability and safety in both temporary and permanent installations.",
       },
       {
-        question: "Are Prefab Structures eco-friendly?",
+        question: "Are Pre-Engineered Buildings eco-friendly?",
         answer:
           "Sustainability is a core value at Texo Prefab World. Our prefab solutions use recyclable materials, smart insulation for reduced energy use, and allow integration with solar power and rainwater harvesting. Off-site construction minimizes waste and site disruption, making our structures environmentally conscious and efficient.",
       },
@@ -5266,9 +4803,9 @@ Our Prefab Structures are built with high-quality materials and can be customize
       },
     ],
   },
-  "Prefabricated Accommodation": {
-    name: "Prefabricated Accommodation",
-    category: "Prefab Solutions",
+  "Labour Accommodation": {
+    name: "Labour Accommodation",
+    category: "Worker Accommodation & Site Welfare",
     icon: Factory,
     description:
       "High-quality prefabricated housing solutions for residential and temporary needs",
@@ -5539,7 +5076,7 @@ Our Prefab Houses are designed for comfortable family living, with spacious layo
   },
   "Prefab Schools": {
     name: "Prefab Schools",
-    category: "Prefab Solutions",
+    category: "Clinics, Schools & Public Cabins",
     icon: Factory,
     description:
       "Educational facilities built with prefabricated technology for quick deployment",
@@ -5807,8 +5344,8 @@ applications: [
       customerSatisfaction: 97,
     },
   },
-  "IOT Pods": {
-    name: "IOT Pods",
+  "IoT Pods": {
+    name: "IoT Pods",
     category: "Prefab Solutions",
     icon: Factory,
     description:
@@ -5945,9 +5482,9 @@ applications: [
       customerSatisfaction: 97,
     },
   },
-  "Clinic Cabin": {
-    name: "Clinic Cabin",
-    category: "Specialized Structures",
+  "Clinics & Health Centres": {
+    name: "Clinics & Health Centres",
+    category: "Clinics, Schools & Public Cabins",
     icon: Briefcase,
     description:
       "Medical facilities in portable cabins for healthcare services",
@@ -6294,18 +5831,14 @@ Our Clinic Cabins are designed for quick deployment and can be equipped with sol
       },
 
       layout2D: {
-        images: [
-          "/products/clinic-cabin/techspecs/layout-1.png",
-          "/products/clinic-cabin/techspecs/layout-2.png",
-          "/products/clinic-cabin/techspecs/layout-3.png",
-        ],
+        images: [],
         specs: [],
       },
     },
   },
-  "Restaurant Cabin": {
-    name: "Restaurant Cabin",
-    category: "Specialized Structures",
+  "Restaurant Cabins": {
+    name: "Restaurant Cabins",
+    category: "Clinics, Schools & Public Cabins",
     icon: Briefcase,
     description: "Portable restaurant facilities for food service operations",
     longDescription: `Restaurant Cabins offer complete food service facilities in portable formats. These specialized structures provide professional kitchen and dining areas for various food service applications.
@@ -6658,18 +6191,14 @@ Our Restaurant Cabins are ideal for events, construction sites, resorts, and tem
       },
 
       layout2D: {
-        images: [
-          "/products/restaurant-cabin/oa.png",
-          "/products/restaurant-cabin/oa.png",
-          "/products/restaurant-cabin/oa.png",
-        ],
+        images: [],
         specs: [],
       },
     },
   },
-  "Smoking Room": {
-    name: "Smoking Room",
-    category: "Specialized Structures",
+  "Smoking Rooms": {
+    name: "Smoking Rooms",
+    category: "Clinics, Schools & Public Cabins",
     icon: Briefcase,
     description:
       "Designated smoking areas with proper ventilation and safety features",
@@ -6809,9 +6338,9 @@ Our Smoking Rooms are suitable for offices, hotels, restaurants, and public faci
       },
     ],
   },
-  "Electrical Room": {
-    name: "Electrical Room",
-    category: "Specialized Structures",
+  "Electrical Rooms": {
+    name: "Electrical Rooms",
+    category: "Electrical, Control & Industrial Rooms",
     icon: Briefcase,
     description:
       "Secure electrical equipment enclosures with safety and ventilation features",
@@ -6948,7 +6477,7 @@ Our Electrical Rooms are essential for power distribution, data centers, and ind
   },
   "Security Cabins": {
     name: "Security Cabins",
-    category: "Security Solutions",
+    category: "Security & Gate Cabins",
     icon: FileText,
     description:
       "Professional security posts with monitoring and communication equipment",
@@ -7004,24 +6533,40 @@ Our Security Cabins are used in residential complexes, commercial facilities, an
     ],
     variants: [
       {
-        variantName: "Studio",
-        variantImage: "/products-hero.png",
-        variantInterior: "/siteoffice-2.webp",
+        variantName: "MS",
+        variantImage: "/products/security/security-cabin/security-cabin-ai.png",
+        variantInterior: "/products/security/security-cabin/images/image5.jpg",
+        description:
+          "Mild-steel cabins on a welded steel frame with painted MS sheet cladding: robust and economical for industrial gates and active sites.",
+        specs: [
+          { label: "Cladding", value: "Painted mild-steel sheet, corrugated or plain" },
+          { label: "Frame", value: "Welded mild-steel frame" },
+          { label: "Best for", value: "Factory gates, construction sites, yards" },
+        ],
       },
       {
-        variantName: "1-BHK",
-        variantImage: "/siteoffice-2.webp",
-        variantInterior: "/siteoffice-2.webp",
+        variantName: "ACP",
+        variantImage: "/products/security/security-cabin/images/image10.png",
+        variantInterior: "/products/security/security-cabin/images/image21.png",
+        description:
+          "Cabins finished in aluminium composite panels for a clean, modern look at corporate campuses, gated communities and commercial entrances.",
+        specs: [
+          { label: "Cladding", value: "Aluminium composite panels in a choice of colours" },
+          { label: "Frame", value: "Steel frame" },
+          { label: "Best for", value: "Corporate campuses, residential gates, retail entrances" },
+        ],
       },
       {
-        variantName: "2-BHK",
-        variantImage: "/products-hero.png",
-        variantInterior: "/siteoffice-2.webp",
-      },
-      {
-        variantName: "3-BHK",
-        variantImage: "/products-hero.png",
-        variantInterior: "/siteoffice-2.webp",
+        variantName: "PUF",
+        variantImage: "/products/security/security-cabin/images/image7.png",
+        variantInterior: "/products/security/security-cabin/images/image21.png",
+        description:
+          "Insulated sandwich-panel cabins with a PUF core that keep the interior more comfortable through hot summers and cold nights on long shifts.",
+        specs: [
+          { label: "Panels", value: "PUF sandwich panels with pre-coated steel skins" },
+          { label: "Insulation", value: "Polyurethane foam core" },
+          { label: "Best for", value: "Long shifts, extreme heat or cold" },
+        ],
       },
     ],
     faq: [
@@ -7262,18 +6807,14 @@ Our Security Cabins are used in residential complexes, commercial facilities, an
       },
 
       layout2D: {
-        images: [
-          "/products/security-cabin/oa.png",
-          "/products/security-cabin/oa.png",
-          "/products/security-cabin/oa.png",
-        ],
+        images: [],
         specs: [],
       },
     },
   },
-  "Toll Booth": {
-    name: "Toll Booth",
-    category: "Security Solutions",
+  "Toll Booths": {
+    name: "Toll Booths",
+    category: "Security & Gate Cabins",
     icon: FileText,
     description:
       "Efficient toll collection facilities with modern payment systems",
@@ -7407,9 +6948,9 @@ Our Toll Booths are equipped with modern payment systems including cash, card, a
       },
     ],
   },
-  "ATM Cabin": {
-    name: "ATM Cabin",
-    category: "Security Solutions",
+  "ATM Cabins": {
+    name: "ATM Cabins",
+    category: "Security & Gate Cabins",
     icon: FileText,
     description: "Secure ATM facilities with surveillance and safety features",
     longDescription: `ATM Cabins provide secure environments for automated teller machines, ensuring customer safety and equipment protection. These specialized structures combine security features with accessibility for banking customers.
@@ -7546,9 +7087,9 @@ Our ATM Cabins are suitable for various locations including retail centers, gas 
       },
     ],
   },
-  "Control Room": {
-    name: "Control Room",
-    category: "PUF Insulated Cabin",
+  "Control Rooms": {
+    name: "Control Rooms",
+    category: "Electrical, Control & Industrial Rooms",
     icon: Package,
     description:
       "Temperature-controlled control rooms for industrial and technical operations",
@@ -7687,9 +7228,9 @@ Our Control Rooms are essential for industries requiring precise environmental c
       },
     ],
   },
-  "Solar Control Room": {
-    name: "Solar Control Room",
-    category: "PUF Insulated Cabin",
+  "Solar Control Rooms": {
+    name: "Solar Control Rooms",
+    category: "Electrical, Control & Industrial Rooms",
     icon: Package,
     description:
       "Solar-powered control rooms with sustainable energy solutions",
@@ -7831,7 +7372,7 @@ Our Solar Control Rooms are ideal for environmental monitoring, renewable energy
   },
   "Clean Room": {
     name: "Clean Room",
-    category: "PUF Insulated Cabin",
+    category: "PUF Insulated Cabins",
     icon: Package,
     description:
       "Sterile environments with HEPA filtration and contamination control",
@@ -7980,4 +7521,41 @@ export const getProductsByCategory = (category: string): ProductData[] => {
 
 export const getProductByName = (name: string): ProductData | undefined => {
   return productsData[name];
+};
+
+/** URL slug for a product: lowercase words joined by hyphens ("Porta Cabin" → "porta-cabin"). */
+export const productSlug = (name: string) =>
+  name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+
+export const getProductBySlug = (slug: string): ProductData | undefined =>
+  Object.values(productsData).find((product) => productSlug(product.name) === slug);
+
+/** Names products used to have (and merged products), so old URLs still redirect. */
+export const LEGACY_PRODUCT_NAMES: Record<string, string> = {
+  "Container House": "Container Homes",
+  "Farmhouse": "Prefab Farmhouses",
+  "Portable Office": "Container Offices",
+  "A-Frame Cabin": "A-Frame Homes",
+  "Arc Pod": "Arc Pods",
+  "Wooden House": "Prefab Wooden Homes",
+  "Smart House": "Smart Homes",
+  "Prefabricated Accommodation": "Labour Accommodation",
+  "Bunk House Cabin": "Bunk Houses",
+  "Modular Toilet": "Toilet Cabins",
+  "Toll Booth": "Toll Booths",
+  "ATM Cabin": "ATM Cabins",
+  "Clinic Cabin": "Clinics & Health Centres",
+  "Restaurant Cabin": "Restaurant Cabins",
+  "Smoking Room": "Smoking Rooms",
+  "Electrical Room": "Electrical Rooms",
+  "Control Room": "Control Rooms",
+  "Solar Control Room": "Solar Control Rooms",
+  "Prefab Structures": "Pre-Engineered Buildings",
+  "Containers House": "Container Homes",
+  "IOT Pods": "IoT Pods",
+  "Mobile Toilet": "Toilet Cabins",
+  "Portable Toilet Cabin": "Toilet Cabins",
 };

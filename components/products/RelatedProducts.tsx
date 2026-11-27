@@ -21,8 +21,8 @@ export default function RelatedProducts({
           <div>
             <Eyebrow className="mb-8">More like this</Eyebrow>
             <h2
-              className={`break-words uppercase leading-[0.78] tracking-[-0.075em] ${
-                hasLongWord(category) ? 'text-[clamp(2.3rem,5.6vw,6.5rem)]' : 'text-[clamp(2.8rem,6.4vw,7.5rem)]'
+              className={`break-words uppercase leading-[0.82] tracking-[-0.035em] ${
+                hasLongWord(category) ? 'text-[clamp(2rem,5.2vw,6rem)]' : 'text-[clamp(2.6rem,5vw,6.2rem)]'
               }`}
             >
               <span className="block">Other</span>
@@ -41,7 +41,7 @@ export default function RelatedProducts({
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {products.slice(0, 3).map((product, i) => (
-            <Reveal key={product.name} delay={i * 0.06} className="h-full">
+            <Reveal key={product.name} delay={i * 0.06} className="h-full min-w-0">
               <ProductCard name={product.name} image={product.gallery[0]} category={product.category} index={i} />
             </Reveal>
           ))}

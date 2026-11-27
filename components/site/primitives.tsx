@@ -82,7 +82,7 @@ export function DisplayHeading({
   as: Tag = 'h2',
   lines,
   accent = 1,
-  className = 'text-[clamp(2.6rem,6.4vw,7.5rem)]',
+  className = 'text-[clamp(2.6rem,5vw,6.2rem)]',
 }: {
   as?: 'h1' | 'h2'
   lines: string[]
@@ -90,7 +90,7 @@ export function DisplayHeading({
   className?: string
 }) {
   return (
-    <Tag lang="en" className={`break-words uppercase leading-[0.78] tracking-[-0.075em] ${className}`}>
+    <Tag lang="en" className={`break-words uppercase leading-[0.82] tracking-[-0.035em] ${className}`}>
       {lines.map((line, i) => (
         <span key={line} className={`block ${INDENTS[i] ?? ''} ${i === accent ? 'text-[#886c46]' : ''}`}>
           {line}

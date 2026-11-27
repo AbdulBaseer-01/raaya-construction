@@ -12,8 +12,7 @@ export default function AboutHero() {
             <DisplayHeading as="h1" lines={['About', 'us.']} className="text-[clamp(3.6rem,10vw,11rem)]" />
           </div>
           <p className="max-w-[26rem] text-[clamp(1.05rem,1.4vw,1.35rem)] leading-[1.45] tracking-[-0.015em] lg:pb-3">
-            Together, we craft environments that feel like home—every detail considered, every corner designed for
-            living.
+            Premium prefab and modular buildings, designed and manufactured in Hyderabad since 2018.
           </p>
         </div>
 
@@ -28,7 +27,7 @@ export default function AboutHero() {
           />
           <div className="mt-3 flex items-start justify-between gap-5 text-[0.58rem] uppercase tracking-[0.22em] text-black/50">
             <span>Texo Prefab World / Hyderabad, India</span>
-            <span>Est. 2006</span>
+            <span>Est. 2018</span>
           </div>
         </Reveal>
       </div>

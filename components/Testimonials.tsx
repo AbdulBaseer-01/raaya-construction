@@ -16,29 +16,16 @@ type Testimonial = {
 	image: string;
 };
 
-const testimonials: Testimonial[] = [
-	{
-		quote: "The team understood what the site needed before we had every detail resolved.",
-		name: "Anika Rao",
-		project: "Courtyard Residence",
-		location: "Hyderabad",
-		image: "/products/puf/solar-room/main.webp",
-	},
-	{
-		quote: "The build arrived with the clarity of a finished plan, but the flexibility of a live site.",
-		name: "Rohan Mehta",
-		project: "Field Office Campus",
-		location: "Pune",
-		image: "/products/prefab/cottage/images/image1.png",
-	},
-	{
-		quote: "We could see the thinking in every decision, from the first sketch to the final installation.",
-		name: "Maya Sen",
-		project: "Garden Studio",
-		location: "Bengaluru",
-		image: "/products/prefab/iot-pod/ext-1.png",
-	},
-];
+/*
+ * Written testimonials (brief, section 10). The previous quotes were
+ * placeholders and the first photo was a stock image of another company's
+ * cabin, so the section stays hidden until real ones are added.
+ *
+ * TODO(Texo): add three real client quotes, with permission to publish:
+ *   { quote: "<under 25 words>", name: "<CLIENT NAME>", project: "<ROLE, COMPANY>",
+ *     location: "<CITY>", image: "<real photo of that client's Texo project>" }
+ */
+const testimonials: Testimonial[] = [];
 
 function TestimonialStory({ testimonial }: { testimonial: Testimonial }) {
 	return (
@@ -71,13 +58,14 @@ export default function Testimonials() {
 	const root = useRef<HTMLElement>(null);
 	const storyRef = useRef<HTMLDivElement>(null);
 	const [activeIndex, setActiveIndex] = useState(0);
-	const activeTestimonial = testimonials[activeIndex];
+	const activeTestimonial = testimonials[activeIndex] as Testimonial | undefined;
 
 	const changeTestimonial = (direction: number) => {
 		setActiveIndex((currentIndex) => (currentIndex + direction + testimonials.length) % testimonials.length);
 	};
 
 	useLayoutEffect(() => {
+		if (!root.current) return;
 		const context = gsap.context(() => {
 			gsap.fromTo(
 				".testimonial-heading-line",
@@ -127,16 +115,19 @@ export default function Testimonials() {
 		return () => context.revert();
 	}, [activeIndex]);
 
+	// Hidden until real testimonials are added (see the TODO above).
+	if (!activeTestimonial) return null;
+
 	return (
 		<section ref={root} className="w-full bg-[#ffffff] text-black">
 			<div className="mx-auto flex min-h-[100vh] max-w-[1600px] flex-col px-[5vw] pb-24 pt-28 md:pb-32 md:pt-40 lg:min-h-[110vh]">
 				<div className="grid gap-10 md:grid-cols-[1.1fr_0.9fr] md:items-end md:gap-16">
 					<p className="flex items-center gap-3 text-[0.58rem] uppercase tracking-[0.28em] text-[#886c46]">
 						<span className="h-px w-10 bg-[#886c46]" />
-						Real words / 06
+						Real words / 09
 					</p>
 					<div className="md:col-start-1 md:row-start-2">
-						<h2 className="max-w-[58rem] text-[clamp(3rem,7vw,8.5rem)] uppercase leading-[0.78] tracking-[-0.075em]">
+						<h2 className="max-w-[58rem] text-[clamp(2.6rem,5vw,6.2rem)] font-normal uppercase leading-[0.82] tracking-[-0.035em]">
 							<span className="testimonial-heading-line block">The space</span>
 							<span className="testimonial-heading-line ml-0 block text-[#886c46] md:ml-[12%]">speaks for itself.</span>
 						</h2>
@@ -184,16 +175,6 @@ export default function Testimonials() {
 					</button>
 				</div>
 
-				<div className="mt-auto flex flex-col gap-4 border-t border-black/15 pt-8 md:flex-row md:items-end md:justify-between">
-					<p className="text-[clamp(1.8rem,3.5vw,4.5rem)] uppercase leading-[0.86] tracking-[-0.055em]">
-						Built on trust.
-						<br />
-						Finished on site.
-					</p>
-					<p className="max-w-[19rem] text-[0.7rem] leading-[1.6] text-black/50 md:text-right">
-						The next story starts with a conversation.
-					</p>
-				</div>
 			</div>
 		</section>
 	);

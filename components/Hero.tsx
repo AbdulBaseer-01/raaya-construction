@@ -2,6 +2,8 @@
 
 import { useLayoutEffect, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { CONTACT, FACTS, QUOTE_ANCHOR } from "@/lib/siteFacts";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -198,7 +200,8 @@ export default function Hero() {
         defaults: { ease: "none" },
         scrollTrigger: {
           trigger: root.current,
-          start: "top top",
+          // The header is visible on the first screen (brief, section 2), so the hero pins just below it.
+          start: "top 68px",
           end: "+=250%",
           scrub: 1,
           pin: true,
@@ -321,7 +324,7 @@ export default function Hero() {
   return (
     <section
       ref={root}
-      className="relative h-[100svh] w-screen overflow-hidden bg-white text-black md:h-screen"
+      className="relative mt-[68px] h-[calc(100svh-68px)] w-screen overflow-hidden bg-white text-black max-md:portrait:h-[calc(100svh-68px-3.5rem-env(safe-area-inset-bottom))] md:h-[calc(100vh-68px)]"
     >
       {/* =========================================================
           85% EDITORIAL WHITE PANEL
@@ -336,27 +339,21 @@ export default function Hero() {
       <div
         className="
           absolute inset-y-0 left-0 z-0 flex w-[85%] flex-col overflow-hidden bg-white
-          px-[8%] pb-[clamp(3rem,9svh,5.5rem)] pt-[clamp(5rem,20svh,11rem)]
+          px-[8%] pb-[clamp(3rem,9svh,5.5rem)] pt-[clamp(2.75rem,12svh,8rem)] [@media(orientation:portrait)_and_(max-height:620px)]:pb-[2.5rem] [@media(orientation:portrait)_and_(max-height:620px)]:pt-[3rem]
           max-lg:landscape:grid max-lg:landscape:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]
           max-lg:landscape:content-center max-lg:landscape:gap-x-[7%] max-lg:landscape:gap-y-[clamp(0.6rem,3svh,1.25rem)]
-          max-lg:landscape:pb-[2.75rem] max-lg:landscape:pt-[6.75rem]
+          max-lg:landscape:pb-[2.75rem] max-lg:landscape:pt-[3.25rem]
           lg:block lg:p-0
         "
       >
 
         
 
-        <Image
-          src="/logo-2.png"
-          alt="Prefab Construction Company"
-          width={88}
-          height={88}
-          className="absolute left-5 top-4 z-10 h-14 w-auto object-contain md:left-[3vw] md:top-5 md:h-20"
-        />
+        {/* The site header (with the Texo logo) now sits above the hero, so the hero's own logo is not repeated here. */}
 
         {/* Top right metadata */}
         <span className="absolute right-5 top-6 text-[0.48rem] uppercase tracking-[0.16em] text-black md:right-[2.5rem] md:top-7 md:text-[0.55rem] md:tracking-[0.2em]">
-          2026 / On site
+          Hyderabad / Since {FACTS.founded}
         </span>
 
         <span className="absolute right-0 top-1/2 hidden -translate-y-1/2 -rotate-90 text-[0.52rem] uppercase tracking-[0.28em] text-black lg:block">
@@ -377,67 +374,85 @@ export default function Hero() {
             MAIN EDITORIAL TYPE
         ===================================================== */}
 
-        <div className="relative max-lg:landscape:col-start-1 max-lg:landscape:row-span-3 max-lg:landscape:row-start-1 max-lg:landscape:self-center lg:absolute lg:left-[10%] lg:top-[30%]">
+        <div className="relative max-lg:landscape:col-start-1 max-lg:landscape:row-span-2 max-lg:landscape:row-start-1 max-lg:landscape:self-end lg:absolute lg:left-[10%] lg:top-[30%]">
           <h1
             className="
               hero-text-1
               text-[clamp(2.1rem,min(11vw,8.5svh),4.8rem)]
               uppercase
               leading-[0.84]
-              tracking-[-0.065em]
-              max-lg:landscape:text-[clamp(1.8rem,min(6.2vw,12svh),4.2rem)]
-              lg:text-[clamp(3rem,5.2vw,7rem)]
+              tracking-[-0.035em]
+              max-lg:landscape:text-[clamp(1.7rem,min(5.4vw,10svh),4rem)]
+              [@media(orientation:portrait)_and_(max-height:620px)]:text-[1.6rem]
+              lg:text-[clamp(3rem,5.6vw,7.2rem)]
             "
           >
             <span className="block">
-              Luxury That
+              Premium Modular
             </span>
 
             <span className="ml-[7%] block lg:ml-[13%]">
-              Leaves a
+              Buildings,
             </span>
 
             <span className="ml-[14%] block lg:ml-[28%]">
               <em
                 className={`
-                  tracking-[-0.045em]
+                  tracking-[-0.025em]
                   text-[#886c46]
         `}
               >
-                Lighter Footprint.
+                Ready in weeks.
               </em>
             </span>
           </h1>
         </div>
 
-        <p className="relative mt-[clamp(1.25rem,4.5svh,2.75rem)] w-[85%] max-w-[24rem] text-[0.62rem] leading-[1.65] tracking-[0.01em] text-black sm:text-[0.74rem] max-lg:landscape:col-start-2 max-lg:landscape:mt-0 max-lg:landscape:w-full max-lg:landscape:text-[0.66rem] lg:absolute lg:left-[58%] lg:top-[37%] lg:mt-0 lg:w-[min(17rem,20vw)] lg:text-[0.68rem] lg:leading-[1.7]">
-          Designed around the realities of modern living, each space balances
-          speed, clarity and the freedom to evolve over time.
-        </p>
+        {/* Right body text + the two lead actions (brief, section 2) */}
+        <div className="relative mt-[clamp(1.25rem,4.5svh,2.75rem)] w-[85%] max-w-[24rem] [@media(orientation:portrait)_and_(max-height:620px)]:mt-3 max-lg:landscape:col-start-2 max-lg:landscape:row-start-1 max-lg:landscape:mt-0 max-lg:landscape:w-full lg:absolute lg:left-[58%] lg:top-[50%] lg:mt-0 lg:w-[min(19rem,24vw)]">
+          <p className="text-[0.62rem] leading-[1.65] tracking-[0.01em] text-black sm:text-[0.74rem] max-lg:landscape:text-[0.66rem] lg:text-[0.68rem] lg:leading-[1.7]">
+            Offices, homes, cottages and site cabins, designed to your brief,
+            built in our Hyderabad factory and installed on your site, finished
+            and ready to use.
+          </p>
+          <div className="mt-4 flex flex-wrap gap-2 [@media(orientation:portrait)_and_(max-height:620px)]:mt-2 max-lg:landscape:mt-3 lg:mt-4">
+            <Link
+              href={QUOTE_ANCHOR}
+              className="inline-flex min-h-10 items-center border border-[#886c46] bg-[#886c46] px-4 text-[0.58rem] uppercase tracking-[0.2em] text-white transition-colors hover:bg-transparent hover:text-[#886c46] max-lg:landscape:min-h-8 max-lg:landscape:px-3 max-lg:landscape:text-[0.52rem] [@media(orientation:portrait)_and_(max-height:620px)]:min-h-8 [@media(orientation:portrait)_and_(max-height:620px)]:px-3 [@media(orientation:portrait)_and_(max-height:620px)]:text-[0.52rem]"
+            >
+              Get a quote
+            </Link>
+            <a
+              href={CONTACT.sales.href}
+              className="inline-flex min-h-10 items-center border border-black/25 px-4 text-[0.58rem] uppercase tracking-[0.2em] text-black transition-colors hover:border-[#886c46] hover:text-[#886c46] max-lg:landscape:min-h-8 max-lg:landscape:px-3 max-lg:landscape:text-[0.52rem] [@media(orientation:portrait)_and_(max-height:620px)]:min-h-8 [@media(orientation:portrait)_and_(max-height:620px)]:px-3 [@media(orientation:portrait)_and_(max-height:620px)]:text-[0.52rem]"
+            >
+              Call {CONTACT.sales.label}
+            </a>
+          </div>
+        </div>
 
-        <p className="relative mt-auto w-full max-w-[26rem] text-justify text-[0.6rem] leading-[1.6] tracking-[0.01em] text-black sm:text-[0.72rem] max-lg:landscape:col-start-2 max-lg:landscape:mt-0 max-lg:landscape:text-[0.64rem] lg:absolute lg:bottom-[14%] lg:left-[10%] lg:mt-0 lg:w-[min(20rem,28vw)] lg:text-[0.66rem] lg:leading-[1.7]">
-          A considered approach to modern construction, where material,
-          proportion and permanence meet in spaces made to belong.
+        <p className="relative mt-auto w-full max-w-[26rem] text-justify text-[0.6rem] leading-[1.6] tracking-[0.01em] text-black sm:text-[0.72rem] max-lg:landscape:col-start-1 max-lg:landscape:row-start-3 max-lg:landscape:mt-0 max-lg:landscape:text-[0.64rem] lg:absolute lg:bottom-[14%] lg:left-[10%] lg:mt-0 lg:w-[min(20rem,28vw)] lg:text-[0.66rem] lg:leading-[1.7]">
+          Since {FACTS.founded}. {FACTS.projects} projects. {FACTS.cities} cities.
+          Starting at {FACTS.startingPrice} per sq.ft.
         </p>
 
         {/* =====================================================
             EDITORIAL DESCRIPTION
         ===================================================== */}
 
-        <div className="relative mt-[clamp(1rem,3.5svh,2rem)] w-full max-w-[26rem] max-lg:landscape:col-start-2 max-lg:landscape:mt-0 lg:absolute lg:bottom-[15%] lg:left-auto lg:right-[8%] lg:mt-0 lg:w-[18rem]">
+        <div className="relative mt-[clamp(1rem,3.5svh,2rem)] w-full max-w-[26rem] [@media(orientation:portrait)_and_(max-height:620px)]:mt-2 max-lg:landscape:col-start-2 max-lg:landscape:row-span-2 max-lg:landscape:row-start-2 max-lg:landscape:mt-0 max-lg:landscape:self-start lg:absolute lg:bottom-[15%] lg:left-auto lg:right-[8%] lg:mt-0 lg:w-[18rem]">
 
           <div className="mb-3 flex items-center gap-3 md:mb-4">
             <span className="h-px w-10 bg-[#886c46]" />
 
             <span className="text-[0.45rem] uppercase tracking-[0.2em] text-[#886c46] md:text-[0.5rem] md:tracking-[0.24em]">
-              Prefabricated living
+              Design / build / install
             </span>
           </div>
 
           <p className="text-[0.62rem] leading-[1.55] tracking-[-0.01em] text-black md:text-[0.7rem] md:leading-[1.65]">
-            Spaces engineered with precision,
-            designed for permanence and built
-            with a lighter footprint.
+            One team from first drawing to handover:
+            design, manufacturing, transport and installation.
           </p>
         </div>
 
@@ -592,7 +607,7 @@ export default function Hero() {
 
         <div className="absolute right-5 top-6 z-10 md:right-[4vw] md:top-8">
           <span className="text-[0.45rem] uppercase tracking-[0.18em] text-white/60 md:text-[0.55rem] md:tracking-[0.25em]">
-            Manufacture / Install
+            Manufacture / Deliver / Install
           </span>
         </div>
 
@@ -610,7 +625,7 @@ export default function Hero() {
             text-[clamp(2.4rem,12vw,5rem)]
             uppercase
             leading-[0.86]
-            tracking-[-0.065em]
+            tracking-[-0.035em]
             text-white
             md:text-[clamp(2rem,6vw,7rem)]
           "

@@ -53,25 +53,44 @@ async function appendLeadToSheet({
   });
 }
 
+/** Escapes user input before it is placed in the notification email's HTML. */
+const escapeHtml = (value: string) =>
+  value.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c] as string);
+
+const isValidMobile = (value: string) => /^(?:\+?91|0)?[6-9]\d{9}$/.test(value.replace(/[\s-]/g, ""));
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { name, email, phone, message } = body;
+    const str = (value: unknown) => (typeof value === "string" ? value.trim() : "");
+    const name = str(body.name);
+    const email = str(body.email);
+    const phone = str(body.phone);
+    const buildType = str(body.buildType);
+    const location = str(body.location);
+    const size = str(body.size);
+    const notes = str(body.message);
 
-    // Validate required fields
-    if (!name?.trim() || !email?.trim() || !message?.trim()) {
+    // Required: name, a valid mobile number, what they want to build and where (brief, section 11).
+    if (!name || !isValidMobile(phone) || !buildType || !location) {
       return NextResponse.json(
-        { error: "Name, email, and message are required." },
+        { error: "Name, a valid mobile number, what you want to build and the project location are required." },
         { status: 400 }
       );
     }
 
-    await appendLeadToSheet({
-      name: name.trim(),
-      email: email.trim(),
-      phone: phone?.trim() || "",
-      message: message.trim(),
-    });
+    // The sheet keeps its five columns (time, name, email, phone, message); the new
+    // enquiry details are written into the message column.
+    const message = [
+      `What they want to build: ${buildType}`,
+      `Project location: ${location}`,
+      size ? `Approx. size: ${size} sq.ft` : "",
+      notes ? `Anything else: ${notes}` : "",
+    ]
+      .filter(Boolean)
+      .join("\n");
+
+    await appendLeadToSheet({ name, email, phone, message });
 
     // Send email notification after the sheet append succeeds.
 
@@ -88,21 +107,21 @@ export async function POST(request: NextRequest) {
     await transporter.sendMail({
       from: `"Website Enquiries" <${process.env.SMTP_USER}>`,
       to: process.env.CLIENT_EMAIL,
-      replyTo: email.trim(),
-      subject: `New Website Enquiry — ${name.trim()}`,
+      ...(email ? { replyTo: email } : {}),
+      subject: `New Website Enquiry — ${name}`,
 
       text: `
 New website enquiry
 
 CONTACT DETAILS
 ----------------
-Name: ${name.trim()}
-Email: ${email.trim()}
-Phone: ${phone?.trim() || "Not provided"}
+Name: ${name}
+Phone: ${phone}
+Email: ${email || "Not provided"}
 
-MESSAGE
+ENQUIRY
 ----------------
-${message.trim()}
+${message}
       `,
 
       html: `
@@ -128,46 +147,41 @@ ${message.trim()}
                 <tr>
                   <td style="padding:10px 0;color:#777777;width:100px;">Name</td>
                   <td style="padding:10px 0;color:#111111;font-weight:600;">
-                    ${name.trim()}
+                    ${escapeHtml(name)}
                   </td>
                 </tr>
 
                 <tr>
                   <td style="padding:10px 0;color:#777777;">Email</td>
                   <td style="padding:10px 0;">
-                    <a
-                      href="mailto:${email.trim()}"
-                      style="color:#111111;"
-                    >
-                      ${email.trim()}
-                    </a>
+                    ${email ? `<a href="mailto:${escapeHtml(email)}" style="color:#111111;">${escapeHtml(email)}</a>` : "Not provided"}
                   </td>
                 </tr>
 
                 <tr>
                   <td style="padding:10px 0;color:#777777;">Phone</td>
                   <td style="padding:10px 0;color:#111111;">
-                    ${phone?.trim() || "Not provided"}
+                    ${escapeHtml(phone)}
                   </td>
                 </tr>
               </table>
 
               <div style="margin-top:28px;">
                 <h2 style="margin:0 0 12px;font-size:16px;color:#111111;">
-                  Message
+                  Enquiry
                 </h2>
 
                 <div style="padding:18px;background:#f7f7f7;border-left:3px solid #111111;color:#333333;font-size:14px;line-height:1.6;">
-                  ${message.trim().replace(/\n/g, "<br />")}
+                  ${escapeHtml(message).replace(/\n/g, "<br />")}
                 </div>
               </div>
 
               <div style="margin-top:28px;">
                 <a
-                  href="mailto:${email.trim()}"
+                  href="${email ? `mailto:${escapeHtml(email)}` : `tel:${escapeHtml(phone.replace(/[\s-]/g, ""))}`}"
                   style="display:inline-block;padding:12px 20px;background:#111111;color:#ffffff;text-decoration:none;font-size:14px;"
                 >
-                  Reply to Enquiry
+                  ${email ? "Reply to Enquiry" : "Call back"}
                 </a>
               </div>
 

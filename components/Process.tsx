@@ -13,6 +13,8 @@ import {
   useSpring,
   useTransform,
 } from 'framer-motion';
+import Link from 'next/link';
+import { QUOTE_ANCHOR } from '@/lib/siteFacts';
 
 /* -------------------------------------------------------------------------- */
 /*  Content                                                                   */
@@ -24,22 +26,22 @@ const STEPS = [
   {
     day: 'Day 0',
     title: 'Inquiry',
-    body: 'We discuss your vision, requirements and budget with our expert team, and map it to your site.',
+    body: 'Tell us what you need, where, and your budget. Our team maps your brief to your site.',
   },
   {
     day: 'Day 1–3',
     title: 'Design & Customisation',
-    body: 'Our architects turn it into a custom design — layout, finishes, colours — tailored to your brand.',
+    body: "Our design team turns it into drawings: layout, finishes and colours, tailored to how you'll use the space. You get drawings and a detailed quote within 48 hours, and approve both before production starts.",
   },
   {
-    day: 'Day 4–30',
+    day: 'Day 4–14',
     title: 'Factory Manufacturing',
-    body: 'Your office is built under quality control in our in-house facility while your site stays clear.',
+    body: 'Your structure is built under quality control in our Hyderabad factory while your site stays clear. Factory time is typically about 10 days, depending on our production schedule.',
   },
   {
-    day: 'Day 30+',
+    day: 'Day 15+',
     title: 'Dispatch & Installation',
-    body: 'We transport, install and hand over a plug-and-play office, ready to use from day one.',
+    body: 'We transport, install and hand over a finished, plug-and-play space, ready to use from day one.',
   },
 ] as const;
 
@@ -265,6 +267,18 @@ function Fill({ p, index, axis }: { p: MotionValue<number>; index: number; axis:
   );
 }
 
+/** "Start with step 1 → Get a quote" (brief, section 7). */
+function StartLink({ className = '' }: { className?: string }) {
+  return (
+    <Link
+      href={QUOTE_ANCHOR}
+      className={`group items-center gap-3 text-[0.62rem] uppercase tracking-[0.2em] text-black/70 transition-colors hover:text-[#886c46] ${className}`}
+    >
+      Start with step 1 <span aria-hidden="true">→</span> Get a quote
+    </Link>
+  );
+}
+
 export default function Process() {
   const sectionRef = useRef<HTMLElement>(null);
   const reduceMotion = useReducedMotion();
@@ -296,14 +310,20 @@ export default function Process() {
       className="relative h-[500vh] bg-white text-black"
     >
       <div className="sticky top-0 h-[100svh] overflow-hidden">
-        <div className="mx-auto flex h-full w-full max-w-7xl flex-col px-5 pb-6 pt-20 sm:px-8 lg:grid lg:grid-cols-[5fr_6fr] lg:items-center lg:gap-16 lg:py-0">
+        <div className="mx-auto flex h-full w-full max-w-7xl flex-col px-5 pb-6 pt-20 sm:px-8 max-md:portrait:pb-[calc(1.5rem+3.5rem+env(safe-area-inset-bottom))] lg:grid lg:grid-cols-[5fr_6fr] lg:items-center lg:gap-16 lg:py-0">
           {/* Text column */}
           <div className="shrink-0">
+            <p className="mb-5 flex items-center gap-3 text-[0.58rem] uppercase tracking-[0.28em] text-black/50 lg:mb-8">
+              <span className="h-px w-10 bg-[#886c46]" />
+              Our process / 06
+            </p>
             <h2
               id="process-title"
-              className="text-3xl font-medium tracking-tight sm:text-4xl lg:mb-12 lg:text-6xl"
+              className="text-[clamp(2.2rem,5vw,6.2rem)] font-normal uppercase leading-[0.82] tracking-[-0.035em] lg:mb-10 lg:text-[clamp(2.6rem,4.2vw,5.2rem)]"
             >
-              Our process
+              {/* On desktop the heading sits in the narrower text column beside the 3D stage, so it is sized to that column. */}
+              <span className="block">From brief</span>
+              <span className="ml-[10vw] block text-[#886c46] lg:ml-[2vw]">to handover.</span>
             </h2>
 
             {/* Desktop: full step list */}
@@ -367,13 +387,14 @@ export default function Process() {
                 );
               })}
             </ol>
+            <StartLink className="hidden lg:inline-flex" />
           </div>
 
           {/* 3D stage */}
           <div
             ref={stageRef}
             role="img"
-            aria-label="3D illustration of an office module moving from design, to factory, to installation on your site"
+            aria-label="3D illustration of a modular building moving from design, to factory, to installation on your site"
             className="relative min-h-0 flex-1 transition-opacity duration-300 lg:h-[76svh] lg:flex-none"
             style={{ perspective: 1600, opacity: measured ? 1 : 0 }}
           >
@@ -420,6 +441,7 @@ export default function Process() {
                 </motion.div>
               </AnimatePresence>
             </div>
+            <StartLink className="mt-1 inline-flex" />
           </div>
         </div>
       </div>

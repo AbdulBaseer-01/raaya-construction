@@ -20,9 +20,9 @@ export default function FeaturesHero() {
         <Reveal>
           <p className="mb-10 flex items-center gap-3 text-[0.58rem] uppercase tracking-[0.28em] text-white/70">
             <span className="h-px w-10 shrink-0 bg-[#886c46]" />
-            Features
+            Why Texo
           </p>
-          <h1 className="text-[clamp(3.2rem,9vw,10rem)] uppercase leading-[0.78] tracking-[-0.075em]">
+          <h1 className="text-[clamp(3.2rem,9vw,10rem)] uppercase leading-[0.82] tracking-[-0.035em]">
             <span className="block">Built</span>
             <span className="ml-[10vw] block">different.</span>
             <span className="ml-[4vw] block text-[#886c46]">Engineered</span>
@@ -32,7 +32,7 @@ export default function FeaturesHero() {
 
         <Reveal delay={0.1} className="grid gap-6 border-t border-white/25 pt-8 md:ml-[10%] md:grid-cols-[minmax(0,1fr)_auto] md:items-end">
           <p className="max-w-[34rem] text-[clamp(1.05rem,1.4vw,1.35rem)] leading-[1.45] tracking-[-0.015em] text-white/85">
-            Build premium, sustainable, modular structures in just days. Designed for performance, built for the future.
+            Drawings and a quote in 48 hours. Built in our Hyderabad factory in about 10 days. Installed on your site, ready to use.
           </p>
           <span className="text-[0.58rem] uppercase tracking-[0.22em] text-white/55">Scroll to explore</span>
         </Reveal>

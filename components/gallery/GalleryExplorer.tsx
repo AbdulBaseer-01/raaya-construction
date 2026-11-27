@@ -1,10 +1,12 @@
 'use client'
 
-import { useMemo, useRef, useState } from 'react'
+import { useMemo, useRef, useState, useSyncExternalStore } from 'react'
+import Link from 'next/link'
 import { LayoutGrid, Rows3, Search, X } from 'lucide-react'
 import { CATEGORIES, SIZES, galleryItems } from '@/lib/galleryItems'
 import Reveal from '@/components/site/Reveal'
 import { DisplayHeading, Eyebrow, outlineButton, pad, shell } from '@/components/site/primitives'
+import { QUOTE_ANCHOR } from '@/lib/siteFacts'
 import GalleryCard, { type GalleryLayout } from './GalleryCard'
 import GalleryLightbox from './GalleryLightbox'
 
@@ -20,6 +22,19 @@ const Underline = ({ active }: { active: boolean }) => (
 const chip =
   'inline-flex items-center gap-2 border border-[#886c46]/40 px-3 py-1.5 text-[0.55rem] uppercase tracking-[0.18em] text-[#886c46] transition-colors hover:border-[#886c46] hover:bg-[#886c46]/10'
 
+/* Masonry columns match the grid breakpoints: 1 / 2 (sm) / 3 (lg) / 4 (xl). */
+const COLUMN_QUERIES: [string, number][] = [
+  ['(min-width: 1280px)', 4],
+  ['(min-width: 1024px)', 3],
+  ['(min-width: 640px)', 2],
+]
+const subscribeColumns = (onChange: () => void) => {
+  const lists = COLUMN_QUERIES.map(([query]) => window.matchMedia(query))
+  lists.forEach((list) => list.addEventListener('change', onChange))
+  return () => lists.forEach((list) => list.removeEventListener('change', onChange))
+}
+const currentColumns = () => COLUMN_QUERIES.find(([query]) => window.matchMedia(query).matches)?.[1] ?? 1
+
 const categoryCount = (category: string) => galleryItems.filter((g) => g.category === category).length
 
 /** Hero search, filters, results, category index and project viewer (they share one filter state). */
@@ -30,6 +45,7 @@ export default function GalleryExplorer() {
   const [layout, setLayout] = useState<GalleryLayout>('masonry')
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
   const resultsRef = useRef<HTMLDivElement>(null)
+  const columnCount = useSyncExternalStore(subscribeColumns, currentColumns, () => 1)
 
   const filtered = useMemo(() => {
     const q = search.toLowerCase()
@@ -187,25 +203,33 @@ export default function GalleryExplorer() {
           {filtered.length === 0 ? (
             <div className="grid gap-8 py-16 md:grid-cols-[1fr_0.7fr] md:items-end md:py-24">
               <div>
-                <Eyebrow className="mb-8">00 results</Eyebrow>
-                <h2 className="text-[clamp(2.4rem,5vw,5.5rem)] uppercase leading-[0.8] tracking-[-0.075em]">No results found</h2>
+                <Eyebrow className="mb-8">00 projects</Eyebrow>
+                <h2 className="text-[clamp(2.4rem,5vw,5.5rem)] uppercase leading-[0.82] tracking-[-0.035em]">No projects in this category yet.</h2>
               </div>
-              <div>
-                <p className="mb-8 max-w-[23rem] text-[0.82rem] leading-[1.8] text-black/65">
-                  Try adjusting your category, size, or search query.
-                </p>
-                <button type="button" onClick={clearAll} className={outlineButton}>
-                  Clear filters
-                  <X className="h-4 w-4" />
-                </button>
+              <div className="flex flex-col items-start gap-6">
+                <Link href={QUOTE_ANCHOR} className={outlineButton}>
+                  Tell us what you need → Get a quote
+                </Link>
+                {filtersActive && (
+                  <button type="button" onClick={clearAll} className="text-[0.58rem] uppercase tracking-[0.22em] text-black/45 underline underline-offset-4 transition-colors hover:text-[#886c46]">
+                    Clear filters
+                  </button>
+                )}
               </div>
             </div>
           ) : layout === 'masonry' ? (
-            <div className="columns-1 gap-4 sm:columns-2 lg:columns-3 xl:columns-4">
-              {filtered.map((item, i) => (
-                <Reveal key={item.id} delay={Math.min(i, 8) * 0.04} className="mb-4 break-inside-avoid">
-                  <GalleryCard item={item} index={i} layout={layout} onOpen={() => setLightboxIndex(i)} />
-                </Reveal>
+            // Cards are dealt into columns left to right, so numbers read row by row (01, 02, 03…).
+            <div className="flex items-start gap-4">
+              {Array.from({ length: columnCount }, (_, column) => (
+                <div key={column} className="flex min-w-0 flex-1 flex-col gap-4">
+                  {filtered.map((item, i) =>
+                    i % columnCount === column ? (
+                      <Reveal key={item.id} delay={Math.min(i, 8) * 0.04}>
+                        <GalleryCard item={item} index={i} layout={layout} onOpen={() => setLightboxIndex(i)} />
+                      </Reveal>
+                    ) : null,
+                  )}
+                </div>
               ))}
             </div>
           ) : (

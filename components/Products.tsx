@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
+import { QUOTE_ANCHOR } from '@/lib/siteFacts'
 
 const featuredProducts = [
 	{
@@ -49,17 +50,17 @@ export default function Products() {
 					<div>
 						<p className="mb-8 flex items-center gap-3 text-[0.58rem] uppercase tracking-[0.28em] text-[#b3976d]">
 							<span className="h-px w-10 bg-[#b3976d]" />
-							The collection / 03
+							The collection / 04
 						</p>
-						<h2 className="max-w-[48rem] text-[clamp(3.2rem,7.5vw,8.5rem)] uppercase leading-[0.78] tracking-[-0.075em]">
+						<h2 className="max-w-[48rem] text-[clamp(2.6rem,5vw,6.2rem)] font-normal uppercase leading-[0.82] tracking-[-0.035em]">
 							<span className="block">Built for</span>
-							<span className="ml-[10vw] block text-[#b3976d]">different</span>
+							<span className="ml-[10vw] block text-[#886c46]">different</span>
 							<span className="ml-[4vw] block">needs.</span>
 						</h2>
 					</div>
 					<div className="md:pb-2">
 						<p className="max-w-[23rem] text-[0.82rem] leading-[1.8] text-black/85">
-							Modular spaces with a point of view. Explore six collections designed to adapt, endure and belong wherever they land.
+							Six collections, 35 products: from A-frame cabins and prefab homes to site offices and security cabins. Each one made to order and finished to your brief.
 						</p>
 						<p className="mt-8 text-[0.58rem] uppercase tracking-[0.22em] text-black/75">
 							35 products / 06 categories
@@ -91,7 +92,7 @@ export default function Products() {
 
 							<div className="p-6 sm:p-7 md:p-8">
 								<div className="mb-5 h-px w-12 bg-[#886c46] transition-all duration-500 group-hover:w-20" />
-								<h3 className="max-w-[23rem] text-[clamp(2rem,3.5vw,4rem)] uppercase leading-[0.82] tracking-[-0.07em]">
+								<h3 className="max-w-[23rem] text-[clamp(2rem,3.5vw,4rem)] uppercase leading-[0.82] tracking-[-0.035em]">
 									{product.name}
 								</h3>
 								<p className="mt-6 max-w-[22rem] text-[0.62rem] uppercase tracking-[0.18em] text-black/55">
@@ -109,10 +110,16 @@ export default function Products() {
 					<p className="max-w-[22rem] text-[0.7rem] leading-[1.6] text-black/50">
 						From a quiet retreat to a high-performance worksite, there is a better way to build.
 					</p>
-					<Link href="/products" className="group flex items-center gap-3 text-[0.62rem] uppercase tracking-[0.2em] text-black/75 transition-colors hover:text-[#b3976d]">
-						Explore the full collection
-						<ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-					</Link>
+					<div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-8">
+						<Link href={QUOTE_ANCHOR} className="group flex items-center gap-3 text-[0.62rem] uppercase tracking-[0.2em] text-black/75 transition-colors hover:text-[#b3976d]">
+							Not sure what you need? Get a quote
+							<ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+						</Link>
+						<Link href="/products" className="group flex items-center gap-3 text-[0.62rem] uppercase tracking-[0.2em] text-black/75 transition-colors hover:text-[#b3976d]">
+							Explore the full collection
+							<ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+						</Link>
+					</div>
 				</div>
 			</div>
 		</section>

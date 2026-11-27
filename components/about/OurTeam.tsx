@@ -9,7 +9,7 @@ export default function OurTeam() {
         <div className="mb-16 grid gap-10 md:grid-cols-[1fr_0.8fr] md:items-end md:gap-16">
           <div>
             <Eyebrow className="mb-8">The people behind every build / 05</Eyebrow>
-            <DisplayHeading lines={['One team.', 'One standard.']} className="text-[clamp(2.4rem,6.4vw,7.5rem)]" />
+            <DisplayHeading lines={['One team.', 'One standard.']} className="text-[clamp(2.6rem,5vw,6.2rem)]" />
           </div>
           <div className="max-w-[28rem] space-y-4 text-[0.85rem] leading-[1.8] text-black/70 md:pb-2">
             <p>

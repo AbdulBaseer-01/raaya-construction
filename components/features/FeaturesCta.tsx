@@ -16,7 +16,7 @@ export default function FeaturesCta() {
             <span className="h-px w-10 shrink-0 bg-[#886c46]" />
             Ready to build?
           </p>
-          <h2 lang="en" className="break-words text-[clamp(2.2rem,5.4vw,6.4rem)] uppercase leading-[0.82] tracking-[-0.07em]">
+          <h2 lang="en" className="break-words text-[clamp(2.6rem,5vw,6.2rem)] uppercase leading-[0.82] tracking-[-0.035em]">
             <span className="block">Your site deserves</span>
             <span className="ml-[10vw] block text-[#886c46]">a structure that works</span>
             <span className="ml-[4vw] block">as hard as you do.</span>

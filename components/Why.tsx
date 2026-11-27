@@ -5,13 +5,13 @@ const reasons = [
 	{
 		number: '01',
 		title: 'Rapid installation',
-		description: 'Factory-built structures installed on-site in weeks, not months.',
+		description: 'Built in our factory while your site is prepared, so you go from approval to handover in weeks, not months.',
 		label: 'Built off-site / finished on-site',
 	},
 	{
 		number: '02',
 		title: 'Custom designs',
-		description: 'Tailored layouts, finishes, colors, and interiors shaped around the way you work or live.',
+		description: 'Our in-house design team shapes the layout, finishes, colours and interiors around how you work or live.',
 		label: 'Made to fit your brief',
 	},
 	{
@@ -38,9 +38,9 @@ export default function Why() {
 					<div className="flex h-full flex-col justify-center px-6 py-24 sm:px-10 md:px-[5vw] md:py-16">
 						<p className="mb-10 flex items-center gap-3 text-[0.58rem] uppercase tracking-[0.28em] text-black/50">
 							<span className="h-px w-10 bg-[#886c46]" />
-							Why prefab / 02
+							Why Texo / 05
 						</p>
-						<h2 className="max-w-[34rem] text-[clamp(3.4rem,6.7vw,8rem)] uppercase leading-[0.78] tracking-[-0.075em]">
+						<h2 className="max-w-[34rem] text-[clamp(2.6rem,5vw,6.2rem)] font-normal uppercase leading-[0.82] tracking-[-0.035em]">
 							<span className="block">The case</span>
 							<span className="ml-[10vw] block text-[#886c46]">for better</span>
 							<span className="ml-[5vw] block">building.</span>
@@ -66,7 +66,7 @@ export default function Why() {
 									</span>
 									<div className="mb-5 h-px w-12 bg-[#886c46] transition-all duration-500 group-hover:w-20" />
 									<div className="flex items-start justify-between gap-6">
-										<h3 className="max-w-[24rem] text-[clamp(2.3rem,4.2vw,5rem)] uppercase leading-[0.8] tracking-[-0.07em] transition-colors duration-300 group-hover:text-[#886c46]">
+										<h3 className="max-w-[24rem] text-[clamp(2.3rem,4.2vw,5rem)] uppercase leading-[0.8] tracking-[-0.035em] transition-colors duration-300 group-hover:text-[#886c46]">
 											{reason.title}
 										</h3>
 										<ArrowUpRight className="h-5 w-5 shrink-0 text-[#886c46]" />
@@ -84,7 +84,7 @@ export default function Why() {
 					</div>
 					<div className="mt-8 flex items-center justify-between border-t border-black/15 pt-5 text-[0.62rem] uppercase tracking-[0.2em] text-black/60">
 						<span>Built around your needs</span>
-						<Link href="/#our-process" className="group flex items-center gap-3 transition-colors hover:text-[#886c46]">
+						<Link href="/#process" className="group flex items-center gap-3 transition-colors hover:text-[#886c46]">
 							See how we build
 							<ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
 						</Link>

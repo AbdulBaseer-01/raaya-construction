@@ -1,48 +1,53 @@
-import { Cog, LayoutGrid, Leaf, Rocket, Shield } from 'lucide-react'
+import { Building2, Clock, Factory, IndianRupee, MapPin } from 'lucide-react'
 import FramedImage from '@/components/site/FramedImage'
 import Reveal from '@/components/site/Reveal'
 import { DisplayHeading, Eyebrow, Rule, pad } from '@/components/site/primitives'
 
+/*
+ * Approved facts only (brief, sections 16 and 18). The previous five stats
+ * (<1mm tolerance, 24h reassembly, 25+ years / R-25 / 150 km/h, 80% off-site,
+ * 30% energy saved) can come back once Texo verifies them.
+ */
 const features = [
   {
-    icon: Cog,
-    label: 'Engineering',
-    headline: 'Precision Engineering',
-    body: 'CNC and robotic fabrication ensures <1 mm tolerance for consistent, high-quality builds with 30% fewer on-site errors.',
-    stat: '<1mm',
-    statLabel: 'Tolerance',
+    icon: Clock,
+    label: 'Why Texo',
+    headline: 'Fast Answers',
+    body: 'Custom layout drawings, material specs and a detailed quote within 48 hours of your brief.',
+    stat: '48h',
+    statLabel: 'Drawings & quote',
   },
   {
-    icon: LayoutGrid,
-    label: 'Scalability',
-    headline: 'Modular Scalability',
-    body: 'Plug-and-play modular design allows seamless expansion, relocation, or reassembly — completed in under 24 hours.',
-    stat: '24h',
-    statLabel: 'Reassembly',
+    icon: Factory,
+    label: 'Why Texo',
+    headline: 'Factory-Built',
+    body: 'Built under quality control while your site is prepared. Timing depends on our production schedule.',
+    stat: '~10 days',
+    statLabel: 'In the factory',
   },
   {
-    icon: Shield,
-    label: 'Materials',
-    headline: 'Smart Material Usage',
-    body: 'Galvanized steel and R-25 insulation deliver 25+ years durability and withstand wind loads up to 150 km/h.',
-    stat: '25+',
-    statLabel: 'Years Life',
+    icon: Building2,
+    label: 'Why Texo',
+    headline: 'Proven at Scale',
+    body: 'Site offices, homes, cabins and specialised structures for developers, businesses and institutions.',
+    stat: '1,359+',
+    statLabel: 'Projects',
   },
   {
-    icon: Rocket,
-    label: 'Deployment',
-    headline: 'Rapid Deployment',
-    body: '80% off-site manufacturing slashes project timelines, enabling setup and delivery in record time.',
-    stat: '80%',
-    statLabel: 'Off-Site Built',
+    icon: MapPin,
+    label: 'Why Texo',
+    headline: 'Wide Reach',
+    body: 'Manufactured in Hyderabad, transported and installed on your site.',
+    stat: '56+',
+    statLabel: 'Cities',
   },
   {
-    icon: Leaf,
-    label: 'Sustainability',
-    headline: 'Eco-Conscious Design',
-    body: 'Thermally optimized builds reduce material waste and cut energy consumption by up to 30%.',
-    stat: '30%',
-    statLabel: 'Energy Saved',
+    icon: IndianRupee,
+    label: 'Why Texo',
+    headline: 'Clear Pricing',
+    body: 'A detailed quote up front, before production starts.',
+    stat: '₹2,500',
+    statLabel: 'From / sq.ft',
   },
 ]
 
@@ -71,10 +76,10 @@ export default function KeyFeatures() {
               />
               <p className="mt-4 flex items-center gap-3 text-[0.58rem] uppercase tracking-[0.22em] text-black/55">
                 <span className="h-1.5 w-1.5 shrink-0 bg-[#886c46]" />
-                ISO 9001:2025 Certified
+                Since 2018
               </p>
               <p className="mt-3 text-[0.82rem] leading-[1.8] text-black/55">
-                18+ years of engineering excellence, delivering precision-built modular structures across India.
+                1,359+ projects delivered across 56+ cities.
               </p>
             </div>
           </div>

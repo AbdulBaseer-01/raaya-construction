@@ -2,8 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { SubmitEvent, useState } from "react";
-import { ArrowRight, ArrowUpRight, LoaderCircle, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Clock, Mail, MapPin, Phone } from "lucide-react";
+import QuoteForm from "@/components/site/QuoteForm";
+import { CONTACT } from "@/lib/siteFacts";
+import { productCategories } from "@/lib/productCategories";
 
 /*
  * Palette
@@ -18,28 +20,27 @@ import { ArrowRight, ArrowUpRight, LoaderCircle, Mail, MapPin, Phone } from "luc
  */
 
 const legalLinks = [
-	{ label: "Terms Of Service", href: "/terms" },
+	{ label: "Terms Of Service", href: "/terms-of-use" },
 	{ label: "Privacy Policy", href: "/privacy-policy" },
 ];
 
 const contacts = [
-	{
-		phone: { label: "+91 99999 99999", href: "tel:+919999999999" },
-		email: { label: "info@texoprefabworld.com", href: "mailto:info@texoprefabworld.com" },
-	},
-	{
-		phone: { label: "+91 88888 88888", href: "tel:+918888888888" },
-		email: { label: "sales@texoprefabworld.com", href: "mailto:sales@texoprefabworld.com" },
-	},
+	{ label: "Sales", phone: CONTACT.sales, email: CONTACT.infoEmail },
+	{ label: "General", phone: CONTACT.general, email: CONTACT.salesEmail },
 ];
 
 const address = {
-	href: "https://maps.app.goo.gl/qNSyNS4xH7eMCv2z9",
-	lines: [
-		"Plot no 1, Venkateshwara Colony, IDA Jeedimetla, Apurupa Colony, Jeedimetla, Hyderabad, Telangana 500055",
-		"India",
-	],
+	href: CONTACT.mapUrl,
+	lines: [CONTACT.address, "India"],
 };
+
+const companyLinks = [
+	{ label: "About Us", href: "/about-us" },
+	{ label: "Projects", href: "/inspiration-gallery" },
+	{ label: "Blogs", href: "/blogs" },
+	{ label: "Careers", href: "/career" },
+	{ label: "Contact", href: "/contact-us" },
+];
 
 const InstagramIcon = () => (
 	<svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -77,28 +78,11 @@ function Eyebrow({ children }: { children: React.ReactNode }) {
 	);
 }
 
-const fieldClass =
-	"block w-full min-w-0 border-0 border-b border-white/20 bg-transparent px-0 py-3 text-[0.95rem] text-white outline-none transition-colors placeholder:text-white/30 hover:border-white/35 focus:border-[#886c46]";
-
-const labelClass =
-	"text-[0.65rem] font-medium uppercase tracking-[0.2em] text-[#A5A5A5] transition-colors group-focus-within:text-[#886c46]";
-
 /**
  * `showContact` renders the contact hero with its enquiry form. Pages that are
  * themselves a contact form (/contact-us) turn it off to avoid two forms in a row.
  */
 export default function Footer({ showContact = true }: { showContact?: boolean }) {
-	const [isSubmitting, setIsSubmitting] = useState(false);
-	const [isSubmitted, setIsSubmitted] = useState(false);
-
-	const handleSubmit = async (event: SubmitEvent<HTMLFormElement>) => {
-		event.preventDefault();
-		setIsSubmitting(true);
-		await new Promise((resolve) => setTimeout(resolve, 700));
-		setIsSubmitting(false);
-		setIsSubmitted(true);
-	};
-
 	return (
 		<footer id="contact" className="relative w-full overflow-hidden bg-[#080808] text-white">
 			{/* ───────────────────────── Contact hero ───────────────────────── */}
@@ -137,21 +121,21 @@ export default function Footer({ showContact = true }: { showContact?: boolean }
 						<div className="grid grid-cols-1 gap-14 @min-[76rem]:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] @min-[76rem]:items-end @min-[76rem]:gap-16">
 							{/* Heading block */}
 							<div className="@container min-w-0">
-								<Eyebrow>Contact</Eyebrow>
+								<Eyebrow>Contact / 10</Eyebrow>
 								<h2
 									id="footer-heading"
-									className="mt-6 text-[clamp(2.25rem,12.5cqi,6rem)] font-light uppercase leading-[0.92] tracking-[-0.045em] text-white"
+									className="mt-6 text-[clamp(2.25rem,10cqi,5.4rem)] font-normal uppercase leading-[0.92] tracking-[-0.03em] text-white"
 								>
-									Ready to
+									Tell us what
 									<br />
-									make a move?
+									you want to build.
 								</h2>
 								<p className="mt-6 max-w-[26rem] text-base leading-7 text-[#A5A5A5] sm:mt-8 sm:text-lg sm:leading-8">
-									Tell us what you&apos;re looking for &ndash; we&apos;ll take care of the rest.
+									Share your requirement and site location. Our team will call you back with next steps and an estimate.
 								</p>
 
 								<a
-									href="mailto:info@texoprefabworld.com"
+									href={CONTACT.infoEmail.href}
 									className="group mt-8 inline-flex min-h-12 items-center gap-6 border border-white/25 py-3 pl-6 pr-4 text-xs font-semibold uppercase tracking-[0.18em] text-white transition-colors duration-300 hover:border-[#886c46] hover:bg-white/[0.03] sm:mt-10"
 								>
 									Let&apos;s talk
@@ -168,10 +152,10 @@ export default function Footer({ showContact = true }: { showContact?: boolean }
 									{/* Details */}
 									<div className="flex min-w-0 flex-col gap-8 border-t border-white/10 pt-6">
 										<div className="grid gap-6">
-											{contacts.map((contact, index) => (
-												<div key={contact.phone.href} className="grid grid-cols-[2rem_minmax(0,1fr)] gap-x-2">
-													<span className="pt-0.5 text-[0.65rem] font-medium tracking-[0.2em] text-[#886c46]">
-														{String(index + 1).padStart(2, "0")}
+											{contacts.map((contact) => (
+												<div key={contact.phone.href} className="grid grid-cols-[4.75rem_minmax(0,1fr)] gap-x-2">
+													<span className="pt-0.5 text-[0.65rem] font-medium uppercase tracking-[0.2em] text-[#886c46]">
+														{contact.label}
 													</span>
 													<div className="grid min-w-0 gap-3 text-[0.95rem]">
 														<a
@@ -191,6 +175,13 @@ export default function Footer({ showContact = true }: { showContact?: boolean }
 													</div>
 												</div>
 											))}
+											<p className="grid grid-cols-[4.75rem_minmax(0,1fr)] gap-x-2 text-sm leading-6 text-[#A5A5A5]">
+												<span className="pt-0.5 text-[0.65rem] font-medium uppercase tracking-[0.2em] text-[#886c46]">Hours</span>
+												<span className="flex min-w-0 items-center gap-3">
+													<Clock aria-hidden="true" className="h-4 w-4 shrink-0 text-[#886c46]" />
+													{CONTACT.hours}
+												</span>
+											</p>
 										</div>
 
 										<a
@@ -201,6 +192,8 @@ export default function Footer({ showContact = true }: { showContact?: boolean }
 										>
 											<MapPin aria-hidden="true" className="mt-1 h-4 w-4 text-[#886c46]" />
 											<span className="min-w-0">
+												{/* TODO(Texo): change to "Office & factory" once confirmed both are at this address. */}
+												<span className="mb-1 block text-[0.65rem] font-medium uppercase tracking-[0.2em] text-white">Office</span>
 												{address.lines[0]}
 												<br />
 												{address.lines[1]}
@@ -217,59 +210,7 @@ export default function Footer({ showContact = true }: { showContact?: boolean }
 
 									{/* Enquiry form */}
 									<div className="@container min-w-0 border border-white/10 bg-[#080808]/60 p-6 sm:p-8">
-										{isSubmitted ? (
-											<div className="py-8" role="status" aria-live="polite">
-												<span aria-hidden="true" className="block h-px w-10 bg-[#886c46]" />
-												<p className="mt-6 text-2xl font-medium uppercase tracking-[-0.02em]">Thank you.</p>
-												<p className="mt-3 text-sm leading-6 text-[#A5A5A5]">We&apos;ll be in touch shortly.</p>
-											</div>
-										) : (
-											<form onSubmit={handleSubmit} className="flex flex-col gap-7">
-												<div>
-													<p className="text-lg font-medium uppercase tracking-[0.04em]">Let&apos;s talk</p>
-													<p className="mt-2 text-sm leading-6 text-[#A5A5A5]">Tell us a little about your project.</p>
-												</div>
-
-												<div className="grid grid-cols-1 gap-x-6 gap-y-6 @min-[26rem]:grid-cols-2">
-													<div className="group min-w-0 @min-[26rem]:col-span-2">
-														<label className={labelClass} htmlFor="footer-name">Your name</label>
-														<input id="footer-name" name="name" required autoComplete="name" placeholder="Full name" className={fieldClass} />
-													</div>
-													<div className="group min-w-0">
-														<label className={labelClass} htmlFor="footer-email">Your email</label>
-														<input id="footer-email" name="email" type="email" required autoComplete="email" placeholder="name@company.com" className={fieldClass} />
-													</div>
-													<div className="group min-w-0">
-														<label className={labelClass} htmlFor="footer-phone">Your Phone</label>
-														<input id="footer-phone" name="phone" type="tel" required autoComplete="tel" placeholder="+91" className={fieldClass} />
-													</div>
-													<div className="group min-w-0 @min-[26rem]:col-span-2">
-														<label className={labelClass} htmlFor="footer-message">Tell us about your project</label>
-														<textarea
-															id="footer-message"
-															name="message"
-															required
-															rows={3}
-															placeholder="Size, site location, timeline…"
-															className={`${fieldClass} min-h-24 resize-y`}
-														/>
-													</div>
-												</div>
-
-												<button
-													type="submit"
-													disabled={isSubmitting}
-													className="group inline-flex min-h-12 w-full items-center justify-between gap-4 border border-white/25 px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-white transition-colors duration-300 hover:border-[#886c46] hover:bg-[#886c46]/10 focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-[#886c46] disabled:cursor-wait disabled:opacity-70 @min-[26rem]:w-fit @min-[26rem]:justify-start"
-												>
-													{isSubmitting ? "Sending" : "Send enquiry"}
-													{isSubmitting ? (
-														<LoaderCircle aria-hidden="true" className="h-4 w-4 animate-spin text-[#886c46]" />
-													) : (
-														<ArrowRight aria-hidden="true" className="h-4 w-4 text-[#886c46] transition-transform duration-300 group-hover:translate-x-1" />
-													)}
-												</button>
-											</form>
-										)}
+										<QuoteForm tone="dark" idPrefix="footer" />
 									</div>
 								</div>
 							</div>
@@ -280,26 +221,25 @@ export default function Footer({ showContact = true }: { showContact?: boolean }
 			)}
 
 			{/* ───────────────────────── Footer body ───────────────────────── */}
-			<section aria-labelledby="footer-plan-heading" className="relative">
+			{/* TODO(Texo): add "GSTIN: …" to the bottom line if it should be shown. */}
+			<section aria-label="Site links" className="relative">
 				<div className="mx-auto w-full max-w-[1600px] px-5 sm:px-8 lg:px-[5vw]">
 					<div className="@container border-t border-white/10 py-12 sm:py-14 lg:py-16">
-						<div className="grid grid-cols-1 gap-10 @min-[52rem]:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] @min-[52rem]:items-end @min-[52rem]:gap-16">
-							<div className="@container min-w-0">
-								<Eyebrow>Get in touch</Eyebrow>
-								<h2
-									id="footer-plan-heading"
-									className="mt-6 text-[clamp(1.9rem,6.5cqi,3.5rem)] font-medium uppercase leading-[0.95] tracking-[-0.045em]"
-								>
-									<span className="block text-white">Let&apos;s plan</span>
-									<span className="block pl-[0.9em] text-[#A5A5A5]">your space.</span>
-								</h2>
-							</div>
-
-							<div className="flex min-w-0 flex-col gap-8 @min-[52rem]:items-end @min-[52rem]:text-right">
-								<p className="max-w-[24rem] text-[0.95rem] leading-7 text-[#A5A5A5]">
-									Tell us what you need to build. We will help you shape it, from the first call to the final handover.
+						<div className="grid grid-cols-1 gap-12 @min-[60rem]:grid-cols-[minmax(0,4fr)_minmax(0,8fr)] @min-[60rem]:gap-16">
+							{/* Brand */}
+							<div className="flex min-w-0 flex-col gap-6">
+								<Link href="/" aria-label="TEXO Prefab World home" className="w-fit transition-opacity hover:opacity-80">
+									<Image
+										src="/horiz-logo.png"
+										alt="TEXO Prefab World"
+										width={360}
+										height={82}
+										className="h-auto w-[150px] object-contain object-left sm:w-[190px]"
+									/>
+								</Link>
+								<p className="max-w-[22rem] text-[0.95rem] leading-7 text-[#A5A5A5]">
+									Premium prefab and modular buildings, designed and manufactured in Hyderabad since 2018.
 								</p>
-
 								<div className="flex flex-wrap items-center gap-5">
 									<span className="text-[0.65rem] font-medium uppercase tracking-[0.24em] text-[#A5A5A5]">Follow</span>
 									<ul className="flex items-center gap-2">
@@ -314,6 +254,54 @@ export default function Footer({ showContact = true }: { showContact?: boolean }
 												</a>
 											</li>
 										))}
+									</ul>
+								</div>
+							</div>
+
+							{/* Columns */}
+							<div className="grid min-w-0 grid-cols-1 gap-10 @min-[36rem]:grid-cols-3 @min-[36rem]:gap-8">
+								<nav aria-label="Products" className="min-w-0">
+									<Eyebrow>Products</Eyebrow>
+									<ul className="mt-5 grid gap-3 text-[0.9rem]">
+										{productCategories.map((category) => (
+											<li key={category.slug}>
+												<Link href={`/products/${category.slug}`} className="text-white transition-colors hover:text-[#886c46]">
+													{category.name}
+												</Link>
+											</li>
+										))}
+									</ul>
+								</nav>
+								<nav aria-label="Company" className="min-w-0">
+									<Eyebrow>Company</Eyebrow>
+									<ul className="mt-5 grid gap-3 text-[0.9rem]">
+										{companyLinks.map((link) => (
+											<li key={link.href}>
+												<Link href={link.href} className="text-white transition-colors hover:text-[#886c46]">
+													{link.label}
+												</Link>
+											</li>
+										))}
+									</ul>
+								</nav>
+								<div className="min-w-0">
+									<Eyebrow>Contact</Eyebrow>
+									<ul className="mt-5 grid gap-3 text-[0.9rem]">
+										<li>
+											<a href={CONTACT.sales.href} className="text-white transition-colors hover:text-[#886c46]">
+												{CONTACT.sales.label}
+											</a>
+										</li>
+										<li>
+											<a href={CONTACT.salesEmail.href} className="text-white transition-colors [overflow-wrap:anywhere] hover:text-[#886c46]">
+												{CONTACT.salesEmail.label}
+											</a>
+										</li>
+										<li>
+											<a href={CONTACT.mapUrl} target="_blank" rel="noopener noreferrer" className="text-[#A5A5A5] transition-colors hover:text-white">
+												Jeedimetla, Hyderabad
+											</a>
+										</li>
 									</ul>
 								</div>
 							</div>
