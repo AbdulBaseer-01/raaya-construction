@@ -1,0 +1,880 @@
+- generic [active] [ref=f15e1]:
+  - generic [ref=f15e2]:
+    - banner [ref=f15e3]:
+      - generic [ref=f15e4]:
+        - link "Prefab Construction home" [ref=f15e5] [cursor=pointer]:
+          - /url: /
+          - img "Prefab Construction Company Logo" [ref=f15e6]
+        - generic [ref=f15e7]:
+          - link "Get a quote" [ref=f15e8] [cursor=pointer]:
+            - /url: "#contact"
+          - button "Open full-screen navigation" [ref=f15e9]:
+            - generic [ref=f15e10]: Menu
+    - generic [aria-hidden]:
+      - generic:
+        - generic:
+          - link:
+            - /url: /
+          - button: Close
+        - generic:
+          - generic:
+            - paragraph: Navigate / 01
+            - navigation:
+              - generic:
+                - link:
+                  - /url: /
+                  - text: Home
+              - generic:
+                - link:
+                  - /url: /products
+                  - text: Products
+              - generic:
+                - link:
+                  - /url: /features
+                  - text: Why Texo
+              - generic:
+                - link:
+                  - /url: /inspiration-gallery
+                  - text: Projects
+              - generic:
+                - link:
+                  - /url: /about-us
+                  - text: About Us
+              - generic:
+                - link:
+                  - /url: /blogs
+                  - text: Blogs
+              - generic:
+                - link:
+                  - /url: /career
+                  - text: Career
+              - generic:
+                - link:
+                  - /url: /contact-us
+                  - text: Contact
+          - generic:
+            - paragraph: Products / 02
+            - generic:
+              - generic:
+                - link:
+                  - /url: /products/homes
+                  - text: Homes
+                - list:
+                  - listitem:
+                    - link:
+                      - /url: /products/container-homes
+                      - text: Container Homes
+                  - listitem:
+                    - link:
+                      - /url: /products/prefab-farmhouses
+                      - text: Prefab Farmhouses
+              - generic:
+                - link:
+                  - /url: /products/offices
+                  - text: Offices
+                - list:
+                  - listitem:
+                    - link:
+                      - /url: /products/container-offices
+                      - text: Container Offices
+                  - listitem:
+                    - link:
+                      - /url: /products/prefab-site-offices
+                      - text: Prefab Site Offices
+                  - listitem:
+                    - link:
+                      - /url: /products/marketing-offices
+                      - text: Marketing Offices
+              - generic:
+                - link:
+                  - /url: /products/resorts-getaways
+                  - text: Resorts & Getaways
+                - list:
+                  - listitem:
+                    - link:
+                      - /url: /products/a-frame-homes
+                      - text: A-Frame Homes
+                  - listitem:
+                    - link:
+                      - /url: /products/arc-pods
+                      - text: Arc Pods
+                  - listitem:
+                    - link:
+                      - /url: /products/prefab-wooden-homes
+                      - text: Prefab Wooden Homes
+                  - listitem:
+                    - link:
+                      - /url: /products/smart-homes
+                      - text: Smart Homes
+              - generic:
+                - link:
+                  - /url: /products/worker-accommodation-site-welfare
+                  - text: Worker Accommodation & Site Welfare
+                - list:
+                  - listitem:
+                    - link:
+                      - /url: /products/labour-accommodation
+                      - text: Labour Accommodation
+                  - listitem:
+                    - link:
+                      - /url: /products/bunk-houses
+                      - text: Bunk Houses
+                  - listitem:
+                    - link:
+                      - /url: /products/toilet-cabins
+                      - text: Toilet Cabins
+              - generic:
+                - link:
+                  - /url: /products/security-gate-cabins
+                  - text: Security & Gate Cabins
+                - list:
+                  - listitem:
+                    - link:
+                      - /url: /products/security-cabins
+                      - text: Security Cabins
+                  - listitem:
+                    - link:
+                      - /url: /products/toll-booths
+                      - text: Toll Booths
+                  - listitem:
+                    - link:
+                      - /url: /products/atm-cabins
+                      - text: ATM Cabins
+              - generic:
+                - link:
+                  - /url: /products/clinics-schools-public-cabins
+                  - text: Clinics, Schools & Public Cabins
+                - list:
+                  - listitem:
+                    - link:
+                      - /url: /products/clinics-health-centres
+                      - text: Clinics & Health Centres
+                  - listitem:
+                    - link:
+                      - /url: /products/prefab-schools
+                      - text: Prefab Schools
+                  - listitem:
+                    - link:
+                      - /url: /products/restaurant-cabins
+                      - text: Restaurant Cabins
+                  - listitem:
+                    - link:
+                      - /url: /products/smoking-rooms
+                      - text: Smoking Rooms
+              - generic:
+                - link:
+                  - /url: /products/electrical-control-industrial-rooms
+                  - text: Electrical, Control & Industrial Rooms
+                - list:
+                  - listitem:
+                    - link:
+                      - /url: /products/electrical-rooms
+                      - text: Electrical Rooms
+                  - listitem:
+                    - link:
+                      - /url: /products/control-rooms
+                      - text: Control Rooms
+                  - listitem:
+                    - link:
+                      - /url: /products/solar-control-rooms
+                      - text: Solar Control Rooms
+              - generic:
+                - link:
+                  - /url: /products/pre-engineered-buildings
+                  - text: Pre-Engineered Buildings
+                - list:
+                  - listitem:
+                    - link:
+                      - /url: /products/pre-engineered-buildings
+                      - text: Pre-Engineered Buildings
+          - generic:
+            - generic:
+              - paragraph: Prefab / 01
+              - paragraph: Built for the next way of living.
+        - generic:
+          - generic: Manufacture / Deliver / Install
+          - generic:
+            - generic:
+              - text: or call
+              - link:
+                - /url: tel:+919000800665
+                - text: +91 90008 00665
+            - link:
+              - /url: "#contact"
+              - text: Get a quote
+    - generic [ref=f15e15]:
+      - generic [ref=f15e16]:
+        - generic [ref=f15e17]: Hyderabad / Since 2018
+        - generic [ref=f15e18]: Form / Function / Future
+        - generic [ref=f15e19]: Built with intent
+        - generic [ref=f15e20]: "01"
+        - heading "Premium Modular Buildings, Ready in weeks." [level=1] [ref=f15e22]:
+          - generic [ref=f15e23]: Premium Modular
+          - generic [ref=f15e24]: Buildings,
+          - emphasis [ref=f15e26]: Ready in weeks.
+        - generic [ref=f15e27]:
+          - paragraph [ref=f15e28]: Offices, homes, cottages and site cabins, designed to your brief, built in our Hyderabad factory and installed on your site, finished and ready to use.
+          - generic [ref=f15e29]:
+            - link "Get a quote" [ref=f15e30] [cursor=pointer]:
+              - /url: "#contact"
+            - link "Call +91 90008 00665" [ref=f15e31] [cursor=pointer]:
+              - /url: tel:+919000800665
+        - paragraph [ref=f15e32]: Since 2018. 1,359+ projects. 56+ cities. Starting at ₹2,500 per sq.ft.
+        - generic [ref=f15e33]:
+          - generic [ref=f15e34]: Design / build / install
+          - paragraph [ref=f15e37]: "One team from first drawing to handover: design, manufacturing, transport and installation."
+        - generic [ref=f15e38]: Structure / craft / time
+      - generic [ref=f15e40]:
+        - img "Prefab architecture" [ref=f15e41]
+        - generic [ref=f15e43]:
+          - generic [ref=f15e45]:
+            - img "Architectural detail one" [ref=f15e46]
+            - img "Architectural detail two" [ref=f15e47]
+          - generic [ref=f15e48]:
+            - generic [ref=f15e49]:
+              - paragraph [ref=f15e50]: Detail / 01
+              - paragraph [ref=f15e51]: Designed to last.
+            - generic [ref=f15e52]: "+01"
+        - generic [ref=f15e53]: Project / 01
+      - generic [ref=f15e54]:
+        - img "Prefab construction" [ref=f15e56]
+        - generic [ref=f15e58]: Field notes / 02
+        - generic [ref=f15e59]: Manufacture / Deliver / Install
+        - heading "Made off-site. Built on-site." [level=2] [ref=f15e60]:
+          - generic [ref=f15e61]: Made off-site.
+          - generic [ref=f15e62]: Built on-site.
+        - generic [ref=f15e63]: Precision / speed / permanence
+        - generic [ref=f15e64]: 02 — 06
+    - generic [ref=f15e66]:
+      - generic [ref=f15e67]:
+        - paragraph [ref=f15e68]: Client films / 03
+        - heading "Real clients. Real builds." [level=2] [ref=f15e70]:
+          - generic [ref=f15e71]: Real clients.
+          - generic [ref=f15e72]: Real builds.
+        - paragraph [ref=f15e73]: Short films from clients on how their space was planned, built and handed over.
+      - generic [ref=f15e74]:
+        - generic [ref=f15e75]:
+          - iframe [ref=f15e77]:
+            - generic [ref=f16e1]:
+              - generic "YouTube Video Player" [ref=f16e3]
+              - generic [ref=f16e5]:
+                - generic:
+                  - generic:
+                    - generic [ref=f16e6] [cursor=pointer]
+                    - button "Play video" [ref=f16e10] [cursor=pointer]
+                    - button "Hide player controls" [ref=f16e12] [cursor=pointer]
+                    - generic [ref=f16e14]:
+                      - generic [ref=f16e21]:
+                        - generic [ref=f16e22]:
+                          - link "Why Customers Trust Texo Prefab | A Seamless, Worry-Free Experience | Texo Prefab" [ref=f16e23] [cursor=pointer]:
+                            - /url: https://www.youtube.com/watch?v=cul1LcpEFIs
+                          - link "Texo Prefab world" [ref=f16e24] [cursor=pointer]:
+                            - /url: /channel/UCBQ0Bk7Xww5GwNUclRUnRRA
+                        - generic [ref=f16e26]:
+                          - button [ref=f16e27] [cursor=pointer]
+                          - generic [ref=f16e29]:
+                            - generic: Texo Prefab world
+                            - generic: 705 subscribers
+                      - generic [ref=f16e30]:
+                        - button "Copy link" [ref=f16e33] [cursor=pointer]
+                        - link "Watch on YouTube" [ref=f16e44] [cursor=pointer]:
+                          - /url: https://www.youtube.com/watch?v=cul1LcpEFIs
+                          - generic [ref=f16e45]: Watch on
+          - generic [ref=f15e78]: Film / 01
+        - button "Next testimonial" [ref=f15e89]: Next story
+    - generic [ref=f15e94]:
+      - generic [ref=f15e95]:
+        - generic [ref=f15e96]:
+          - paragraph [ref=f15e97]: The collection / 04
+          - heading "Built for different needs." [level=2] [ref=f15e99]:
+            - generic [ref=f15e100]: Built for
+            - generic [ref=f15e101]: different
+            - generic [ref=f15e102]: needs.
+        - generic [ref=f15e103]:
+          - paragraph [ref=f15e104]: "Six collections, 35 products: from A-frame cabins and prefab homes to site offices and security cabins. Each one made to order and finished to your brief."
+          - paragraph [ref=f15e105]: 35 products / 06 categories
+      - generic [ref=f15e106]:
+        - link "Wooden Series 01 Wooden Series A-Frame Cabin / Arc Pod / Wooden House Explore collection" [ref=f15e107] [cursor=pointer]:
+          - /url: /products/wooden-series
+          - generic [ref=f15e108]:
+            - img "Wooden Series" [ref=f15e109]
+            - generic [ref=f15e111]: "01"
+          - generic [ref=f15e115]:
+            - heading "Wooden Series" [level=3] [ref=f15e117]
+            - paragraph [ref=f15e118]: A-Frame Cabin / Arc Pod / Wooden House
+            - paragraph [ref=f15e119]: Explore collection
+        - link "Portable Solutions 02 Portable Solutions Porta Cabin / Farmhouse / Portable Office Explore collection" [ref=f15e120] [cursor=pointer]:
+          - /url: /products/portable-solutions
+          - generic [ref=f15e121]:
+            - img "Portable Solutions" [ref=f15e122]
+            - generic [ref=f15e124]: "02"
+          - generic [ref=f15e128]:
+            - heading "Portable Solutions" [level=3] [ref=f15e130]
+            - paragraph [ref=f15e131]: Porta Cabin / Farmhouse / Portable Office
+            - paragraph [ref=f15e132]: Explore collection
+        - link "Prefab Solutions 03 Prefab Solutions Site Offices / Prefab Houses / Prefab Cottages Explore collection" [ref=f15e133] [cursor=pointer]:
+          - /url: /products/prefab-solutions
+          - generic [ref=f15e134]:
+            - img "Prefab Solutions" [ref=f15e135]
+            - generic [ref=f15e137]: "03"
+          - generic [ref=f15e141]:
+            - heading "Prefab Solutions" [level=3] [ref=f15e143]
+            - paragraph [ref=f15e144]: Site Offices / Prefab Houses / Prefab Cottages
+            - paragraph [ref=f15e145]: Explore collection
+        - link "Specialized Structures 04 Specialized Structures Clinic Cabin / Restaurant Cabin / Electrical Room Explore collection" [ref=f15e146] [cursor=pointer]:
+          - /url: /products/specialized-structures
+          - generic [ref=f15e147]:
+            - img "Specialized Structures" [ref=f15e148]
+            - generic [ref=f15e150]: "04"
+          - generic [ref=f15e154]:
+            - heading "Specialized Structures" [level=3] [ref=f15e156]
+            - paragraph [ref=f15e157]: Clinic Cabin / Restaurant Cabin / Electrical Room
+            - paragraph [ref=f15e158]: Explore collection
+        - link "Security Solutions 05 Security Solutions Security Cabins / Toll Booths / ATM Cabins Explore collection" [ref=f15e159] [cursor=pointer]:
+          - /url: /products/security-solutions
+          - generic [ref=f15e160]:
+            - img "Security Solutions" [ref=f15e161]
+            - generic [ref=f15e163]: "05"
+          - generic [ref=f15e167]:
+            - heading "Security Solutions" [level=3] [ref=f15e169]
+            - paragraph [ref=f15e170]: Security Cabins / Toll Booths / ATM Cabins
+            - paragraph [ref=f15e171]: Explore collection
+        - link "PUF Insulated Cabins 06 PUF Insulated Cabins Control Rooms / Solar Control Rooms / Clean Rooms Explore collection" [ref=f15e172] [cursor=pointer]:
+          - /url: /products/puf-insulated-cabin
+          - generic [ref=f15e173]:
+            - img "PUF Insulated Cabins" [ref=f15e174]
+            - generic [ref=f15e176]: "06"
+          - generic [ref=f15e180]:
+            - heading "PUF Insulated Cabins" [level=3] [ref=f15e182]
+            - paragraph [ref=f15e183]: Control Rooms / Solar Control Rooms / Clean Rooms
+            - paragraph [ref=f15e184]: Explore collection
+      - generic [ref=f15e185]:
+        - paragraph [ref=f15e186]: From a quiet retreat to a high-performance worksite, there is a better way to build.
+        - generic [ref=f15e187]:
+          - link "Not sure what you need? Get a quote" [ref=f15e188] [cursor=pointer]:
+            - /url: "#contact"
+          - link "Explore the full collection" [ref=f15e192] [cursor=pointer]:
+            - /url: /products
+    - generic [ref=f15e197]:
+      - generic [ref=f15e199]:
+        - paragraph [ref=f15e200]: Why Texo / 05
+        - heading "The case for better building." [level=2] [ref=f15e202]:
+          - generic [ref=f15e203]: The case
+          - generic [ref=f15e204]: for better
+          - generic [ref=f15e205]: building.
+        - paragraph [ref=f15e206]: Not just faster. A smarter way to make space, built around how you plan to use it.
+        - generic [ref=f15e207]:
+          - generic [ref=f15e208]: Scroll to explore
+          - generic [ref=f15e210]: 04 reasons
+      - generic [ref=f15e211]:
+        - generic [ref=f15e212]:
+          - article [ref=f15e213]:
+            - generic [ref=f15e214]:
+              - generic [ref=f15e215]: Why / 01
+              - heading "Rapid installation" [level=3] [ref=f15e218]
+              - generic [ref=f15e222]:
+                - generic [ref=f15e223]: "01"
+                - paragraph [ref=f15e224]: Built in our factory while your site is prepared, so you go from approval to handover in weeks, not months.
+              - paragraph [ref=f15e225]: Built off-site / finished on-site
+          - article [ref=f15e226]:
+            - generic [ref=f15e227]:
+              - generic [ref=f15e228]: Why / 02
+              - heading "Custom designs" [level=3] [ref=f15e231]
+              - generic [ref=f15e235]:
+                - generic [ref=f15e236]: "02"
+                - paragraph [ref=f15e237]: Our in-house design team shapes the layout, finishes, colours and interiors around how you work or live.
+              - paragraph [ref=f15e238]: Made to fit your brief
+          - article [ref=f15e239]:
+            - generic [ref=f15e240]:
+              - generic [ref=f15e241]: Why / 03
+              - heading "Plug & play" [level=3] [ref=f15e244]
+              - generic [ref=f15e248]:
+                - generic [ref=f15e249]: "03"
+                - paragraph [ref=f15e250]: Electrical, plumbing, and interiors are coordinated and ready when your space arrives.
+              - paragraph [ref=f15e251]: Ready from day one
+          - article [ref=f15e252]:
+            - generic [ref=f15e253]:
+              - generic [ref=f15e254]: Why / 04
+              - heading "Relocatable & scalable" [level=3] [ref=f15e257]
+              - generic [ref=f15e261]:
+                - generic [ref=f15e262]: "04"
+                - paragraph [ref=f15e263]: Expand, relocate, or reconfigure your structure as your needs grow and change.
+              - paragraph [ref=f15e264]: Designed for what is next
+        - generic [ref=f15e265]:
+          - generic [ref=f15e266]: Built around your needs
+          - link "See how we build" [ref=f15e267] [cursor=pointer]:
+            - /url: /#process
+    - region "From brief to handover." [ref=f15e271]:
+      - generic [ref=f15e273]:
+        - generic [ref=f15e274]:
+          - paragraph [ref=f15e275]: Our process / 06
+          - heading "From brief to handover." [level=2] [ref=f15e277]:
+            - generic [ref=f15e278]: From brief
+            - generic [ref=f15e279]: to handover.
+          - list [ref=f15e280]:
+            - listitem [ref=f15e281]:
+              - generic [ref=f15e282]: "1"
+              - button "Day 0 Inquiry Tell us what you need, where, and your budget. Our team maps your brief to your site." [ref=f15e285]:
+                - generic [ref=f15e286]: Day 0
+                - generic [ref=f15e287]: Inquiry
+                - generic [ref=f15e288]: Tell us what you need, where, and your budget. Our team maps your brief to your site.
+            - listitem [ref=f15e291]:
+              - generic [ref=f15e292]: "2"
+              - 'button "Day 1–3 Design & Customisation Our design team turns it into drawings: layout, finishes and colours, tailored to how you''ll use the space. You get drawings and a detailed quote within 48 hours, and approve both before production starts." [ref=f15e295]':
+                - generic [ref=f15e296]: Day 1–3
+                - generic [ref=f15e297]: Design & Customisation
+                - generic: "Our design team turns it into drawings: layout, finishes and colours, tailored to how you'll use the space. You get drawings and a detailed quote within 48 hours, and approve both before production starts."
+            - listitem [ref=f15e299]:
+              - generic [ref=f15e300]: "3"
+              - button "Day 4–14 Factory Manufacturing Your structure is built under quality control in our Hyderabad factory while your site stays clear. Factory time is typically about 10 days, depending on our production schedule." [ref=f15e303]:
+                - generic [ref=f15e304]: Day 4–14
+                - generic [ref=f15e305]: Factory Manufacturing
+                - generic: Your structure is built under quality control in our Hyderabad factory while your site stays clear. Factory time is typically about 10 days, depending on our production schedule.
+            - listitem [ref=f15e307]:
+              - generic [ref=f15e308]: "4"
+              - button "Day 15+ Dispatch & Installation We transport, install and hand over a finished, plug-and-play space, ready to use from day one." [ref=f15e310]:
+                - generic [ref=f15e311]: Day 15+
+                - generic [ref=f15e312]: Dispatch & Installation
+                - generic: We transport, install and hand over a finished, plug-and-play space, ready to use from day one.
+          - link "Start with step 1 Get a quote" [ref=f15e314] [cursor=pointer]:
+            - /url: "#contact"
+            - text: Start with step 1
+            - generic [aria-hidden] [ref=f15e315]: →
+            - text: Get a quote
+        - img "3D illustration of a modular building moving from design, to factory, to installation on your site" [ref=f15e316]:
+          - generic:
+            - generic [ref=f15e317]: Factory
+            - generic [ref=f15e321]: Your site
+    - generic [ref=f15e361]:
+      - generic [ref=f15e362]:
+        - generic [ref=f15e363]:
+          - paragraph [ref=f15e364]: Our portfolio / 07
+          - heading "Made to stay." [level=2] [ref=f15e366]:
+            - generic [ref=f15e367]: Made
+            - generic [ref=f15e368]: to stay.
+        - paragraph [ref=f15e369]: "Five spaces. Five different answers to the same question: what should a building make possible?"
+      - generic [ref=f15e370]:
+        - generic [ref=f15e371]:
+          - link "The Courtyard - Prefab residence 01 / 05 Hyderabad / 2024 Prefab residence The Courtyard Explore project" [ref=f15e372] [cursor=pointer]:
+            - /url: /inspiration-gallery
+            - img "The Courtyard - Prefab residence" [ref=f15e373]
+            - generic [ref=f15e375]:
+              - generic [ref=f15e376]: 01 / 05
+              - generic [ref=f15e377]: Hyderabad / 2024
+            - generic [ref=f15e378]:
+              - paragraph [ref=f15e380]: Prefab residence
+              - heading "The Courtyard" [level=3] [ref=f15e381]
+              - generic [ref=f15e382]: Explore project
+          - link "Desert Pod - Luxury retreat 02 / 05 Rajasthan / 2024 Luxury retreat Desert Pod Explore project" [ref=f15e386] [cursor=pointer]:
+            - /url: /inspiration-gallery
+            - img "Desert Pod - Luxury retreat" [ref=f15e387]
+            - generic [ref=f15e389]:
+              - generic [ref=f15e390]: 02 / 05
+              - generic [ref=f15e391]: Rajasthan / 2024
+            - generic [ref=f15e392]:
+              - paragraph [ref=f15e394]: Luxury retreat
+              - heading "Desert Pod" [level=3] [ref=f15e395]
+              - generic [ref=f15e396]: Explore project
+          - link "Field Office - Workplace system 03 / 05 Pune / 2023 Workplace system Field Office Explore project" [ref=f15e400] [cursor=pointer]:
+            - /url: /inspiration-gallery
+            - img "Field Office - Workplace system" [ref=f15e401]
+            - generic [ref=f15e403]:
+              - generic [ref=f15e404]: 03 / 05
+              - generic [ref=f15e405]: Pune / 2023
+            - generic [ref=f15e406]:
+              - paragraph [ref=f15e408]: Workplace system
+              - heading "Field Office" [level=3] [ref=f15e409]
+              - generic [ref=f15e410]: Explore project
+          - link "The Bunkhouse - Accommodation 04 / 05 Goa / 2023 Accommodation The Bunkhouse Explore project" [ref=f15e414] [cursor=pointer]:
+            - /url: /inspiration-gallery
+            - img "The Bunkhouse - Accommodation" [ref=f15e415]
+            - generic [ref=f15e417]:
+              - generic [ref=f15e418]: 04 / 05
+              - generic [ref=f15e419]: Goa / 2023
+            - generic [ref=f15e420]:
+              - paragraph [ref=f15e422]: Accommodation
+              - heading "The Bunkhouse" [level=3] [ref=f15e423]
+              - generic [ref=f15e424]: Explore project
+          - link "The Workshop - Flexible space 05 / 05 Bengaluru / 2022 Flexible space The Workshop Explore project" [ref=f15e428] [cursor=pointer]:
+            - /url: /inspiration-gallery
+            - img "The Workshop - Flexible space" [ref=f15e429]
+            - generic [ref=f15e431]:
+              - generic [ref=f15e432]: 05 / 05
+              - generic [ref=f15e433]: Bengaluru / 2022
+            - generic [ref=f15e434]:
+              - paragraph [ref=f15e436]: Flexible space
+              - heading "The Workshop" [level=3] [ref=f15e437]
+              - generic [ref=f15e438]: Explore project
+        - generic:
+          - button "Scroll projects left" [ref=f15e442]
+          - button "Scroll projects right" [ref=f15e445]
+      - generic [ref=f15e448]:
+        - generic [ref=f15e449]: Scroll to explore
+        - link "View all projects ↗" [ref=f15e450] [cursor=pointer]:
+          - /url: /inspiration-gallery
+    - generic [ref=f15e452]:
+      - generic [ref=f15e453]:
+        - paragraph [ref=f15e454]: Trusted by / 08
+        - heading "Built with people who build seriously." [level=2] [ref=f15e457]:
+          - generic [ref=f15e458]: Built with people
+          - generic [ref=f15e459]: who build seriously.
+        - paragraph [ref=f15e460]: From developers and contractors to businesses and institutions, our spaces are built around real requirements.
+      - generic [ref=f15e461]:
+        - generic [ref=f15e464]:
+          - link "L&T Construction, start a conversation" [ref=f15e465] [cursor=pointer]:
+            - /url: "#contact"
+            - img "L&T Construction"
+            - generic [ref=f15e466]: Partner / 01
+          - link "Pragati, start a conversation" [ref=f15e467] [cursor=pointer]:
+            - /url: "#contact"
+            - img "Pragati"
+            - generic [ref=f15e468]: Partner / 02
+          - link "Aliens Group, start a conversation" [ref=f15e469] [cursor=pointer]:
+            - /url: "#contact"
+            - img "Aliens Group"
+            - generic [ref=f15e470]: Partner / 03
+          - link "Amara Raja, start a conversation" [ref=f15e471] [cursor=pointer]:
+            - /url: "#contact"
+            - img "Amara Raja"
+            - generic [ref=f15e472]: Partner / 04
+          - link "GMR, start a conversation" [ref=f15e473] [cursor=pointer]:
+            - /url: "#contact"
+            - img "GMR"
+            - generic [ref=f15e474]: Partner / 05
+          - link "Hallmark, start a conversation" [ref=f15e475] [cursor=pointer]:
+            - /url: "#contact"
+            - img "Hallmark"
+            - generic [ref=f15e476]: Partner / 06
+          - link "My Home Group, start a conversation" [ref=f15e477] [cursor=pointer]:
+            - /url: "#contact"
+            - img "My Home Group"
+            - generic [ref=f15e478]: Partner / 07
+          - link "L&T Construction, start a conversation" [ref=f15e479] [cursor=pointer]:
+            - /url: "#contact"
+            - img "L&T Construction"
+            - generic [ref=f15e480]: Partner / 01
+          - link "Pragati, start a conversation" [ref=f15e481] [cursor=pointer]:
+            - /url: "#contact"
+            - img "Pragati"
+            - generic [ref=f15e482]: Partner / 02
+          - link "Aliens Group, start a conversation" [ref=f15e483] [cursor=pointer]:
+            - /url: "#contact"
+            - img "Aliens Group"
+            - generic [ref=f15e484]: Partner / 03
+          - link "Amara Raja, start a conversation" [ref=f15e485] [cursor=pointer]:
+            - /url: "#contact"
+            - img "Amara Raja"
+            - generic [ref=f15e486]: Partner / 04
+          - link "GMR, start a conversation" [ref=f15e487] [cursor=pointer]:
+            - /url: "#contact"
+            - img "GMR"
+            - generic [ref=f15e488]: Partner / 05
+          - link "Hallmark, start a conversation" [ref=f15e489] [cursor=pointer]:
+            - /url: "#contact"
+            - img "Hallmark"
+            - generic [ref=f15e490]: Partner / 06
+          - link "My Home Group, start a conversation" [ref=f15e491] [cursor=pointer]:
+            - /url: "#contact"
+            - img "My Home Group"
+            - generic [ref=f15e492]: Partner / 07
+        - generic [ref=f15e495]:
+          - link "360 Life, start a conversation" [ref=f15e496] [cursor=pointer]:
+            - /url: "#contact"
+            - img "360 Life"
+            - generic [ref=f15e497]: Partner / 01
+          - link "Muppa, start a conversation" [ref=f15e498] [cursor=pointer]:
+            - /url: "#contact"
+            - img "Muppa"
+            - generic [ref=f15e499]: Partner / 02
+          - link "General Electric, start a conversation" [ref=f15e500] [cursor=pointer]:
+            - /url: "#contact"
+            - img "General Electric"
+            - generic [ref=f15e501]: Partner / 03
+          - link "Jyothi Construction Company, start a conversation" [ref=f15e502] [cursor=pointer]:
+            - /url: "#contact"
+            - img "Jyothi Construction Company"
+            - generic [ref=f15e503]: Partner / 04
+          - link "Kalyani Developers, start a conversation" [ref=f15e504] [cursor=pointer]:
+            - /url: "#contact"
+            - img "Kalyani Developers"
+            - generic [ref=f15e505]: Partner / 05
+          - link "Tropical Side, start a conversation" [ref=f15e506] [cursor=pointer]:
+            - /url: "#contact"
+            - img "Tropical Side"
+            - generic [ref=f15e507]: Partner / 06
+          - link "Keystone Infra, start a conversation" [ref=f15e508] [cursor=pointer]:
+            - /url: "#contact"
+            - img "Keystone Infra"
+            - generic [ref=f15e509]: Partner / 07
+          - link "360 Life, start a conversation" [ref=f15e510] [cursor=pointer]:
+            - /url: "#contact"
+            - img "360 Life"
+            - generic [ref=f15e511]: Partner / 01
+          - link "Muppa, start a conversation" [ref=f15e512] [cursor=pointer]:
+            - /url: "#contact"
+            - img "Muppa"
+            - generic [ref=f15e513]: Partner / 02
+          - link "General Electric, start a conversation" [ref=f15e514] [cursor=pointer]:
+            - /url: "#contact"
+            - img "General Electric"
+            - generic [ref=f15e515]: Partner / 03
+          - link "Jyothi Construction Company, start a conversation" [ref=f15e516] [cursor=pointer]:
+            - /url: "#contact"
+            - img "Jyothi Construction Company"
+            - generic [ref=f15e517]: Partner / 04
+          - link "Kalyani Developers, start a conversation" [ref=f15e518] [cursor=pointer]:
+            - /url: "#contact"
+            - img "Kalyani Developers"
+            - generic [ref=f15e519]: Partner / 05
+          - link "Tropical Side, start a conversation" [ref=f15e520] [cursor=pointer]:
+            - /url: "#contact"
+            - img "Tropical Side"
+            - generic [ref=f15e521]: Partner / 06
+          - link "Keystone Infra, start a conversation" [ref=f15e522] [cursor=pointer]:
+            - /url: "#contact"
+            - img "Keystone Infra"
+            - generic [ref=f15e523]: Partner / 07
+        - generic [ref=f15e526]:
+          - link "Tata Projects, start a conversation" [ref=f15e527] [cursor=pointer]:
+            - /url: "#contact"
+            - img "Tata Projects"
+            - generic [ref=f15e528]: Partner / 01
+          - link "Simply Fresh, start a conversation" [ref=f15e529] [cursor=pointer]:
+            - /url: "#contact"
+            - img "Simply Fresh"
+            - generic [ref=f15e530]: Partner / 02
+          - link "Shree Cement, start a conversation" [ref=f15e531] [cursor=pointer]:
+            - /url: "#contact"
+            - img "Shree Cement"
+            - generic [ref=f15e532]: Partner / 03
+          - link "Prestige Group, start a conversation" [ref=f15e533] [cursor=pointer]:
+            - /url: "#contact"
+            - img "Prestige Group"
+            - generic [ref=f15e534]: Partner / 04
+          - link "Myron Homes, start a conversation" [ref=f15e535] [cursor=pointer]:
+            - /url: "#contact"
+            - img "Myron Homes"
+            - generic [ref=f15e536]: Partner / 05
+          - link "Microsoft, start a conversation" [ref=f15e537] [cursor=pointer]:
+            - /url: "#contact"
+            - img "Microsoft"
+            - generic [ref=f15e538]: Partner / 06
+          - link "MSN Realty, start a conversation" [ref=f15e539] [cursor=pointer]:
+            - /url: "#contact"
+            - img "MSN Realty"
+            - generic [ref=f15e540]: Partner / 07
+          - link "Tata Projects, start a conversation" [ref=f15e541] [cursor=pointer]:
+            - /url: "#contact"
+            - img "Tata Projects"
+            - generic [ref=f15e542]: Partner / 01
+          - link "Simply Fresh, start a conversation" [ref=f15e543] [cursor=pointer]:
+            - /url: "#contact"
+            - img "Simply Fresh"
+            - generic [ref=f15e544]: Partner / 02
+          - link "Shree Cement, start a conversation" [ref=f15e545] [cursor=pointer]:
+            - /url: "#contact"
+            - img "Shree Cement"
+            - generic [ref=f15e546]: Partner / 03
+          - link "Prestige Group, start a conversation" [ref=f15e547] [cursor=pointer]:
+            - /url: "#contact"
+            - img "Prestige Group"
+            - generic [ref=f15e548]: Partner / 04
+          - link "Myron Homes, start a conversation" [ref=f15e549] [cursor=pointer]:
+            - /url: "#contact"
+            - img "Myron Homes"
+            - generic [ref=f15e550]: Partner / 05
+          - link "Microsoft, start a conversation" [ref=f15e551] [cursor=pointer]:
+            - /url: "#contact"
+            - img "Microsoft"
+            - generic [ref=f15e552]: Partner / 06
+          - link "MSN Realty, start a conversation" [ref=f15e553] [cursor=pointer]:
+            - /url: "#contact"
+            - img "MSN Realty"
+            - generic [ref=f15e554]: Partner / 07
+      - generic [ref=f15e555]:
+        - generic [ref=f15e556]:
+          - term [ref=f15e557]:
+            - text: Years in prefab
+            - generic [ref=f15e558]: Team since 2016, Texo since 2018
+          - definition [ref=f15e559]: "0"
+        - generic [ref=f15e560]:
+          - term [ref=f15e561]: Projects delivered
+          - definition [ref=f15e562]: 0+
+        - generic [ref=f15e563]:
+          - term [ref=f15e564]: Cities
+          - definition [ref=f15e565]: 0+
+        - generic [ref=f15e566]:
+          - term [ref=f15e567]: Starting price per sq.ft
+          - definition [ref=f15e568]: ₹0
+    - contentinfo [ref=f15e569]:
+      - region "Tell us what you want to build." [ref=f15e570]:
+        - generic [ref=f15e573]:
+          - generic [ref=f15e574]:
+            - link "TEXO Prefab World home" [ref=f15e575] [cursor=pointer]:
+              - /url: /
+              - img "TEXO Prefab World" [ref=f15e576]
+            - generic [ref=f15e577]: Start a project
+          - generic [ref=f15e579]:
+            - generic [ref=f15e580]:
+              - paragraph [ref=f15e581]: Contact / 10
+              - heading "Tell us what you want to build." [level=2] [ref=f15e583]: Tell us whatyou want to build.
+              - paragraph [ref=f15e584]: Share your requirement and site location. Our team will call you back with next steps and an estimate.
+              - link "Let's talk" [ref=f15e585] [cursor=pointer]:
+                - /url: mailto:info@texoprefab.com
+            - generic [ref=f15e589]:
+              - generic [ref=f15e590]:
+                - generic [ref=f15e591]:
+                  - generic [ref=f15e592]:
+                    - generic [ref=f15e593]: Sales
+                    - generic [ref=f15e594]:
+                      - link "+91 90008 00665" [ref=f15e595] [cursor=pointer]:
+                        - /url: tel:+919000800665
+                      - link "info@texoprefab.com" [ref=f15e599] [cursor=pointer]:
+                        - /url: mailto:info@texoprefab.com
+                  - generic [ref=f15e604]:
+                    - generic [ref=f15e605]: General
+                    - generic [ref=f15e606]:
+                      - link "+91 81858 92514" [ref=f15e607] [cursor=pointer]:
+                        - /url: tel:+918185892514
+                      - link "sales@texoprefab.com" [ref=f15e611] [cursor=pointer]:
+                        - /url: mailto:sales@texoprefab.com
+                  - paragraph [ref=f15e616]:
+                    - generic [ref=f15e617]: Hours
+                    - generic [ref=f15e618]: Mon–Sat, 9:00 AM – 6:30 PM
+                - link "Office Plot no 1, Venkateshwara Colony, IDA Jeedimetla, Apurupa Colony, Jeedimetla, Hyderabad, Telangana 500055 India View on map" [ref=f15e622] [cursor=pointer]:
+                  - /url: https://maps.app.goo.gl/qNSyNS4xH7eMCv2z9
+                  - generic [ref=f15e626]:
+                    - generic [ref=f15e627]: Office
+                    - text: Plot no 1, Venkateshwara Colony, IDA Jeedimetla, Apurupa Colony, Jeedimetla, Hyderabad, Telangana 500055India
+                    - generic [ref=f15e628]: View on map
+              - generic [ref=f15e633]:
+                - generic [ref=f15e634]:
+                  - paragraph [ref=f15e635]: Get a quote
+                  - paragraph [ref=f15e636]: Takes under a minute.
+                - generic [ref=f15e637]:
+                  - generic [ref=f15e638]:
+                    - text: Your name *
+                    - textbox "Your name *" [ref=f15e639]:
+                      - /placeholder: Full name
+                  - generic [ref=f15e640]:
+                    - text: Your phone *
+                    - textbox "Your phone *" [ref=f15e641]:
+                      - /placeholder: 10-digit mobile number
+                  - generic [ref=f15e642]:
+                    - text: Your email (optional)
+                    - textbox "Your email (optional)" [ref=f15e643]:
+                      - /placeholder: name@company.com
+                  - generic [ref=f15e644]:
+                    - text: What do you want to build? *
+                    - combobox "What do you want to build? *" [ref=f15e646] [cursor=pointer]:
+                      - option "Choose one" [disabled] [selected]
+                      - option "Site office"
+                      - option "Portable cabin / porta cabin"
+                      - option "Prefab house or cottage"
+                      - option "Wooden series (A-frame, pod)"
+                      - option "Security cabin / toll booth"
+                      - option "Specialised structure (clinic, restaurant, electrical room)"
+                      - option "PUF insulated cabin"
+                      - option "Other"
+                  - generic [ref=f15e647]:
+                    - text: Project location (city) *
+                    - textbox "Project location (city) *" [ref=f15e648]:
+                      - /placeholder: e.g. Hyderabad
+                  - generic [ref=f15e649]:
+                    - text: Approx. size (sq.ft)
+                    - textbox "Approx. size (sq.ft)" [ref=f15e650]:
+                      - /placeholder: e.g. 400
+                  - generic [ref=f15e651]:
+                    - text: Anything else?
+                    - textbox "Anything else?" [ref=f15e652]:
+                      - /placeholder: Timeline, budget, special requirements…
+                - generic [ref=f15e653]:
+                  - button "Get my quote" [ref=f15e654]
+                  - paragraph [ref=f15e657]: We'll only use your details to respond to this enquiry.
+      - region "Site links" [ref=f15e658]:
+        - generic [ref=f15e659]:
+          - generic [ref=f15e661]:
+            - generic [ref=f15e662]:
+              - link "TEXO Prefab World home" [ref=f15e663] [cursor=pointer]:
+                - /url: /
+                - img "TEXO Prefab World" [ref=f15e664]
+              - paragraph [ref=f15e665]: Premium prefab and modular buildings, designed and manufactured in Hyderabad since 2018.
+              - generic [ref=f15e666]:
+                - generic [ref=f15e667]: Follow
+                - list [ref=f15e668]:
+                  - listitem [ref=f15e669]:
+                    - link "Instagram" [ref=f15e670] [cursor=pointer]:
+                      - /url: "#"
+                  - listitem [ref=f15e675]:
+                    - link "Facebook" [ref=f15e676] [cursor=pointer]:
+                      - /url: "#"
+                  - listitem [ref=f15e679]:
+                    - link "YouTube" [ref=f15e680] [cursor=pointer]:
+                      - /url: "#"
+            - generic [ref=f15e683]:
+              - navigation "Products" [ref=f15e684]:
+                - paragraph [ref=f15e685]: Products
+                - list [ref=f15e687]:
+                  - listitem [ref=f15e688]:
+                    - link "Homes" [ref=f15e689] [cursor=pointer]:
+                      - /url: /products/homes
+                  - listitem [ref=f15e690]:
+                    - link "Offices" [ref=f15e691] [cursor=pointer]:
+                      - /url: /products/offices
+                  - listitem [ref=f15e692]:
+                    - link "Resorts & Getaways" [ref=f15e693] [cursor=pointer]:
+                      - /url: /products/resorts-getaways
+                  - listitem [ref=f15e694]:
+                    - link "Worker Accommodation & Site Welfare" [ref=f15e695] [cursor=pointer]:
+                      - /url: /products/worker-accommodation-site-welfare
+                  - listitem [ref=f15e696]:
+                    - link "Security & Gate Cabins" [ref=f15e697] [cursor=pointer]:
+                      - /url: /products/security-gate-cabins
+                  - listitem [ref=f15e698]:
+                    - link "Clinics, Schools & Public Cabins" [ref=f15e699] [cursor=pointer]:
+                      - /url: /products/clinics-schools-public-cabins
+                  - listitem [ref=f15e700]:
+                    - link "Electrical, Control & Industrial Rooms" [ref=f15e701] [cursor=pointer]:
+                      - /url: /products/electrical-control-industrial-rooms
+                  - listitem [ref=f15e702]:
+                    - link "Pre-Engineered Buildings" [ref=f15e703] [cursor=pointer]:
+                      - /url: /products/pre-engineered-buildings
+              - navigation "Company" [ref=f15e704]:
+                - paragraph [ref=f15e705]: Company
+                - list [ref=f15e707]:
+                  - listitem [ref=f15e708]:
+                    - link "About Us" [ref=f15e709] [cursor=pointer]:
+                      - /url: /about-us
+                  - listitem [ref=f15e710]:
+                    - link "Projects" [ref=f15e711] [cursor=pointer]:
+                      - /url: /inspiration-gallery
+                  - listitem [ref=f15e712]:
+                    - link "Blogs" [ref=f15e713] [cursor=pointer]:
+                      - /url: /blogs
+                  - listitem [ref=f15e714]:
+                    - link "Careers" [ref=f15e715] [cursor=pointer]:
+                      - /url: /career
+                  - listitem [ref=f15e716]:
+                    - link "Contact" [ref=f15e717] [cursor=pointer]:
+                      - /url: /contact-us
+              - generic [ref=f15e718]:
+                - paragraph [ref=f15e719]: Contact
+                - list [ref=f15e721]:
+                  - listitem [ref=f15e722]:
+                    - link "+91 90008 00665" [ref=f15e723] [cursor=pointer]:
+                      - /url: tel:+919000800665
+                  - listitem [ref=f15e724]:
+                    - link "sales@texoprefab.com" [ref=f15e725] [cursor=pointer]:
+                      - /url: mailto:sales@texoprefab.com
+                  - listitem [ref=f15e726]:
+                    - link "Jeedimetla, Hyderabad" [ref=f15e727] [cursor=pointer]:
+                      - /url: https://maps.app.goo.gl/qNSyNS4xH7eMCv2z9
+          - generic [ref=f15e728]:
+            - generic [ref=f15e729]: © 2026 TEXO PREFAB WORLD. All rights reserved.
+            - navigation "Legal" [ref=f15e730]:
+              - link "Terms Of Service" [ref=f15e731] [cursor=pointer]:
+                - /url: /terms-of-use
+              - link "Privacy Policy" [ref=f15e732] [cursor=pointer]:
+                - /url: /privacy-policy
+  - button "Open Next.js Dev Tools" [ref=f15e738] [cursor=pointer]
+  - alert [ref=f15e742]

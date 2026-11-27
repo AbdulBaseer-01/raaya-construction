@@ -415,16 +415,16 @@ export default function Hero() {
             built in our Hyderabad factory and installed on your site, finished
             and ready to use.
           </p>
-          <div className="mt-4 flex flex-wrap gap-2 [@media(orientation:portrait)_and_(max-height:620px)]:mt-2 max-lg:landscape:mt-3 lg:mt-4">
+          <div className="mt-4 flex flex-wrap gap-2 max-lg:grid max-lg:w-fit max-lg:grid-cols-1 [@media(orientation:portrait)_and_(max-height:620px)]:mt-2 max-lg:landscape:mt-3 lg:mt-4">
             <Link
               href={QUOTE_ANCHOR}
-              className="inline-flex min-h-10 items-center border border-[#886c46] bg-[#886c46] px-4 text-[0.58rem] uppercase tracking-[0.2em] text-white transition-colors hover:bg-transparent hover:text-[#886c46] max-lg:landscape:min-h-8 max-lg:landscape:px-3 max-lg:landscape:text-[0.52rem] [@media(orientation:portrait)_and_(max-height:620px)]:min-h-8 [@media(orientation:portrait)_and_(max-height:620px)]:px-3 [@media(orientation:portrait)_and_(max-height:620px)]:text-[0.52rem]"
+              className="inline-flex min-h-10 items-center max-lg:justify-center border border-[#886c46] px-4 bg-[#886c46]  text-[0.58rem] uppercase tracking-[0.2em] text-white transition-colors hover:bg-transparent hover:text-[#886c46] max-lg:landscape:min-h-8 max-lg:landscape:px-3 max-lg:landscape:text-[0.52rem] [@media(orientation:portrait)_and_(max-height:620px)]:min-h-8 [@media(orientation:portrait)_and_(max-height:620px)]:px-3 [@media(orientation:portrait)_and_(max-height:620px)]:text-[0.52rem]"
             >
               Get a quote
             </Link>
             <a
               href={CONTACT.sales.href}
-              className="inline-flex min-h-10 items-center border border-black/25 px-4 text-[0.58rem] uppercase tracking-[0.2em] text-black transition-colors hover:border-[#886c46] hover:text-[#886c46] max-lg:landscape:min-h-8 max-lg:landscape:px-3 max-lg:landscape:text-[0.52rem] [@media(orientation:portrait)_and_(max-height:620px)]:min-h-8 [@media(orientation:portrait)_and_(max-height:620px)]:px-3 [@media(orientation:portrait)_and_(max-height:620px)]:text-[0.52rem]"
+              className="inline-flex min-h-10 items-center max-lg:justify-center border border-black/25 px-4 text-[0.58rem] uppercase tracking-[0.2em] text-black transition-colors hover:border-[#886c46] hover:text-[#886c46] max-lg:landscape:min-h-8 max-lg:landscape:px-3 max-lg:landscape:text-[0.52rem] [@media(orientation:portrait)_and_(max-height:620px)]:min-h-8 [@media(orientation:portrait)_and_(max-height:620px)]:px-3 [@media(orientation:portrait)_and_(max-height:620px)]:text-[0.52rem]"
             >
               Call {CONTACT.sales.label}
             </a>
@@ -440,7 +440,7 @@ export default function Hero() {
             EDITORIAL DESCRIPTION
         ===================================================== */}
 
-        <div className="relative mt-[clamp(1rem,3.5svh,2rem)] w-full max-w-[26rem] [@media(orientation:portrait)_and_(max-height:620px)]:mt-2 max-lg:landscape:col-start-2 max-lg:landscape:row-span-2 max-lg:landscape:row-start-2 max-lg:landscape:mt-0 max-lg:landscape:self-start lg:absolute lg:bottom-[15%] lg:left-auto lg:right-[8%] lg:mt-0 lg:w-[18rem]">
+        <div className="relative mt-[clamp(1rem,3.5svh,2rem)] w-full max-w-[26rem] [@media(orientation:portrait)_and_(max-height:620px)]:mt-2 max-lg:landscape:col-start-2 max-lg:landscape:row-span-2 max-lg:landscape:row-start-2 max-lg:landscape:mt-0 max-lg:landscape:self-start lg:absolute lg:bottom-[15%] lg:left-auto lg:right-[8%] lg:mt-0 lg:w-[18rem] ">
 
           <div className="mb-3 flex items-center gap-3 md:mb-4">
             <span className="h-px w-10 bg-[#886c46]" />
@@ -450,14 +450,14 @@ export default function Hero() {
             </span>
           </div>
 
-          <p className="text-[0.62rem] leading-[1.55] tracking-[-0.01em] text-black md:text-[0.7rem] md:leading-[1.65]">
+          <p className="text-[0.62rem] leading-[1.55] tracking-[-0.01em] text-black md:text-[0.7rem] md:leading-[1.65] ">
             One team from first drawing to handover:
             design, manufacturing, transport and installation.
           </p>
         </div>
 
         {/* Bottom left metadata */}
-        <span className="absolute bottom-5 left-5 text-[0.45rem] uppercase tracking-[0.18em] text-black md:bottom-7 md:left-[3vw] md:text-[0.52rem] md:tracking-[0.24em]">
+        <span className="absolute bottom-5 left-5 text-[0.45rem] uppercase tracking-[0.18em] text-black md:bottom-7 md:left-[3vw] md:text-[0.52rem] md:tracking-[0.24em] hidden md:block">
           Structure / craft / time
         </span>
 

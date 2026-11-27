@@ -1,0 +1,308 @@
+[     511ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[     613ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[     713ms] [WARNING] Image with src "/black-logo.png" is using quality "100" which is not configured in images.qualities [75]. Please update your config to [100, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[     888ms] [WARNING] GSAP target .detail-image-3 not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[     891ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[     917ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[     921ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[     931ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[     952ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[     953ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[     960ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[     966ms] [WARNING] Image with src "/black-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[    1024ms] [WARNING] GSAP target .detail-image-3 not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[    1024ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[    1030ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[    1032ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[    1038ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[    1074ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[    1075ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[    1080ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[    1476ms] [WARNING] The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127 @ :1
+[    1630ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[    1630ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[    1634ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[    2609ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[    2610ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[    2613ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   19486ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   20318ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   20419ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   20534ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   20568ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   21109ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   21198ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   21291ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   21380ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   21485ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   21565ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   21669ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   21762ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   21870ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   21936ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   22026ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   22091ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   22147ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   22213ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   22282ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   22349ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   22411ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   22478ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   22540ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   22607ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   22674ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   22740ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   22806ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   22873ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   22925ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   22993ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   23057ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   23126ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   23190ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   23257ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   23324ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   23391ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   23457ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   23525ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   23577ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   23640ms] [LOG] [Fast Refresh] done in 788ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   24165ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   24191ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   24256ms] [WARNING] Image with src "/black-logo.png" is using quality "100" which is not configured in images.qualities [75]. Please update your config to [100, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   24532ms] [WARNING] GSAP target .detail-image-3 not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   24533ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   24544ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   24548ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   24558ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   24584ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   24585ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   24593ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   24598ms] [WARNING] Image with src "/black-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   24664ms] [WARNING] GSAP target .detail-image-3 not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   24665ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   24670ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   24675ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   24682ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   24714ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   24715ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   24719ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   25047ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   25048ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   25056ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   25112ms] [WARNING] The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127 @ :1
+[   25563ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   25716ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   25778ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   25846ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   25912ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   25978ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   26045ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   26109ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   26176ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   26244ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   26310ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   26374ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   26434ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   26497ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   26559ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   26626ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   26690ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   26757ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   26823ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   26890ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   26957ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   27011ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   27073ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   27140ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   27207ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   27273ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   27339ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   27401ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   27462ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   27523ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   27590ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   27649ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   27711ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   27774ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   27836ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   27898ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   27958ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   28016ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   28074ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   28142ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   28201ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   28268ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   28329ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   28393ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   28453ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   28526ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   28584ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   28646ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   28708ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   28774ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   28835ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   28892ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   28951ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   29012ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   29073ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   29132ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   29203ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   29274ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   29332ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   29393ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   29408ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   29409ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   29418ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   29474ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   29535ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   29595ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   29657ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   29720ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   29782ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   29846ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   30266ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   30289ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   30349ms] [WARNING] Image with src "/black-logo.png" is using quality "100" which is not configured in images.qualities [75]. Please update your config to [100, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   30729ms] [WARNING] GSAP target .detail-image-3 not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   30730ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   30737ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   30742ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   30750ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   30768ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   30769ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   30777ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   30785ms] [WARNING] Image with src "/black-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   30844ms] [WARNING] GSAP target .detail-image-3 not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   30845ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   30850ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   30853ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   30864ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   30900ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   30901ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   30910ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   30921ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   30923ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   30929ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   31080ms] [WARNING] The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127 @ :1
+[   31492ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   31560ms] [LOG] [Fast Refresh] done in 175ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   35238ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   35240ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   35247ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   36096ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   36116ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   36178ms] [WARNING] Image with src "/black-logo.png" is using quality "100" which is not configured in images.qualities [75]. Please update your config to [100, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   36509ms] [WARNING] GSAP target .detail-image-3 not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   36510ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   36516ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   36520ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   36529ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   36552ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   36553ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   36559ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   36563ms] [WARNING] Image with src "/black-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   36614ms] [WARNING] GSAP target .detail-image-3 not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   36616ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   36625ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   36627ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   36634ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   36659ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   36660ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   36666ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   36678ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   36679ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   36684ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   36826ms] [WARNING] The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127 @ :1
+[   37241ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   37309ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   40796ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   40796ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   40800ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   41758ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   41779ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   41857ms] [WARNING] Image with src "/black-logo.png" is using quality "100" which is not configured in images.qualities [75]. Please update your config to [100, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   42197ms] [WARNING] GSAP target .detail-image-3 not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   42198ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   42210ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   42218ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   42233ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   42291ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   42292ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   42297ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   42309ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   42311ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   42318ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   42325ms] [WARNING] Image with src "/black-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   42383ms] [WARNING] GSAP target .detail-image-3 not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   42384ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   42392ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   42394ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   42406ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   42433ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   42433ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   42443ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   42559ms] [WARNING] The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127 @ :1
+[   43041ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   43058ms] [LOG] [Fast Refresh] done in 124ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   46743ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   46744ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   46749ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   47569ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   47592ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   47664ms] [WARNING] Image with src "/black-logo.png" is using quality "100" which is not configured in images.qualities [75]. Please update your config to [100, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   48033ms] [WARNING] GSAP target .detail-image-3 not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   48035ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   48048ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   48057ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   48076ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   48121ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   48123ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   48127ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   48137ms] [WARNING] Image with src "/black-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   48223ms] [WARNING] GSAP target .detail-image-3 not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   48225ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   48235ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   48243ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   48257ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   48302ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   48303ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   48314ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   48332ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   48335ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   48347ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   48461ms] [WARNING] The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127 @ :1
+[   48898ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   48899ms] [LOG] [Fast Refresh] done in 105ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   52314ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   52315ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   52318ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   53320ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   53336ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   53435ms] [WARNING] Image with src "/black-logo.png" is using quality "100" which is not configured in images.qualities [75]. Please update your config to [100, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   53832ms] [WARNING] GSAP target .detail-image-3 not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   53834ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   53844ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   53849ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   53858ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   53888ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   53890ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   53896ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   53903ms] [WARNING] Image with src "/black-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   53954ms] [WARNING] GSAP target .detail-image-3 not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   53956ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   53961ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   53964ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   53972ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   53996ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   53997ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   54006ms] [WARNING] GSAP target  not found. https://gsap.com @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   54103ms] [WARNING] The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127 @ :1
+[   54582ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
+[   54599ms] [LOG] [Fast Refresh] done in 121ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:777
